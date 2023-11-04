@@ -8,7 +8,6 @@ const IndexPage: FC<PageProps> = () => {
   return (
     <Layout>
       <Header />
-      <Button>Example button</Button>
     </Layout>
   );
 };
