@@ -1,0 +1,1 @@
+{"version":3,"sources":["webpack:///./src/pages/404.tsx"],"names":["NotFoundPage","___EmotionJSX"],"mappings":"6FAAA,iCAMeA,UAJMA,IACnBC,YAAA,UAAI","file":"component---src-pages-404-tsx-9fadfd214c7fe0e1dd07.js","sourcesContent":["import * as React from 'react'\n\nconst NotFoundPage = () => (\n  <h1>No page</h1>\n)\n\nexport default NotFoundPage\n"],"sourceRoot":""}

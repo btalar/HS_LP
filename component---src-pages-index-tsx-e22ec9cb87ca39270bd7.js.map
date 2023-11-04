@@ -1,0 +1,1 @@
+{"version":3,"sources":["webpack:///./src/pages/index.tsx"],"names":["IndexPage","___EmotionJSX"],"mappings":"kHAIeA,UAJGA,IACTC,YAAA,UAAI","file":"component---src-pages-index-tsx-e22ec9cb87ca39270bd7.js","sourcesContent":["const IndexPage = () =>{\n  return <h1>Kacper</h1>\n}\n\nexport default IndexPage;\n"],"sourceRoot":""}
