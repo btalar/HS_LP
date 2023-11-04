@@ -8,9 +8,7 @@ type LayoutType = {
 };
 
 const Layout = ({ children }: LayoutType) => (
-  <NextUIProvider>
-    <Header />
-  </NextUIProvider>
+  <NextUIProvider>{children}</NextUIProvider>
 );
 
 export default Layout;

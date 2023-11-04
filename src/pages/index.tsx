@@ -1,11 +1,13 @@
-import React from "react";
+import React, { FC } from "react";
 import { Button } from "@nextui-org/react";
 import { PageProps } from "gatsby";
 import Layout from "../components/Layout/Layout";
+import Header from "../components/Header/Header";
 
-const IndexPage: React.FC<PageProps> = () => {
+const IndexPage: FC<PageProps> = () => {
   return (
     <Layout>
+      <Header />
       <Button>Example button</Button>
     </Layout>
   );
