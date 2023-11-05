@@ -7,29 +7,25 @@ import {
   Link,
   Button,
 } from "@nextui-org/react";
-import logo from "./../../assets/logo.png";
+
+import { LOGO } from "../../assets";
 
 const navbarItems = [
-  { text: "Generuj więcej rozmów", href: "#" },
-  { text: "Pod", href: "#" },
-  { text: "Zalety", href: "#" },
+  { text: "HotelPod", href: "#" },
+  { text: "Główne zalety", href: "#" },
   { text: "Funkcjonalności", href: "#" },
+  { text: "Korzyści", href: "#" },
+  { text: "Aplikacja Mobilna", href: "#" },
+  { text: "Store", href: "#" },
+  { text: "Kontakt", href: "#" },
 ];
 
-const Navbar = () => {
-  const [isScroll, setIsScroll] = useState(false);
+export const Navbar = () => {
 
-  useEffect(() => {
-    document.addEventListener("scroll", () => {
-      setIsScroll(Boolean(50 > window.scrollY));
-    });
-  }, []);
 
   return (
-    <NavbarStyled mode={isScroll ? "light" : "dark"} position="sticky">
-      <NavbarBrand>
-        <img src={logo} />
-      </NavbarBrand>
+    <NavbarStyled >
+      <NavbarBrand> <img src={LOGO} />  </NavbarBrand>
       <NavbarContent className="hidden sm:flex gap-4" justify="center">
         {navbarItems.map(({ href, text }, index) => (
           <NavbarItem key={index}>
@@ -46,4 +42,3 @@ const Navbar = () => {
   );
 };
 
-export default Navbar;

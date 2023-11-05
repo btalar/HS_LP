@@ -1,16 +1,14 @@
 import React from "react";
 import {Card, CardFooter, Image,  CardHeader} from "@nextui-org/react";
-import pod from "./../../assets/pod-1.png";
-import pod2 from "./../../assets/pod-2.png";
-import pod3 from "./../../assets/pod-3.png";
-import Claim from "../Claim/Claim";
-const About = () => {
+import { POD1, POD2, POD3} from "../../assets";
+import {Claim, SectionWrapper} from "../../components";
+export const About = () => {
     return (
+            <SectionWrapper>
+                <SectionWrapper noGap>
+                    <Claim title="Cyfrowy" description="Woman listing to music"/>
+                </SectionWrapper>
 
-        <div className="container mx-auto max-w-[1200px] px-6">
-            <div className='py-6'>
-                <Claim title="Cyfrowy  " description="Woman listing to music"/>
-            </div>
             <div className="grid grid-cols-2 gap-4">
                 <div className="col-span-1 h-656">
                     <Card
@@ -19,10 +17,11 @@ const About = () => {
                         className="border-none"
                     >
                         <Image
+                            isZoomed
                             alt="Woman listing to music"
                             className="object-cover"
                             height={600}
-                            src={pod}
+                            src={POD1}
                             width={600}
                         />
                         <CardFooter className="justify-between before:bg-white/10 border-white/20 border-1 overflow-hidden py-1 absolute before:rounded-xl rounded-large bottom-1 w-[calc(100%_-_8px)] shadow-small ml-1 z-10">
@@ -43,10 +42,11 @@ const About = () => {
                                 <h4 className="text-white font-medium text-large">Stream the Acme event</h4>
                             </CardHeader>
                             <Image
+                                isZoomed
                                 alt="Woman listing to music"
                                 className="object-cover"
                                 height={300}
-                                src={pod2}
+                                src={POD2}
                                 width={600}
                             />
                             <CardFooter className="justify-between before:bg-white/10 border-white/20 border-1 overflow-hidden py-1 absolute before:rounded-xl rounded-large bottom-1 w-[calc(100%_-_8px)] shadow-small ml-1 z-10">
@@ -62,10 +62,11 @@ const About = () => {
                                 className="border-none"
                             >
                                 <Image
+                                    isZoomed
                                     alt="Woman listing to music"
                                     className="object-cover"
                                     height={300}
-                                    src={pod3}
+                                    src={POD3}
                                     width={600}
                                 />
                                 <CardFooter className="justify-between before:bg-white/10 border-white/20 border-1 overflow-hidden py-1 absolute before:rounded-xl rounded-large bottom-1 w-[calc(100%_-_8px)] shadow-small ml-1 z-10">
@@ -77,11 +78,7 @@ const About = () => {
                     </div>
                 </div>
             </div>
-        </div>
-
-
+        </SectionWrapper>
 
     );
 };
-
-export default About;

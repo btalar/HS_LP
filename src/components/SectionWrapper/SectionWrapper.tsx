@@ -2,10 +2,14 @@ import React, {ReactNode} from "react";
 
 type SectionWrapperType = {
     children: ReactNode;
+    isFluid?: boolean
+    noMarginVertical: boolean
+    noGap: boolean
 };
 
-const SectionWrapper = ({ children }: SectionWrapperType) => (
-    <section className="my-10 w-full">{children}</section>
+export const SectionWrapper = ({ children , isFluid, noMarginVertical, noGap}: SectionWrapperType) => (
+    <section className={`${!noMarginVertical && 'my-10'} ${!noGap && 'px-6' } ${isFluid ? 'w-full ' : 'container mx-auto max-w-[1200px]'}  `}>
+        {children}
+    </section>
 );
 
-export default SectionWrapper;

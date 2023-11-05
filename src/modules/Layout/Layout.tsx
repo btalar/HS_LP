@@ -6,8 +6,7 @@ type LayoutType = {
   children: ReactNode;
 };
 
-const Layout = ({ children }: LayoutType) => (
+export const Layout = ({ children }: LayoutType) => (
   <NextUIProvider>{children}</NextUIProvider>
 );
 
-export default Layout;

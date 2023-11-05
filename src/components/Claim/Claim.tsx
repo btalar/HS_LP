@@ -9,7 +9,7 @@ type ClaimType= {
     buttonText?: string;
     buttonAction?: () => void;
 };
-const Claim = ({ title, description, hasSeparator, buttonText, buttonAction }: ClaimType) => (
+export const Claim = ({ title, description, hasSeparator, buttonText, buttonAction }: ClaimType) => (
 
 <>
             <Title>{title}</Title>
@@ -26,6 +26,5 @@ const Claim = ({ title, description, hasSeparator, buttonText, buttonAction }: C
             )}
     </>
 
-    );
+ );
 
-export default Claim;
