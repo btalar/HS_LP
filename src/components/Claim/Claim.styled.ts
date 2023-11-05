@@ -10,6 +10,7 @@ export const Separator = styled.hr`
   width: 256px;
   height: 2px;
   background: #2e3a59;
+  margin: 20px 0;
 `;
 
 export const Description = styled.p`

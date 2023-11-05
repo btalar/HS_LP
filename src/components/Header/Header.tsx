@@ -1,32 +1,23 @@
 import React from "react";
 import Navbar from "../Navbar/Navbar";
 import heroBackground from "./../../assets/hero-img-desktop.webp";
-import { Button } from "@nextui-org/react";
-import { Separator, Description, Title } from "./header.styled";
+import Claim from "../Claim/Claim";
 const Header = () => {
   return (
     <div
-      className="h-screen bg-green-900 bg-center bg-cover"
+      className="h-screen bg-center bg-cover"
       style={{ backgroundImage: `url(${heroBackground})` }}
     >
       <Navbar />
-      <div className="flex px-6 gap-4 w-full h-full flex-col justify-center max-w-[1024px] gap-y-8 m-auto">
-        <Title>Digital POD</Title>
-        <Separator />
-        <Description>
-          Interaktywny cyfrowy concierge hotelowy z dotykowym ekranem, który
-          zapewnia gościom wszystkie niezbędne informacje dotyczące udogodnień
-          oraz wszystkich usług hotelowych, rekomendacje lokalnych wydarzeń,
-          wycieczek, restauracji.
-        </Description>
-        <section className="gap-x-8 flex">
-          <Button size="lg" color="warning" variant="shadow">
-            Umów prezentacje
-          </Button>
-          <Button size="lg" color="primary" variant="flat">
-            Wypróbuj za darmo
-          </Button>
-        </section>
+      <div className="flex px-6 w-full h-full flex-col justify-center max-w-[1200px] m-auto">
+        <Claim title="Digital POD "
+               description="Interaktywny cyfrowy concierge hotelowy z dotykowym ekranem,
+                który zapewnia gościom wszystkie niezbędne informacje dotyczące udogodnień
+                oraz wszystkich usług hotelowych, rekomendacje lokalnych wydarzeń, wycieczek,
+                restauracji."
+                hasSeparator
+               buttonText="Umów prezentacje "
+        />
       </div>
     </div>
   );
