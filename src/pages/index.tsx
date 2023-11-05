@@ -1,15 +1,15 @@
-import React, { FC } from "react";
-import { Button } from "@nextui-org/react";
-import { PageProps } from "gatsby";
-import Layout from "../components/Layout/Layout";
-import Header from "../components/Header/Header";
+import { PageProps } from 'gatsby';
+import React, { FC } from 'react';
 
-const IndexPage: FC<PageProps> = () => {
-  return (
-    <Layout>
-      <Header />
-    </Layout>
-  );
-};
+import About from '../components/About/About';
+import Header from '../components/Header/Header';
+import Layout from '../components/Layout/Layout';
+
+const IndexPage: FC<PageProps> = () => (
+  <Layout>
+    <Header />
+    <About />
+  </Layout>
+);
 
 export default IndexPage;

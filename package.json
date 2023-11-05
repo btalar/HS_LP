@@ -13,12 +13,25 @@
     "build": "gatsby build",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
-    "typecheck": "tsc --noEmit"
+    "typecheck": "tsc --noEmit",
+    "lint": "eslint --ext .ts,.tsx --cache src/ --max-warnings 50",
+    "lint:fix": "eslint --ext .ts,.tsx --fix src/",
+    "prepare": "husky install"
   },
   "dependencies": {
+    "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
     "@nextui-org/react": "^2.2.1",
+    "@typescript-eslint/eslint-plugin": "^6.9.1",
     "autoprefixer": "^10.4.16",
     "babel-plugin-styled-components": "^2.1.4",
+    "eslint": "^8.53.0",
+    "eslint-config-airbnb": "^19.0.4",
+    "eslint-import-resolver-typescript": "^3.6.1",
+    "eslint-plugin-import": "^2.29.0",
+    "eslint-plugin-jsx-a11y": "^6.8.0",
+    "eslint-plugin-react": "^7.33.2",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "eslint-plugin-simple-import-sort": "^10.0.0",
     "framer-motion": "^10.16.4",
     "gatsby": "^5.12.4",
     "gatsby-plugin-google-gtag": "^5.12.3",
@@ -30,17 +43,21 @@
     "gatsby-plugin-styled-components": "^6.12.0",
     "gatsby-source-filesystem": "^5.12.1",
     "gatsby-transformer-sharp": "^5.12.3",
+    "husky": "^8.0.3",
+    "lint-staged": "11.2.6",
     "postcss": "^8.4.31",
     "prettier": "^3.0.3",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "styled-components": "^6.1.0",
-    "tailwindcss": "^3.3.5"
+    "tailwindcss": "^3.3.5",
+    "typescript-eslint": "^0.0.1-alpha.0"
   },
   "devDependencies": {
     "@types/node": "^20.3.3",
     "@types/react": "^18.2.14",
     "@types/react-dom": "^18.2.6",
+    "@typescript-eslint/parser": "^6.9.1",
     "typescript": "^5.1.6"
   }
 }

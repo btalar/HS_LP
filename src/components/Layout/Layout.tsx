@@ -1,7 +1,7 @@
-import { NextUIProvider } from "@nextui-org/react";
-import React from "react";
-import { ReactNode } from "react";
-import Header from "../Header/Header";
+import { NextUIProvider } from '@nextui-org/react';
+import React, { ReactNode } from 'react';
+
+import Header from '../Header/Header';
 
 type LayoutType = {
   children: ReactNode;

@@ -1,32 +1,33 @@
-import React, { useEffect, useState } from "react";
-import { NavbarStyled } from "./Navbar.styled";
 import {
+  Button,
+  Link,
   NavbarBrand,
   NavbarContent,
   NavbarItem,
-  Link,
-  Button,
-} from "@nextui-org/react";
-import logo from "./../../assets/logo.png";
+} from '@nextui-org/react';
+import React, { useEffect, useState } from 'react';
+
+import logo from '../../assets/logo.png';
+import { NavbarStyled } from './Navbar.styled';
 
 const navbarItems = [
-  { text: "Generuj więcej rozmów", href: "#" },
-  { text: "Pod", href: "#" },
-  { text: "Zalety", href: "#" },
-  { text: "Funkcjonalności", href: "#" },
+  { text: 'Generuj więcej rozmów', href: '#' },
+  { text: 'Pod', href: '#' },
+  { text: 'Zalety', href: '#' },
+  { text: 'Funkcjonalności', href: '#' },
 ];
 
 const Navbar = () => {
   const [isScroll, setIsScroll] = useState(false);
 
   useEffect(() => {
-    document.addEventListener("scroll", () => {
-      setIsScroll(Boolean(10 > window.scrollY));
+    document.addEventListener('scroll', () => {
+      setIsScroll(Boolean(window.scrollY < 10));
     });
   }, []);
 
   return (
-    <NavbarStyled mode={isScroll ? "light" : "dark"} position="sticky">
+    <NavbarStyled mode={isScroll ? 'light' : 'dark'} position="sticky">
       <NavbarBrand>
         <img src={logo} />
       </NavbarBrand>
