@@ -4,6 +4,7 @@ module.exports = {
   content: [
     `./src/pages/**/*.{js,jsx,ts,tsx}`,
     `./src/components/**/*.{js,jsx,ts,tsx}`,
+    `./src/modules/**/*.{js,jsx,ts,tsx}`,
     `./node_modules/@nextui-org/theme/dist/**/*.{js,ts,jsx,tsx}`,
   ],
   theme: {
