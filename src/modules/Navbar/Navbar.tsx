@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { NavbarStyled } from "./Navbar.styled";
+import { navbarClassNames, NavbarStyled } from "./Navbar.styled";
 import {
   NavbarBrand,
   NavbarContent,
@@ -21,12 +21,12 @@ const navbarItems = [
 ];
 
 export const Navbar = () => {
-
-
   return (
-    <NavbarStyled >
-      <NavbarBrand> <img src={LOGO} />  </NavbarBrand>
-      <NavbarContent className="hidden sm:flex gap-4" justify="center">
+    <NavbarStyled classNames={navbarClassNames}>
+      <NavbarBrand>
+        <img src={LOGO} />
+      </NavbarBrand>
+      <NavbarContent className="gap-4" justify="center">
         {navbarItems.map(({ href, text }, index) => (
           <NavbarItem key={index}>
             <Link color="foreground" href={href}>
@@ -41,4 +41,3 @@ export const Navbar = () => {
     </NavbarStyled>
   );
 };
-

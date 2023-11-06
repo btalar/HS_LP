@@ -16,9 +16,6 @@ const config: GatsbyConfig = {
     "gatsby-plugin-sitemap",
     {
       resolve: "gatsby-plugin-manifest",
-      options: {
-        icon: "src/images/icon.png",
-      },
     },
     "gatsby-plugin-sharp",
     "gatsby-transformer-sharp",
@@ -26,7 +23,7 @@ const config: GatsbyConfig = {
       resolve: "gatsby-source-filesystem",
       options: {
         name: "images",
-        path: "./src/images/",
+        path: "./src/assets/",
       },
       __key: "images",
     },
