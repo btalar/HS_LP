@@ -9,6 +9,14 @@ import people from "./advantages/people.png";
 import pieChart from "./advantages/pie-chart.png";
 import trendingUp from "./advantages/trending-up.png";
 
+import arrowLeft from "./../assets/arrow-left.svg";
+import arrowRight from "./../assets/arrow-right.svg";
+import businessman from "./businessman.png";
+
+export const BUSINESSMAN = businessman;
+export const ARROW_LEFT = arrowLeft;
+export const ARROW_RIGHT = arrowRight;
+
 export const HEART_ICON = heart;
 export const PEOPLE_ICON = people;
 

@@ -1,9 +1,8 @@
-import React from "react";
+import React, { ReactNode, useEffect, useRef, useState } from "react";
 import Carousel from "react-multi-carousel";
-import { Image } from "@nextui-org/react";
-import { HEART_ICON, PEOPLE_ICON, PIE_CHART, TRENDING_UP } from "../../assets";
-import { Description, Title } from "./SliderCard.styled";
-import { Claim } from "../../components";
+import { Button, ButtonGroup, Image } from "@nextui-org/react";
+import { ARROW_LEFT, ARROW_RIGHT } from "../../assets";
+import { Claim, ClaimType } from "../../components";
 
 const responsive = {
   superLargeDesktop: {
@@ -25,72 +24,52 @@ const responsive = {
   },
 };
 
-type CardType = {
-  isFirstElement?: boolean;
-  isLastElement?: boolean;
-  src: string;
-  title: string;
-  description: string;
+export type SlideCartType = {
+  claim: ClaimType;
+  children: ReactNode;
 };
 
-const cartItems = [
-  {
-    src: PEOPLE_ICON,
-    title: "Usprawnienie obsługi klienta",
-    description:
-      "Cyfrowy concierge może dostarczać szybką i skuteczną informację dla gości 24/7, eliminując potrzebę czekania przy recepcji. Skutecznie zostaje zwiększone zadowolenie klientów.",
-  },
-  {
-    src: PIE_CHART,
-    title: "Analiza danych",
-    description: "",
-  },
-  {
-    src: TRENDING_UP,
-    title: "Usprawnienie obsługi klienta",
-    description:
-      "Cyfrowy concierge może dostarczać szybką i skuteczną informację dla gości 24/7, eliminując potrzebę czekania przy recepcji. Skutecznie zostaje zwiększone zadowolenie klientów.",
-  },
-  {
-    src: HEART_ICON,
-    title: "Usprawnienie obsługi klienta",
-    description:
-      "Cyfrowy concierge może dostarczać szybką i skuteczną informację dla gości 24/7, eliminując potrzebę czekania przy recepcji. Skutecznie zostaje zwiększone zadowolenie klientów.",
-  },
-];
+export const SliderCard = ({ claim, children }: SlideCartType) => {
+  const ref = useRef<Carousel>(null);
 
-const Card = ({
-  src,
-  title,
-  description,
-  isFirstElement,
-  isLastElement,
-}: CardType) => (
-  <div
-    className={`p-3 h-[272px] border border-[#C5CEE0] rounded-xl gap-4 mx-3 ${
-      isFirstElement && "ml-0"
-    } ${isLastElement && "mr-0"}`}
-  >
-    <Image src={src} />
-    <Title>{title}</Title>
-    <Description>{description}</Description>
-  </div>
-);
+  const [isPrevousDisabled, setIsPreviousDisabled] = useState(true);
+  const [isNextDisabled, setIsNextDisabled] = useState(false);
 
-export const SliderCard = () => {
+  const handleRightClick = () => {
+    ref?.current?.next(0);
+  };
+
+  const handleLeftClick = () => {
+    ref?.current?.previous(0);
+  };
+
   return (
-    <div>
-      <div>
-        <Claim title="Zalety" />
-      </div>
-      <Carousel responsive={responsive} arrows={true}>
-        {[...cartItems, ...cartItems].map((props, index, arr) => (
-          <Card
-            isFirstElement={index === 0}
-            isLastElement={arr.length === index + 1}
-            {...props}
+    <div className="flex flex-col gap-8 ">
+      <div className="flex justify-between items-end">
+        <div>
+          <Claim {...claim} />
+        </div>
+        <ButtonGroup variant="flat" color="primary">
+          <Button
+            onClick={handleLeftClick}
+            endContent={<Image src={ARROW_LEFT} />}
           />
-        ))}
+          <Button
+            onClick={handleRightClick}
+            endContent={<Image src={ARROW_RIGHT} />}
+          />
+        </ButtonGroup>
+      </div>
+      <Carousel
+        itemClass="px-2"
+        partialVisbile={true}
+        partialVisible={true}
+        ref={ref}
+        responsive={responsive}
+        arrows={false}
+        infinite={true}
+      >
+        {children}
       </Carousel>
     </div>
   );
