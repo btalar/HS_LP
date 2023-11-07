@@ -10,7 +10,7 @@ const ClaimProperties: ClaimType = {
   restauracji.`,
   hasSeparator: true,
   buttonPrimaryText: "Umów prezentacje ",
-  buttonSecondaryText: "Wypróbuj za darmo",
+  buttonSecondaryText: "Wypróbuj nie za darmo",
 };
 
 export const Header = () => {
