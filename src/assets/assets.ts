@@ -12,7 +12,9 @@ import trendingUp from "./advantages/trending-up.png";
 import arrowLeft from "./../assets/arrow-left.svg";
 import arrowRight from "./../assets/arrow-right.svg";
 import businessman from "./businessman.png";
+import footerRectangle from './footer-rectangle.png'
 
+export const FOOTER_RECT = footerRectangle
 export const BUSINESSMAN = businessman;
 export const ARROW_LEFT = arrowLeft;
 export const ARROW_RIGHT = arrowRight;

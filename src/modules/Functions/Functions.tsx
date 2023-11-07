@@ -7,7 +7,7 @@ import { ImageCard } from "../SliderCard/ImageCard/ImageCard";
 export const Functions = () => {
   return (
     <div className="bg-[#F5F5F5]">
-      <SectionWrapper className="py-8 px-10">
+      <SectionWrapper className="py-8 mb-0 px-10">
         <SliderCard
           claim={{
             title: "PODSTAWOWE FUNKCJE",
