@@ -1,6 +1,6 @@
 import React, { FC } from "react";
 import { PageProps } from "gatsby";
-import {About, Layout, Header, Advantage, Navbar} from "../modules";
+import {About, Layout, Header, Advantage, Navbar, Footer} from "../modules";
 
 const IndexPage: FC<PageProps> = () => {
   return (
@@ -9,6 +9,7 @@ const IndexPage: FC<PageProps> = () => {
         <Header/>
         <About/>
         <Advantage/>
+        <Footer/>
     </Layout>
   );
 };
