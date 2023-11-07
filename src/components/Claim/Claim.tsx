@@ -1,30 +1,50 @@
 import React from "react";
-import {Description, Separator, Title} from "./Claim.styled";
-import {Button} from "@nextui-org/react";
+import { Description, Separator, Title } from "./Claim.styled";
+import { Button } from "@nextui-org/react";
 
-type ClaimType= {
-    title?: string,
-    description?: string,
-    hasSeparator?: boolean
-    buttonText?: string;
-    buttonAction?: () => void;
+export type ClaimType = {
+  title?: string;
+  description?: string;
+  hasSeparator?: boolean;
+  buttonPrimaryText?: string;
+  buttonPrimaryAction?: () => void;
+  buttonSecondaryText?: string;
+  buttonSecondaryAction?: () => void;
 };
-export const Claim = ({ title, description, hasSeparator, buttonText, buttonAction }: ClaimType) => (
-
-<>
-            <Title>{title}</Title>
-            {hasSeparator && <Separator />}
-            <Description>
-                {description}
-            </Description>
-            {buttonText && (
-            <section className="gap-x-8 flex">
-                <Button size="lg" color="warning" variant="shadow">
-                    {buttonText}
-                </Button>
-            </section>
-            )}
-    </>
-
- );
-
+export const Claim = ({
+  title,
+  description,
+  hasSeparator,
+  buttonPrimaryText,
+  buttonPrimaryAction,
+  buttonSecondaryText,
+  buttonSecondaryAction,
+}: ClaimType) => (
+  <>
+    <Title>{title}</Title>
+    {hasSeparator && <Separator />}
+    <Description>{description}</Description>
+    <section className="gap-x-8 flex">
+      {buttonPrimaryText && (
+        <Button
+          onClick={buttonPrimaryAction}
+          size="lg"
+          color="warning"
+          variant="flat"
+        >
+          {buttonPrimaryText}
+        </Button>
+      )}
+      {buttonSecondaryText && (
+        <Button
+          onClick={buttonPrimaryAction}
+          size="lg"
+          color="primary"
+          variant="flat"
+        >
+          {buttonSecondaryText}
+        </Button>
+      )}
+    </section>
+  </>
+);
