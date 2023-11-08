@@ -2,7 +2,11 @@ import React from "react";
 import { Claim, SectionWrapper } from "../../components";
 import {
   CheckboxLabel,
-  SubmitButton,
+  ContactForm,
+  FooterInfo,
+  InputSection,
+  RectImg,
+  SubmitSection,
   TextAreaInput,
   TextInput,
 } from "./Footer.styled";
@@ -14,7 +18,7 @@ export const Footer = () => {
   return (
     <SectionWrapper noMarginVertical isFluid className="bg-[#F5F5F5] py-8">
       <SectionWrapper
-        className="mt-0 max-w-[1200px] flex gap-x-6 justify-between px-6"
+        className="mt-0 max-w-[1200px] flex gap-x-6 justify-between lg:px-6 px-0"
         noGap
       >
         <div>
@@ -23,22 +27,22 @@ export const Footer = () => {
           <h2 className="text-[24px] font-[600] text-[#006fee] mt-[12px]">
             +48 123 456 789
           </h2>
-          <div className="contact-form max-w-[628px] mt-[24px] text-[12px] text-[#2e3a59]">
+          <ContactForm>
             <p>Lub wypełnij poniższy formularz by skontaktować się mailowo:</p>
             <div className="input-fields">
-              <div className="upper w-[100%] flex justify-between gap-[24px] mt-[12px] mb-[12px]">
+              <InputSection className="upper mt-[12px] mb-[12px]">
                 <TextInput placeholder="Imię" />
                 <TextInput placeholder="Nazwisko" />
-              </div>
-              <div className="middle w-[100%] flex justify-between gap-[24px] mb-[12px]">
+              </InputSection>
+              <InputSection className="middle mb-[12px]">
                 <TextInput placeholder="E-mail" />
                 <TextInput placeholder="Numer telefonu" />
-              </div>
-              <div className="lower w-[100%] flex justify-between gap-[24px]">
+              </InputSection>
+              <InputSection className="lower">
                 <TextAreaInput placeholder="Dodatkowe informacje" />
-              </div>
+              </InputSection>
             </div>
-            <div className="submit-section flex items-end">
+            <SubmitSection>
               <div className="privacy-policy-check flex justify-between gap-[10px] mt-[24px]">
                 <input
                   type="checkbox"
@@ -58,22 +62,27 @@ export const Footer = () => {
                   udzielenia odpowiedzi na moją wiadomość.
                 </p>
               </div>
-              <Button color="primary" size="lg" variant="flat">
+              <Button
+                color="primary"
+                size="lg"
+                variant="flat"
+                className="w-full lg:w-auto"
+              >
                 Wyślij
               </Button>
-            </div>
+            </SubmitSection>
             <p className="mt-[25px]">
               Kontakt bezpośredni:{" "}
               <span className="cursor-pointer text-[#006fee] text-[14px] font-[500]">
                 example@example.com
               </span>
             </p>
-          </div>
+          </ContactForm>
         </div>
-        <img src={FOOTER_RECT} alt="" />
+        <RectImg src={FOOTER_RECT} />
       </SectionWrapper>
-      <div className="footer-info_wrapper border-t border-[#c5cee0] px-6 py-[64px] text-[#192038] text-[14px] max-w-[1200px] mx-auto">
-        <div className="footer-info flex justify-between max-w-[423px]">
+      <div className="footer-info_wrapper border-t border-[#c5cee0] px-0 lg:px-6 py-[64px] text-[#192038] text-[14px] max-w-[1200px] mx-auto">
+        <FooterInfo>
           <div className="left">
             <Image className="mb-[24px]" src={LOGO} />
             <ul>
@@ -100,7 +109,7 @@ export const Footer = () => {
               <li>Kontakt</li>
             </ul>
           </div>
-        </div>
+        </FooterInfo>
       </div>
       <div className="footer-copyright flex items-center justify-between text-[12px] text-[#2e3a59] gap-[24px] max-w-[1200px] mx-auto">
         <svg
@@ -109,6 +118,7 @@ export const Footer = () => {
           height="40"
           viewBox="0 0 40 40"
           fill="none"
+          className="min-h-[40px] min-w-[40px]"
         >
           <path
             fill-rule="evenodd"

@@ -4,6 +4,9 @@ export const Title = styled.h1`
   font-size: 80px;
   color: #192038;
   font-weight: 300;
+  @media (max-width: 768px) {
+    font-size: 30px;
+  }
 `;
 
 export const Separator = styled.hr`

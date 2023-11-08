@@ -6,8 +6,8 @@ import { Description } from "../InfoCard/InfoCart.styled";
 
 export const ImageCard = () => {
   return (
-    <div className="flex flex-col  rounded-xl gap-y-3 ">
-      <Image className="rounded-xl shadow-md" src={BUSINESSMAN} />
+    <div className="flex flex-col rounded-xl gap-y-3 ">
+      <Image className="rounded-xl shadow-md w-screen" src={BUSINESSMAN} />
       <div className="bg-white shadow-md rounded-xl p-4 flex flex-col gap-y-3">
         <Title>Dołączenie do grona stałych gości</Title>
         <Description>

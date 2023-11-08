@@ -9,8 +9,8 @@ export const About = () => {
         <Claim title="Cyfrowy" description="Woman listing to music" />
       </SectionWrapper>
 
-      <div className="grid grid-cols-2 gap-4">
-        <div className="col-span-1 h-656">
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
+        <div className="col-span-1 h-300 lg:h-656">
           <Card isFooterBlurred radius="lg" className="border-none">
             <Image
               isZoomed
@@ -25,8 +25,7 @@ export const About = () => {
             </CardFooter>
           </Card>
         </div>
-        <div className="col-span-1 flex-1 flex flex-col justify-between">
-          {/*ale dlaczego tutaj margin zamiast flexa ;-;*/}
+        <div className="col-span-1 flex-1 flex flex-col gap-4 justify-between">
           <div className="h-300 flex-1">
             <Card isFooterBlurred radius="lg" className="border-none">
               <CardHeader className="absolute z-10 top-1 flex-col !items-start">
