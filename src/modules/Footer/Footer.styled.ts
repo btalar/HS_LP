@@ -47,3 +47,51 @@ export const CheckboxLabel = styled.label`
     border-color: #006fee; /* Border color when checkbox is checked */
   }
 `;
+
+export const RectImg = styled.img`
+max-width: 519px;
+  @media (max-width: 1104px) {
+    display: none;
+  }
+`;
+
+export const ContactForm = styled.div`
+ max-width: 628px;
+  margin-top: 24px;
+  font-size: 12px;
+  color: #2e3a59;
+`;
+
+export const InputSection = styled.div`
+// w-[100%] flex justify-between gap-[24px]
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  gap: 24px;
+  
+  @media (max-width: 599px) {
+    flex-direction: column;
+    gap: 12px;
+    
+  }
+`;
+
+export const SubmitSection = styled.div`
+ display: flex;
+  align-items: end;
+  @media (max-width: 599px) {
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+  }
+`;
+
+export const FooterInfo = styled.div`
+//flex justify-between max-w-[423px]
+  display: flex;
+  justify-content: space-between;
+  max-width: 423px;
+  @media (max-width: 500px) {
+    flex-direction: column;
+  }
+`;
