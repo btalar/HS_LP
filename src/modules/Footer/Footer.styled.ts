@@ -33,9 +33,9 @@ export const CheckboxLabel = styled.label`
   position: relative;
 
   input[type="checkbox"]:checked + &::before {
-    content: "\\2713"; /* Unicode checkmark character */
+    content: "\u2713"; /* Unicode checkmark character */
     font-size: 16px; /* Adjust the font size of the checkmark */
-    color: transparent; /* Make the checkmark transparent by default */
+    color: #ffffff; /* Color of the checkmark when checkbox is checked */
     position: absolute;
     top: 50%;
     left: 50%;
@@ -45,6 +45,7 @@ export const CheckboxLabel = styled.label`
   .custom-checkbox:checked + & {
     background-color: #006fee; /* Background color when checkbox is checked */
     border-color: #006fee; /* Border color when checkbox is checked */
+  }
   }
 `;
 

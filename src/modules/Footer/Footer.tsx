@@ -41,13 +41,13 @@ export const Footer = () => {
             <SubmitSection>
               <div className="privacy-policy-check flex justify-between gap-[10px] mt-[24px]">
                 <input
-                  type="checkbox"
-                  id="privacy-checkbox"
-                  className="custom-checkbox hidden"
+                    type="checkbox"
+                    id="privacy-checkbox"
+                    className="custom-checkbox hidden"
                 />
                 <CheckboxLabel
-                  htmlFor="privacy-checkbox"
-                  className="checkbox-label"
+                    htmlFor="privacy-checkbox"
+                    className="checkbox-label"
                 />
                 <p>
                   Potwierdzam iż, zapoznałem się z{" "}
