@@ -24,7 +24,7 @@ export const Claim = ({
     <Title>{title}</Title>
     {hasSeparator && <Separator />}
     <Description>{description}</Description>
-    <section className="gap-x-8 flex">
+    <section className="gap-8 flex flex-col md:flex-row">
       {buttonPrimaryText && (
         <Button
           onClick={buttonPrimaryAction}

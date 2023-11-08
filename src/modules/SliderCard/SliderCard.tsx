@@ -45,11 +45,11 @@ export const SliderCard = ({ claim, children }: SlideCartType) => {
 
   return (
     <div className="flex flex-col gap-8 ">
-      <div className="flex justify-between items-end">
-        <div>
+      <div className="flex justify-between items-center ">
+        <div className="">
           <Claim {...claim} />
         </div>
-        <ButtonGroup variant="flat" color="primary">
+        <ButtonGroup variant="flat" color="primary" className="hidden lg:flex">
           <Button
             onClick={handleLeftClick}
             endContent={<Image src={ARROW_LEFT} />}
@@ -61,16 +61,31 @@ export const SliderCard = ({ claim, children }: SlideCartType) => {
         </ButtonGroup>
       </div>
       <Carousel
+        autoPlay={true}
         itemClass="px-2"
         partialVisbile={true}
         partialVisible={true}
         ref={ref}
         responsive={responsive}
-        arrows={false}
         infinite={true}
+        arrows={false}
       >
         {children}
       </Carousel>
+      <ButtonGroup
+        variant="flat"
+        color="primary"
+        className="flex lg:hidden w-full"
+      >
+        <Button
+          onClick={handleLeftClick}
+          endContent={<Image src={ARROW_LEFT} />}
+        />
+        <Button
+          onClick={handleRightClick}
+          endContent={<Image src={ARROW_RIGHT} />}
+        />
+      </ButtonGroup>
     </div>
   );
 };

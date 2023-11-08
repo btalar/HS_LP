@@ -8,13 +8,14 @@ import heart from "./advantages/heart.png";
 import people from "./advantages/people.png";
 import pieChart from "./advantages/pie-chart.png";
 import trendingUp from "./advantages/trending-up.png";
+import heroBackgroundMobile from "./hero-img-mobile.webp";
 
 import arrowLeft from "./../assets/arrow-left.svg";
 import arrowRight from "./../assets/arrow-right.svg";
 import businessman from "./businessman.png";
-import footerRectangle from './footer-rectangle.png'
+import footerRectangle from "./footer-rectangle.png";
 
-export const FOOTER_RECT = footerRectangle
+export const FOOTER_RECT = footerRectangle;
 export const BUSINESSMAN = businessman;
 export const ARROW_LEFT = arrowLeft;
 export const ARROW_RIGHT = arrowRight;
@@ -30,3 +31,4 @@ export const POD1 = pod1;
 export const POD2 = pod2;
 export const POD3 = pod3;
 export const HERO_BG = heroBackground;
+export const HERO_BG_MOBILE = heroBackgroundMobile;

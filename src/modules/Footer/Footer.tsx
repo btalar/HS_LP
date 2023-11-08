@@ -1,8 +1,12 @@
 import React from "react";
 import { Claim, SectionWrapper } from "../../components";
 import {
-  CheckboxLabel, ContactForm, FooterInfo, InputSection, RectImg,
-  SubmitButton, SubmitSection,
+  CheckboxLabel,
+  ContactForm,
+  FooterInfo,
+  InputSection,
+  RectImg,
+  SubmitSection,
   TextAreaInput,
   TextInput,
 } from "./Footer.styled";
@@ -14,7 +18,7 @@ export const Footer = () => {
   return (
     <SectionWrapper noMarginVertical isFluid className="bg-[#F5F5F5] py-8">
       <SectionWrapper
-        className="mt-0 max-w-[1200px] flex gap-x-6 justify-between px-6"
+        className="mt-0 max-w-[1200px] flex gap-x-6 justify-between lg:px-6 px-0"
         noGap
       >
         <div>
@@ -26,28 +30,28 @@ export const Footer = () => {
           <ContactForm>
             <p>Lub wypełnij poniższy formularz by skontaktować się mailowo:</p>
             <div className="input-fields">
-              <InputSection className='upper mt-[12px] mb-[12px]'>
+              <InputSection className="upper mt-[12px] mb-[12px]">
                 <TextInput placeholder="Imię" />
                 <TextInput placeholder="Nazwisko" />
               </InputSection>
-              <InputSection className='middle mb-[12px]'>
+              <InputSection className="middle mb-[12px]">
                 <TextInput placeholder="E-mail" />
                 <TextInput placeholder="Numer telefonu" />
               </InputSection>
-              <InputSection className='lower'>
+              <InputSection className="lower">
                 <TextAreaInput placeholder="Dodatkowe informacje" />
               </InputSection>
             </div>
             <SubmitSection>
               <div className="privacy-policy-check flex justify-between gap-[10px] mt-[24px]">
                 <input
-                    type="checkbox"
-                    id="privacy-checkbox"
-                    className="custom-checkbox hidden"
+                  type="checkbox"
+                  id="privacy-checkbox"
+                  className="custom-checkbox hidden"
                 />
                 <CheckboxLabel
-                    htmlFor="privacy-checkbox"
-                    className="checkbox-label"
+                  htmlFor="privacy-checkbox"
+                  className="checkbox-label"
                 />
                 <p>
                   Potwierdzam iż, zapoznałem się z{" "}
@@ -58,7 +62,12 @@ export const Footer = () => {
                   udzielenia odpowiedzi na moją wiadomość.
                 </p>
               </div>
-              <Button color="primary" size="lg" variant="flat">
+              <Button
+                color="primary"
+                size="lg"
+                variant="flat"
+                className="w-full lg:w-auto"
+              >
                 Wyślij
               </Button>
             </SubmitSection>
@@ -72,7 +81,7 @@ export const Footer = () => {
         </div>
         <RectImg src={FOOTER_RECT} />
       </SectionWrapper>
-      <div className="footer-info_wrapper border-t border-[#c5cee0] px-6 py-[64px] text-[#192038] text-[14px] max-w-[1200px] mx-auto">
+      <div className="footer-info_wrapper border-t border-[#c5cee0] px-0 lg:px-6 py-[64px] text-[#192038] text-[14px] max-w-[1200px] mx-auto">
         <FooterInfo>
           <div className="left">
             <Image className="mb-[24px]" src={LOGO} />
@@ -109,7 +118,7 @@ export const Footer = () => {
           height="40"
           viewBox="0 0 40 40"
           fill="none"
-          className='min-h-[40px] min-w-[40px]'
+          className="min-h-[40px] min-w-[40px]"
         >
           <path
             fill-rule="evenodd"

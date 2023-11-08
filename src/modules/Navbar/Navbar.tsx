@@ -6,6 +6,9 @@ import {
   NavbarItem,
   Link,
   Button,
+  NavbarMenuToggle,
+  NavbarMenu,
+  NavbarMenuItem,
 } from "@nextui-org/react";
 
 import { LOGO } from "../../assets";
@@ -21,12 +24,18 @@ const navbarItems = [
 ];
 
 export const Navbar = () => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
   return (
-    <NavbarStyled classNames={navbarClassNames}>
+    <NavbarStyled
+      isMenuOpen={isMenuOpen}
+      onMenuOpenChange={setIsMenuOpen}
+      classNames={navbarClassNames}
+    >
       <NavbarBrand>
         <img src={LOGO} />
       </NavbarBrand>
-      <NavbarContent className="gap-4" justify="center">
+      <NavbarMenuToggle className="lg:hidden" />
+      <NavbarContent className="lg:flex hidden gap-4" justify="center">
         {navbarItems.map(({ href, text }, index) => (
           <NavbarItem key={index}>
             <Link color="foreground" href={href}>
@@ -38,6 +47,21 @@ export const Navbar = () => {
           Umów prezentacje
         </Button>
       </NavbarContent>
+      <NavbarMenu>
+        {navbarItems.map(({ text, href }, index) => (
+          <NavbarMenuItem key={`${text}-${index}`}>
+            <Link
+              onPress={() => setIsMenuOpen(false)}
+              className="w-full"
+              href={`#${href}`}
+              size="lg"
+              color="foreground"
+            >
+              {text}
+            </Link>
+          </NavbarMenuItem>
+        ))}
+      </NavbarMenu>
     </NavbarStyled>
   );
 };
