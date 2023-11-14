@@ -1,12 +1,15 @@
 import styled from "styled-components";
 
 export const Title = styled.h1`
-  font-size: 80px;
+  font-size: 42px;
   color: #192038;
-  font-weight: 300;
+  font-weight: 600;
+  line-height: 1.3;
+  letter-spacing: -1px;
+  max-width: 600px;
   @media (max-width: 768px) {
     font-size: 30px;
-  }
+  } 
 `;
 
 export const Separator = styled.hr`
@@ -16,7 +19,8 @@ export const Separator = styled.hr`
 `;
 
 export const Description = styled.p`
-  font-size: 16px;
+  font-size: 18px;
+  line-height: 1.7;
   max-width: 730px;
   color: #2e3a59;
 `;

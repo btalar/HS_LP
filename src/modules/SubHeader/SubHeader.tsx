@@ -12,9 +12,9 @@ export const SubHeader = () => {
         <Image width={512} height={512} src={HOME_POD_MINI} />
         <div className="flex flex-col gap-8 justify-center px-8">
           <Claim
-            title="HomePod MIni"
-            description="HomePod Mini to niewielki, ale potężny głośnik bezprzewodowy od Apple. Wyposażony jest w głośnik basowy o średnicy 3,5 cm i głośnik wysokotonowy o średnicy 1 cm, które zapewniają bogaty i przestrzenny dźwięk. HomePod Mini jest również wyposażony w asystenta głosowego Siri, który umożliwia sterowanie głośnikiem za pomocą głosu."
-            buttonSecondaryText="Dowiedz się więcej"
+            title="Cyfrowego concierge"
+            description="Intuicyjna aplikacja cyfrowego concierge dla hoteli, umożliwiająca gościom pełen dostęp do różnorodnych usług i informacji, poprawiając komfort i wygodę ich pobytu. Dzięki naszemu innowacyjnemu rozwiązaniu, użytkownicy mogą łatwo zlecać zamówienia, rezerwować usługi, dowiedzieć się o atrakcjach lokalnych, a także otrzymywać spersonalizowane rekomendacje, zapewniając wyjątkowe wrażenia podczas każdej wizyty w hotelu."
+            buttonSecondaryText="Sprawdź korzyści"
           />
         </div>
       </div>

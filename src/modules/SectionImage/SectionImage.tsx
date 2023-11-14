@@ -1,5 +1,5 @@
 import React from "react";
-import { HERO_BG, HERO_BG_MOBILE } from "../../assets";
+import { HERO_BG, HERO_BG_MOBILE, VIZ_POD_BG } from "../../assets";
 import { Claim, ClaimType } from "../../components";
 import styled from "styled-components";
 
@@ -24,16 +24,14 @@ const HeaderStyled = styled.div<{
   }
 `;
 
-export const Header = () => {
+export const SectionImage = () => {
   return (
     <HeaderStyled
-      background={HERO_BG}
+      background={VIZ_POD_BG}
       mobileBackground={HERO_BG_MOBILE}
       className="h-screen bg-center bg-cover flex justify-center"
     >
-      <div className="flex px-6 gap-8 w-full h-full flex-col justify-center max-w-[1200px] m-auto">
-        <Claim {...ClaimProperties} />
-      </div>
+
     </HeaderStyled>
   );
 };

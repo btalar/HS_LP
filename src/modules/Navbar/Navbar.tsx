@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
-import { navbarClassNames, NavbarStyled } from "./Navbar.styled";
+
+import { navbarClassNames, NavbarStyled , Item} from "./Navbar.styled";
 import {
   NavbarBrand,
   NavbarContent,
@@ -9,17 +10,16 @@ import {
   NavbarMenuToggle,
   NavbarMenu,
   NavbarMenuItem,
+  Dropdown, DropdownTrigger, DropdownMenu, DropdownItem
 } from "@nextui-org/react";
 
 import { LOGO } from "../../assets";
 
 const navbarItems = [
-  { text: "HotelPod", href: "#" },
-  { text: "Główne zalety", href: "#" },
+  { text: "Home", href: "#" },
+  { text: "Produkt", href: "#" },
   { text: "Funkcjonalności", href: "#" },
-  { text: "Korzyści", href: "#" },
-  { text: "Aplikacja Mobilna", href: "#" },
-  { text: "Store", href: "#" },
+  { text: "Blog", href: "#" },
   { text: "Kontakt", href: "#" },
 ];
 
@@ -39,13 +39,30 @@ export const Navbar = () => {
         {navbarItems.map(({ href, text }, index) => (
           <NavbarItem key={index}>
             <Link color="foreground" href={href}>
-              {text}
+              <Item>{text}</Item>
             </Link>
           </NavbarItem>
         ))}
-        <Button color="primary" variant="flat">
+        <Button  radius="full"  variant="bordered" className={"text-white border-primary bg-primary"}>
           Umów prezentacje
         </Button>
+        <Dropdown>
+          <DropdownTrigger>
+            <Button
+                variant="bordered"
+                color="transparent"
+            >
+             PL
+            </Button>
+          </DropdownTrigger>
+          <DropdownMenu className={''}
+              onAction={(key) => alert(key)}
+          >
+            <DropdownItem key="new"> English</DropdownItem>
+            <DropdownItem key="copy">Deutch</DropdownItem>
+            <DropdownItem key="edit">Franch</DropdownItem>
+          </DropdownMenu>
+        </Dropdown>
       </NavbarContent>
       <NavbarMenu>
         {navbarItems.map(({ text, href }, index) => (

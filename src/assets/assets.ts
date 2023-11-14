@@ -4,6 +4,7 @@ import pod2 from "./pod-2.png";
 import pod3 from "./pod-3.png";
 import heroBackground from "./hero-img-desktop.webp";
 import homePodMini from "./homePodMini.png";
+import vizPodBackground from "./viz_pod.png";
 import heart from "./advantages/heart.png";
 import people from "./advantages/people.png";
 import pieChart from "./advantages/pie-chart.png";
@@ -32,3 +33,5 @@ export const POD2 = pod2;
 export const POD3 = pod3;
 export const HERO_BG = heroBackground;
 export const HERO_BG_MOBILE = heroBackgroundMobile;
+
+export const VIZ_POD_BG = vizPodBackground;

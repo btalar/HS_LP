@@ -14,7 +14,7 @@ export const About = () => {
           <Card isFooterBlurred radius="lg" className="border-none">
             <Image
               isZoomed
-              alt="Woman listing to music"
+              alt="Lorem Ipsum has been the industry's standard dummy text ever since the 1500s"
               className="object-cover"
               height={600}
               src={POD1}

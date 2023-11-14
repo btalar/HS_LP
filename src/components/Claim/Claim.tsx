@@ -27,20 +27,22 @@ export const Claim = ({
     <section className="gap-8 flex flex-col md:flex-row">
       {buttonPrimaryText && (
         <Button
+          radius="full"
           onClick={buttonPrimaryAction}
           size="lg"
-          color="warning"
-          variant="flat"
+          color="secondary"
+          className={"text-black border-primary bg-secondary"}
+          variant="bordered"
         >
           {buttonPrimaryText}
         </Button>
       )}
       {buttonSecondaryText && (
         <Button
+           radius="full"
           onClick={buttonPrimaryAction}
           size="lg"
           color="primary"
-          variant="flat"
         >
           {buttonSecondaryText}
         </Button>
