@@ -1,6 +1,6 @@
-import React, { useEffect, useState } from "react";
-
-import { navbarClassNames, NavbarStyled , Item} from "./Navbar.styled";
+import React, { useState } from "react";
+import { Navbar as NextNavbar } from "@nextui-org/react";
+import { navbarClassNames, Item } from "./Navbar.styled";
 import {
   NavbarBrand,
   NavbarContent,
@@ -10,7 +10,10 @@ import {
   NavbarMenuToggle,
   NavbarMenu,
   NavbarMenuItem,
-  Dropdown, DropdownTrigger, DropdownMenu, DropdownItem
+  Dropdown,
+  DropdownTrigger,
+  DropdownMenu,
+  DropdownItem,
 } from "@nextui-org/react";
 
 import { LOGO } from "../../assets";
@@ -26,7 +29,7 @@ const navbarItems = [
 export const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   return (
-    <NavbarStyled
+    <NextNavbar
       isMenuOpen={isMenuOpen}
       onMenuOpenChange={setIsMenuOpen}
       classNames={navbarClassNames}
@@ -43,21 +46,20 @@ export const Navbar = () => {
             </Link>
           </NavbarItem>
         ))}
-        <Button  radius="full"  variant="bordered" className={"text-white border-primary bg-primary"}>
+        <Button
+          radius="full"
+          variant="bordered"
+          className={"text-white border-primary bg-primary"}
+        >
           Umów prezentacje
         </Button>
         <Dropdown>
           <DropdownTrigger>
-            <Button
-                variant="bordered"
-                color="transparent"
-            >
-             PL
+            <Button variant="bordered" color="transparent">
+              PL
             </Button>
           </DropdownTrigger>
-          <DropdownMenu className={''}
-              onAction={(key) => alert(key)}
-          >
+          <DropdownMenu className={""} onAction={(key) => alert(key)}>
             <DropdownItem key="new"> English</DropdownItem>
             <DropdownItem key="copy">Deutch</DropdownItem>
             <DropdownItem key="edit">Franch</DropdownItem>
@@ -79,6 +81,6 @@ export const Navbar = () => {
           </NavbarMenuItem>
         ))}
       </NavbarMenu>
-    </NavbarStyled>
+    </NextNavbar>
   );
 };

@@ -2,3 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
+.group[data-filled-within="true"] .group-data-\[filled-within\=true\]\:text-foreground-600{
+    color: rgb(163 106 47) !important;
+}
