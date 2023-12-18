@@ -42,7 +42,7 @@ export const Claim = ({
         <section className="gap-8 flex flex-col md:flex-row">
           {buttonPrimaryText && (
             <Button
-              radius="sm"
+              radius="full"
               onClick={buttonPrimaryAction}
               size="lg"
               color="secondary"
@@ -51,10 +51,10 @@ export const Claim = ({
             >
               {buttonPrimaryText}
             </Button>
-          )}
+           )}
           {buttonSecondaryText && (
             <Button
-              radius="sm"
+              radius="full"
               onClick={buttonPrimaryAction}
               size="lg"
               color="primary"

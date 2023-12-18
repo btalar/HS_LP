@@ -1,0 +1,17 @@
+{
+  "title": "Gatsby Polski",
+  "description": "Rozpocznij swój następny, wspaniały projekt Gatsby przy użyciu tego domyślnego startera-intl. Ten starter zawiera podstawowe pliki konfiguracyjne Gatsby, które mogą ci się przydać.",
+  "author": "@wiziple",
+  "hello": "Cześć ludzie",
+  "welcome": "Witaj na swojej nowej stronie Gatsby.",
+  "title_page2": "Strona druga",
+  "hello_page2": "Cześć z drugiej strony",
+  "go_page2": "Idź do strony 2",
+  "build": "Teraz zbuduj coś wielkiego.",
+  "welcome_page2": "Witaj na stronie 2",
+  "go_back": "Wróć do strony głównej",
+  "notfound": {
+    "header": "NIE ZNALEZIONO",
+    "description": "Właśnie trafiłeś na trasę, której nie ma... smutek."
+  }
+}

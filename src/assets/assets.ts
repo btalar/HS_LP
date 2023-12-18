@@ -50,6 +50,7 @@ import logoWhite from "./../assets/logo_white.png";
 import rect from "./../assets/rect.png";
 import appstore from "./../assets/app-store.svg";
 import googleplay from "./../assets/google-play.svg";
+import cover from "./../assets/cover2.png";
 
 export const APP_STORE = appstore;
 export const GOOGLE_PLAY = googleplay;
@@ -67,6 +68,8 @@ export const SVG4 = svg4;
 export const SVG5 = svg5;
 export const SVG6 = svg6;
 export const SVG7 = svg7;
+
+export const COVER = cover;
 
 export const BLOCK9 = block9;
 export const BLOCK1 = block1;

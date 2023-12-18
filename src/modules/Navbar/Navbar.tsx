@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import { Navbar as NextNavbar } from "@nextui-org/react";
 import { navbarClassNames, Item, NavbarWrapper } from "./Navbar.styled";
 import {
   NavbarBrand,
@@ -15,18 +14,19 @@ import {
   DropdownMenu,
   DropdownItem,
 } from "@nextui-org/react";
+import {   useIntl } from "gatsby-plugin-intl";
 
 import { LOGO, LOGO_WHITE } from "../../assets";
 
 const navbarItems = [
   { text: "Home", href: "#" },
   { text: "Produkt", href: "#" },
-  { text: "Funkcjonalności", href: "#" },
-  { text: "Blog", href: "#" },
+  { text: "Funkcje", href: "#" },
   { text: "Kontakt", href: "#" },
 ];
 
 export const Navbar = () => {
+  const intl = useIntl();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   return (
     <NavbarWrapper
@@ -56,24 +56,25 @@ export const Navbar = () => {
             size="lg"
             variant="bordered"
             className="text-white"
+            radius="full"
           >
-            Umów prezentacje
+            Kontakt z konsultantem
           </Button>
-          <Dropdown>
+          <Dropdown backdrop="blur">
             <DropdownTrigger>
               <Button
-                style={{ fontSize: 15, height: 60 }}
+                style={{ fontSize: 16, height: 60 }}
                 size="lg"
                 variant="bordered"
                 className="text-white"
               >
-                PL
+                {intl.locale}
               </Button>
             </DropdownTrigger>
-            <DropdownMenu className={""} onAction={(key) => alert(key)}>
-              <DropdownItem key="new"> English</DropdownItem>
-              <DropdownItem key="copy">Deutch</DropdownItem>
-              <DropdownItem key="edit">Franch</DropdownItem>
+            <DropdownMenu onAction={(e) => (window.location = `/${e}`)}>
+              <DropdownItem key="pl">PL</DropdownItem>
+              <DropdownItem key="en">EN</DropdownItem>
+              <DropdownItem key="de">DE</DropdownItem>
             </DropdownMenu>
           </Dropdown>
         </div>

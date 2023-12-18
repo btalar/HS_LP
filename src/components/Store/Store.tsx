@@ -6,7 +6,7 @@ const Store = () => {
   return (
     <div>
       <SectionWrapper>
-        <div className="flex flex-col gap-[20px]">
+        <div className="flex flex-col gap-[80px]">
           <Claim titleClassName="text-[60px]" title="Hotelspot Store" />
           <div className="w-full h-[300px] bg-default-100 rounded-xl"></div>
         </div>

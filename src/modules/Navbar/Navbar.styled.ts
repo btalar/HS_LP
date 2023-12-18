@@ -4,8 +4,7 @@ import { Navbar as NextNavbar } from "@nextui-org/react";
 export const NavbarWrapper = styled(NextNavbar)`   
   background: transparent!important;
   backdrop-filter: none!important;
- 
-  position: absolute;
+  padding: 30px 0; 
   top: 0;
 `;
 

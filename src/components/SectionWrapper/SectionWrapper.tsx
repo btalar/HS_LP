@@ -16,7 +16,7 @@ export const SectionWrapper = ({
   noGap,
 }: SectionWrapperType) => (
   <section
-    className={`${!noMarginVertical && "my-10"} ${!noGap && "px-6"} ${
+    className={`${!noMarginVertical && "my-[65px]"} ${!noGap && "px-6"} ${
       isFluid ? "w-full " : "container mx-auto max-w-[1440px]"
     }  ${className}`}
   >
