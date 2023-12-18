@@ -1,4 +1,13 @@
 import styled from "styled-components";
+import { Navbar as NextNavbar } from "@nextui-org/react";
+
+export const NavbarWrapper = styled(NextNavbar)`   
+  background: transparent!important;
+  backdrop-filter: none!important;
+ 
+  position: absolute;
+  top: 0;
+`;
 
 export const Item = styled.p`
   font-size: 0.9rem;
@@ -8,6 +17,6 @@ export const Item = styled.p`
 `;
 
 export const navbarClassNames = {
-  base: "bg-transparent p-[10px]",
   wrapper: "max-w-[1440px]",
+
 };

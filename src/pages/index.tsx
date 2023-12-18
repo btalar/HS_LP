@@ -1,6 +1,6 @@
 import React, { FC } from "react";
 import { PageProps } from "gatsby";
-import { About, Layout, Header, Advantage, Navbar, Footer } from "../modules";
+import {About, Layout, Header, Advantage, Navbar, Footer, Hero} from "../modules";
 
 import { SectionImage } from "../modules/SectionImage";
 import { Functional } from "../components/Functional/Functional";
@@ -13,7 +13,6 @@ import Store from "../components/Store/Store";
 const IndexPage: FC<PageProps> = () => {
   return (
     <Layout>
-      <Navbar />
       <Header />
       <SectionImage />
       <About />

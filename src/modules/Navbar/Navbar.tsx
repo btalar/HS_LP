@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Navbar as NextNavbar } from "@nextui-org/react";
-import { navbarClassNames, Item } from "./Navbar.styled";
+import { navbarClassNames, Item, NavbarWrapper } from "./Navbar.styled";
 import {
   NavbarBrand,
   NavbarContent,
@@ -29,11 +29,12 @@ const navbarItems = [
 export const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   return (
-    <NextNavbar
+    <NavbarWrapper
       isMenuOpen={isMenuOpen}
       onMenuOpenChange={setIsMenuOpen}
       classNames={navbarClassNames}
       position="static"
+      isBlurred={false}
     >
       <NavbarBrand className="flex-0 mr-[70px]" style={{ flex: "unset" }}>
         <img src={LOGO_WHITE} />
@@ -92,6 +93,6 @@ export const Navbar = () => {
           </NavbarMenuItem>
         ))}
       </NavbarMenu>
-    </NextNavbar>
+    </NavbarWrapper>
   );
 };

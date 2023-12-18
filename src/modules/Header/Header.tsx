@@ -2,6 +2,7 @@ import React from "react";
 import { BLOCK9 } from "../../assets";
 import { Claim, ClaimType } from "../../components";
 import styled from "styled-components";
+import {Navbar} from "../Navbar";
 
 const ClaimProperties: ClaimType = {
   title: "Intuicyjna aplikacja cyfrowego concierge dla hoteli",
@@ -29,9 +30,10 @@ export const Header = () => {
     <HeaderStyled
       background={BLOCK9}
       mobileBackground={BLOCK9}
-      className="h-screen  bg-cover  bg-topflex justify-center -mt-[84px] rounded-b-[100px]"
+      className="h-[1080px]  bg-contain  justify-center max-w-[1920px] m-auto"
     >
-      <div className="flex px-6 gap-8 w-full h-full flex-col justify-center max-w-[1440px] m-auto">
+        <Navbar/>
+      <div className="flex px-3 gap-8 w-full h-full flex-col justify-center max-w-[1440px] m-auto">
         <Claim {...ClaimProperties} />
       </div>
     </HeaderStyled>
