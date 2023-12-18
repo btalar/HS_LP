@@ -40,7 +40,7 @@ const HowItWorks = () => {
   return (
     <div>
       <SectionWrapper>
-        <div className="flex flex-row">
+        <div className="flex flex-row flex-1 justify-between">
           <div className="flex flex-col gap-[40px]">
             <Claim title="Jak to działa?" />
             <div className="flex flex-col gap-[15px]">
