@@ -4,13 +4,12 @@ import { Claim, ClaimType } from "../../components";
 import styled from "styled-components";
 
 const ClaimProperties: ClaimType = {
-  title:
-    "Intuicyjna aplikacja cyfrowego concierge dla hoteli na 24' dotykowym ekranie ",
+  title: "Intuicyjna aplikacja cyfrowego concierge dla hoteli",
   description: `Interaktywny cyfrowy concierge hotelowy z dotykowym ekranem,
   który zapewnia gościom wszystkie niezbędne informacje dotyczące udogodnień
   oraz wszystkich usług hotelowych, rekomendacje lokalnych wydarzeń, wycieczek,
   restauracji.`,
-  hasSeparator: true,
+  hasSeparator: false,
   buttonSecondaryText: "Dowiedz się więcej",
   theme: "dark",
 };
@@ -30,9 +29,9 @@ export const Header = () => {
     <HeaderStyled
       background={BLOCK9}
       mobileBackground={BLOCK9}
-      className="h-screen bg-center bg-cover flex justify-center -mt-[64px]"
+      className="h-screen  bg-cover  bg-topflex justify-center -mt-[84px] rounded-b-[100px]"
     >
-      <div className="flex px-6 gap-8 w-full h-full flex-col justify-center max-w-[1200px] m-auto">
+      <div className="flex px-6 gap-8 w-full h-full flex-col justify-center max-w-[1440px] m-auto">
         <Claim {...ClaimProperties} />
       </div>
     </HeaderStyled>

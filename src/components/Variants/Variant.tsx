@@ -23,7 +23,7 @@ export const Variant = () => {
         </div>
         <div className="flex flex-row gap-[50px] h-[700px]">
           <div
-            className="flex-1 bg-center rounded-xl relative p-[50px] flex flex-col justify-end gap-[10px]"
+            className="flex-1 bg-center rounded-[50px] relative p-[50px] flex flex-col justify-end gap-[10px]"
             style={{ backgroundImage: `url("${BLOCK5}")` }}
           >
             <Icon src={SVG4} />
@@ -34,7 +34,7 @@ export const Variant = () => {
             </p>
           </div>
           <div
-            className="flex-1 bg-center rounded-xl relative p-[50px] flex flex-col justify-end gap-[10px]"
+            className="flex-1 bg-center rounded-[50px] relative p-[50px] flex flex-col justify-end gap-[10px]"
             style={{ backgroundImage: `url("${BLOCK6}")` }}
           >
             <Icon src={SVG5} />

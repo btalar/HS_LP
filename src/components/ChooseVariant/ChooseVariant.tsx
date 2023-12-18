@@ -8,7 +8,7 @@ export const ChooseVariant = () => {
 
   return (
     <div className="flex flex-col gap-3">
-      <div>Wybierz wariant:</div>
+      <div className="text-[20px] font-semibold">Wybierz wariant:</div>
       <div className="flex flex-row gap-4">
         <button
           onClick={() => setVariant("white")}

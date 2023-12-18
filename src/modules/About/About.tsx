@@ -15,10 +15,12 @@ import { ChooseVariant } from "../../components/ChooseVariant";
 export const About = () => {
   return (
     <SectionWrapper>
-      <div className="flex gap-[50px] max-h-[600px]">
-        <div className="gap-[10px] flex flex-col">
+      <div className="flex gap-[50px] ">
+        <div className="gap-[10px] flex flex-col max-w-[400px] justify-between ">
           <Claim
+            titleClassName="text-[60px]"
             title="wyjątkowy niepowtarzalny design"
+            descriptionClassName="text-[15px]"
             description="Cyfrowy concierge to aplikacja, która służy do zapewnienia
 dostępu do informacji 24/7, prezentacji wszelkich udogodnień
 hotelowych, a także promocji ofert specjalnych
@@ -29,15 +31,13 @@ za pomocą technologii cyfrowej."
             <Image src={POD4} />
           </div>
         </div>
-        <div className="">
-          <Image
-            classNames={{
-              wrapper: "h-full",
-            }}
-            className="h-full"
-            src={POD5}
-          />
-        </div>
+        <Image
+          classNames={{
+            wrapper: "h-full",
+          }}
+          className="h-full"
+          src={POD5}
+        />
         <div className="flex flex-col justify-between">
           <Image src={POD10} />
           <Image src={POD11} />
