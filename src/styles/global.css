@@ -5,3 +5,14 @@
 .group[data-filled-within="true"] .group-data-\[filled-within\=true\]\:text-foreground-600{
     color: rgb(163 106 47) !important;
 }
+
+
+#___gatsby .react-multi-carousel-dot button {
+    width: 15px;
+    height: 15px;
+    border: none;
+    background: lightgray;
+}
+#___gatsby .react-multi-carousel-dot--active button{
+    background: rgb(163 106 47);
+}

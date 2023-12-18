@@ -43,6 +43,23 @@ import svg5 from "./../assets/svg/5.svg";
 import svg6 from "./../assets/svg/6.svg";
 import svg7 from "./../assets/svg/7.svg";
 
+import pod10 from "./../assets/blocks/10.png";
+import pod11 from "./../assets/blocks/11.png";
+import pod12 from "./../assets/blocks/12.png";
+import logoWhite from "./../assets/logo_white.png";
+import rect from "./../assets/rect.png";
+import appstore from "./../assets/app-store.svg";
+import googleplay from "./../assets/google-play.svg";
+
+export const APP_STORE = appstore;
+export const GOOGLE_PLAY = googleplay;
+export const RECT = rect;
+export const LOGO_WHITE = logoWhite;
+export const POD10 = pod10;
+export const POD11 = pod11;
+
+export const POD12 = pod12;
+
 export const SVG1 = svg1;
 export const SVG2 = svg2;
 export const SVG3 = svg3;

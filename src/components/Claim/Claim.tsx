@@ -22,36 +22,39 @@ export const Claim = ({
   theme = "light",
 }: ClaimType) => (
   <>
-    <Title className={theme === "dark" ? "text-white" : undefined}>
-      {title}
-    </Title>
+    <Title className={theme === "dark" ? "!text-white" : ""}>{title}</Title>
     {hasSeparator && <Separator />}
-    <Description className={theme === "dark" ? "text-white" : undefined}>
-      {description}
-    </Description>
-    <section className="gap-8 flex flex-col md:flex-row">
-      {buttonPrimaryText && (
-        <Button
-          radius="sm"
-          onClick={buttonPrimaryAction}
-          size="lg"
-          color="secondary"
-          className={"text-black border-primary bg-secondary"}
-          variant="bordered"
-        >
-          {buttonPrimaryText}
-        </Button>
-      )}
-      {buttonSecondaryText && (
-        <Button
-          radius="sm"
-          onClick={buttonPrimaryAction}
-          size="lg"
-          color="primary"
-        >
-          {buttonSecondaryText}
-        </Button>
-      )}
-    </section>
+    {description && (
+      <Description className={theme === "dark" ? "!text-white" : ""}>
+        {description}
+      </Description>
+    )}
+    {buttonPrimaryText ||
+      (buttonSecondaryText && (
+        <section className="gap-8 flex flex-col md:flex-row">
+          {buttonPrimaryText && (
+            <Button
+              radius="sm"
+              onClick={buttonPrimaryAction}
+              size="lg"
+              color="secondary"
+              className={"text-black border-primary bg-secondary"}
+              variant="bordered"
+            >
+              {buttonPrimaryText}
+            </Button>
+          )}
+          {buttonSecondaryText && (
+            <Button
+              radius="sm"
+              onClick={buttonPrimaryAction}
+              size="lg"
+              color="primary"
+            >
+              {buttonSecondaryText}
+            </Button>
+          )}
+        </section>
+      ))}
   </>
 );

@@ -16,7 +16,7 @@ import {
   DropdownItem,
 } from "@nextui-org/react";
 
-import { LOGO } from "../../assets";
+import { LOGO, LOGO_WHITE } from "../../assets";
 
 const navbarItems = [
   { text: "Home", href: "#" },
@@ -35,7 +35,7 @@ export const Navbar = () => {
       classNames={navbarClassNames}
     >
       <NavbarBrand>
-        <img src={LOGO} />
+        <img src={LOGO_WHITE} />
       </NavbarBrand>
       <NavbarMenuToggle className="lg:hidden" />
       <NavbarContent className="lg:flex hidden gap-4" justify="center">
@@ -46,16 +46,12 @@ export const Navbar = () => {
             </Link>
           </NavbarItem>
         ))}
-        <Button
-          radius="full"
-          variant="bordered"
-          className={"text-white border-primary bg-primary"}
-        >
+        <Button size="lg" variant="bordered" className="text-white">
           Umów prezentacje
         </Button>
         <Dropdown>
           <DropdownTrigger>
-            <Button variant="bordered" color="transparent">
+            <Button size="lg" variant="bordered" className="text-white">
               PL
             </Button>
           </DropdownTrigger>

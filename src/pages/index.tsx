@@ -7,6 +7,8 @@ import { Functional } from "../components/Functional/Functional";
 import { Variant } from "../components/Variants/Variant";
 import { Details } from "../components/Details/Details";
 import { MobileApp } from "../components/MobileApp/MobileApp";
+import HowItWorks from "../components/HowItWorks/HowItWorks";
+import Store from "../components/Store/Store";
 
 const IndexPage: FC<PageProps> = () => {
   return (
@@ -17,9 +19,11 @@ const IndexPage: FC<PageProps> = () => {
       <About />
       <Advantage />
       <Functional />
+      <HowItWorks />
       <Details />
       <Variant />
       <MobileApp />
+      <Store />
       <Footer />
     </Layout>
   );

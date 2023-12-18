@@ -1,5 +1,5 @@
 import React from "react";
-import { BLOCK9, HERO_BG, HERO_BG_MOBILE } from "../../assets";
+import { BLOCK9 } from "../../assets";
 import { Claim, ClaimType } from "../../components";
 import styled from "styled-components";
 
@@ -12,6 +12,7 @@ const ClaimProperties: ClaimType = {
   restauracji.`,
   hasSeparator: true,
   buttonSecondaryText: "Dowiedz się więcej",
+  theme: "dark",
 };
 
 const HeaderStyled = styled.div<{
@@ -29,10 +30,10 @@ export const Header = () => {
     <HeaderStyled
       background={BLOCK9}
       mobileBackground={BLOCK9}
-      className="h-screen bg-center bg-cover flex justify-center"
+      className="h-screen bg-center bg-cover flex justify-center -mt-[64px]"
     >
       <div className="flex px-6 gap-8 w-full h-full flex-col justify-center max-w-[1200px] m-auto">
-        <Claim theme="dark" {...ClaimProperties} />
+        <Claim {...ClaimProperties} />
       </div>
     </HeaderStyled>
   );
