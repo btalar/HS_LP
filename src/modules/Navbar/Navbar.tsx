@@ -15,6 +15,7 @@ import {
   DropdownMenu,
   DropdownItem,
 } from "@nextui-org/react";
+import { Link as IntlLink, useIntl } from "gatsby-plugin-intl";
 
 import { LOGO, LOGO_WHITE } from "../../assets";
 
@@ -27,6 +28,8 @@ const navbarItems = [
 ];
 
 export const Navbar = () => {
+  const intl = useIntl();
+  console.log(intl);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   return (
     <NextNavbar
@@ -66,13 +69,13 @@ export const Navbar = () => {
                 variant="bordered"
                 className="text-white"
               >
-                PL
+                {intl.locale}
               </Button>
             </DropdownTrigger>
-            <DropdownMenu className={""} onAction={(key) => alert(key)}>
-              <DropdownItem key="new"> English</DropdownItem>
-              <DropdownItem key="copy">Deutch</DropdownItem>
-              <DropdownItem key="edit">Franch</DropdownItem>
+            <DropdownMenu onAction={(e) => (window.location = `/${e}`)}>
+              <DropdownItem key="pl">PL</DropdownItem>
+              <DropdownItem key="en">EN</DropdownItem>
+              <DropdownItem key="de">DE</DropdownItem>
             </DropdownMenu>
           </Dropdown>
         </div>

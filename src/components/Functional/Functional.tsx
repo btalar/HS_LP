@@ -30,7 +30,7 @@ export const Functional = () => {
         </div>
         <div className="flex-1 flex flex-col gap-[50px] relative">
           <div
-            className="flex-1 bg-center bg-cover rounded-xl relative p-[50px] flex flex-col justify-end gap-[10px] rounded-[50px]"
+            className="flex-1 bg-center bg-cover relative p-[50px] flex flex-col justify-end gap-[10px] rounded-[50px]"
             style={{ backgroundImage: `url("${BLOCK2}")` }}
           >
             <Icon src={SVG3} />
@@ -41,7 +41,7 @@ export const Functional = () => {
             </p>
           </div>
           <div
-            className="flex-1 bg-center bg-cover rounded-xl relative p-[50px] flex flex-col justify-end gap-[10px] rounded-[50px]"
+            className="flex-1 bg-center bg-cover relative p-[50px] flex flex-col justify-end gap-[10px] rounded-[50px]"
             style={{ backgroundImage: `url("${BLOCK3}")` }}
           >
             <Icon src={SVG2} />

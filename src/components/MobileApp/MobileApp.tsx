@@ -16,7 +16,7 @@ export const MobileApp = () => {
                 Aplikacja <br /> mobilna
               </>
             }
-            descriptionClassName="max-w-[400px]"
+            descriptionClassName="max-w-[300px]"
             description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ultricies dolor sed volutpat laoreet."
           />
           <div className="flex gap-[10px]">
