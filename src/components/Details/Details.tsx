@@ -5,7 +5,7 @@ import { Button } from "@nextui-org/react";
 export const Details = () => {
   return (
     <div
-      className="rounded-t-[50px] bg-center h-[500px] flex flex-col gap-[40px] items-center justify-center"
+      className="bg-cover rounded-t-[50px] bg-center h-[500px] flex flex-col gap-[40px] items-center justify-center"
       style={{ backgroundImage: `url('${BLOCK4}')` }}
     >
       <div className="text-white text-[60px] font-bold text-center leading-none">

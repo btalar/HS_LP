@@ -19,7 +19,7 @@ export const About = () => {
         <div className="gap-[10px] flex flex-col max-w-[400px] justify-between ">
           <Claim
             titleClassName="text-[60px]"
-            title="wyjątkowy niepowtarzalny design"
+            title="wyjątkowy design"
             descriptionClassName="text-[15px]"
             description="Cyfrowy concierge to aplikacja, która służy do zapewnienia
 dostępu do informacji 24/7, prezentacji wszelkich udogodnień
