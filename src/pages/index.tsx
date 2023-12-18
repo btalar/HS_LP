@@ -1,22 +1,30 @@
 import React, { FC } from "react";
 import { PageProps } from "gatsby";
-import { About, Layout, Header, Advantage, Navbar , Footer} from "../modules";
-import { SubHeader } from "../modules/SubHeader";
-import { Functions } from "../modules/Functions";
-import {SectionImage} from "../modules/SectionImage";
+import { About, Layout, Header, Advantage, Navbar, Footer } from "../modules";
+
+import { SectionImage } from "../modules/SectionImage";
+import { Functional } from "../components/Functional/Functional";
+import { Variant } from "../components/Variants/Variant";
+import { Details } from "../components/Details/Details";
+import { MobileApp } from "../components/MobileApp/MobileApp";
+import HowItWorks from "../components/HowItWorks/HowItWorks";
+import Store from "../components/Store/Store";
 
 const IndexPage: FC<PageProps> = () => {
   return (
     <Layout>
       <Navbar />
       <Header />
-        <SubHeader />
       <SectionImage />
-
       <About />
       <Advantage />
-      <Functions />
-        <Footer/>
+      <Functional />
+      <HowItWorks />
+      <Details />
+      <Variant />
+      <MobileApp />
+      <Store />
+      <Footer />
     </Layout>
   );
 };

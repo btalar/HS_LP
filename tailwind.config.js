@@ -10,23 +10,24 @@ module.exports = {
   theme: {
     extend: {
       backgroundColor: {
-        'primary': '#A36A2F',
-        'primary-hover': '#825526',
-        'secondary' : '#F5EEE8',
+        primary: "#A36A2F",
+        "primary-hover": "#825526",
+        secondary: "#F5EEE8",
+        black: "#000",
       },
       textColor: {
-        'black': '#000', // replace with your text color
-        'white' : '#fff',
+        black: "#000", // replace with your text color
+        white: "#fff",
       },
       borderColor: {
-        'primary': '#A36A2F', // replace with your border color
-        'primary-hover': '#1c64b3', // replace with your border hover color
+        primary: "#A36A2F", // replace with your border color
+        "primary-hover": "#1c64b3", // replace with your border hover color
       },
-      borderWidth:{
-        'primary': '1px',
+      borderWidth: {
+        primary: "1px",
       },
       fontSize: {
-        'primary' : '14px'
+        primary: "14px",
       },
     },
   },

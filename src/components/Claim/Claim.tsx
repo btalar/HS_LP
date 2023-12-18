@@ -10,6 +10,7 @@ export type ClaimType = {
   buttonPrimaryAction?: () => void;
   buttonSecondaryText?: string;
   buttonSecondaryAction?: () => void;
+  theme?: "dark" | "light";
 };
 export const Claim = ({
   title,
@@ -18,35 +19,42 @@ export const Claim = ({
   buttonPrimaryText,
   buttonPrimaryAction,
   buttonSecondaryText,
-  buttonSecondaryAction,
+  theme = "light",
 }: ClaimType) => (
   <>
-    <Title>{title}</Title>
+    <Title className={theme === "dark" ? "!text-white" : ""}>{title}</Title>
     {hasSeparator && <Separator />}
-    <Description>{description}</Description>
-    <section className="gap-8 flex flex-col md:flex-row">
-      {buttonPrimaryText && (
-        <Button
-          radius="full"
-          onClick={buttonPrimaryAction}
-          size="lg"
-          color="secondary"
-          className={"text-black border-primary bg-secondary"}
-          variant="bordered"
-        >
-          {buttonPrimaryText}
-        </Button>
-      )}
-      {buttonSecondaryText && (
-        <Button
-           radius="full"
-          onClick={buttonPrimaryAction}
-          size="lg"
-          color="primary"
-        >
-          {buttonSecondaryText}
-        </Button>
-      )}
-    </section>
+    {description && (
+      <Description className={theme === "dark" ? "!text-white" : ""}>
+        {description}
+      </Description>
+    )}
+    {buttonPrimaryText ||
+      (buttonSecondaryText && (
+        <section className="gap-8 flex flex-col md:flex-row">
+          {buttonPrimaryText && (
+            <Button
+              radius="sm"
+              onClick={buttonPrimaryAction}
+              size="lg"
+              color="secondary"
+              className={"text-black border-primary bg-secondary"}
+              variant="bordered"
+            >
+              {buttonPrimaryText}
+            </Button>
+          )}
+          {buttonSecondaryText && (
+            <Button
+              radius="sm"
+              onClick={buttonPrimaryAction}
+              size="lg"
+              color="primary"
+            >
+              {buttonSecondaryText}
+            </Button>
+          )}
+        </section>
+      ))}
   </>
 );

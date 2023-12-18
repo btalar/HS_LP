@@ -1,26 +1,5 @@
 import styled from "styled-components";
 
-export const TextInput = styled.input`
-  background: #fff;
-  border: 1px solid #c5cee0;
-  border-radius: 6px;
-  height: 40px;
-  padding: 0 12px;
-  width: 100%;
-  font-size: 14px;
-`;
-
-export const TextAreaInput = styled.textarea`
-  background: #fff;
-  border: 1px solid #c5cee0;
-  border-radius: 6px;
-  padding: 12px;
-  width: 100%;
-  height: 120px;
-  resize: none;
-  font-size: 14px;
-`;
-
 export const CheckboxLabel = styled.label`
   display: inline-block;
   width: 24px;
@@ -50,35 +29,21 @@ export const CheckboxLabel = styled.label`
 `;
 
 export const RectImg = styled.img`
-max-width: 519px;
+  max-width: 519px;
   @media (max-width: 1104px) {
     display: none;
   }
 `;
 
 export const ContactForm = styled.div`
- max-width: 628px;
+  max-width: 628px;
   margin-top: 24px;
   font-size: 12px;
   color: #2e3a59;
 `;
 
-export const InputSection = styled.div`
-// w-[100%] flex justify-between gap-[24px]
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  gap: 24px;
-  
-  @media (max-width: 599px) {
-    flex-direction: column;
-    gap: 12px;
-    
-  }
-`;
-
 export const SubmitSection = styled.div`
- display: flex;
+  display: flex;
   align-items: end;
   @media (max-width: 599px) {
     flex-direction: column;
@@ -88,11 +53,10 @@ export const SubmitSection = styled.div`
 `;
 
 export const FooterInfo = styled.div`
-//flex justify-between max-w-[423px]
   display: flex;
   justify-content: space-between;
-  max-width: 423px;
-  @media (max-width: 500px) {
+  @media (max-width: 768px) {
     flex-direction: column;
+    gap: 50px;
   }
 `;

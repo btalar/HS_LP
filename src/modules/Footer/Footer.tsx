@@ -1,19 +1,9 @@
 import React from "react";
 import { Claim, SectionWrapper } from "../../components";
-import {
-  CheckboxLabel,
-  ContactForm,
-  FooterInfo,
-  InputSection,
-  RectImg,
-  SubmitSection,
-  TextAreaInput,
-  TextInput,
-} from "./Footer.styled";
-import { Button, Image } from "@nextui-org/react";
+import { ContactForm, FooterInfo, RectImg } from "./Footer.styled";
+import { Button, Image, Input, Textarea } from "@nextui-org/react";
 import { FOOTER_RECT } from "../../assets";
 import { LOGO } from "../../assets";
-
 export const Footer = () => {
   return (
     <SectionWrapper noMarginVertical isFluid className="bg-[#F5F5F5] py-8">
@@ -24,90 +14,104 @@ export const Footer = () => {
         <div>
           <Claim title="Skontaktuj się" />
           Skontaktuj się bezpośrednio poprzez telefon:
-          <h2 className="text-[24px] font-[600] text-[#006fee] mt-[12px]">
-            +48 123 456 789
+          <h2 className="text-[24px] font-[600] mt-[12px]">+48 123 456 789</h2>
+          <h2 className="text-[24px] font-[600] mt-[12px]">
+            office@hotelspot.com
           </h2>
           <ContactForm>
-            <p>Lub wypełnij poniższy formularz by skontaktować się mailowo:</p>
-            <div className="input-fields">
-              <InputSection className="upper mt-[12px] mb-[12px]">
-                <TextInput placeholder="Imię" />
-                <TextInput placeholder="Nazwisko" />
-              </InputSection>
-              <InputSection className="middle mb-[12px]">
-                <TextInput placeholder="E-mail" />
-                <TextInput placeholder="Numer telefonu" />
-              </InputSection>
-              <InputSection className="lower">
-                <TextAreaInput placeholder="Dodatkowe informacje" />
-              </InputSection>
-            </div>
-            <SubmitSection>
-              <div className="privacy-policy-check flex justify-between gap-[10px] mt-[24px]">
-                <input
-                  type="checkbox"
-                  id="privacy-checkbox"
-                  className="custom-checkbox hidden"
+            <div className="flex flex-col gap-3">
+              <div className="flex flex-row justify-around gap-3">
+                <Input
+                  variant="bordered"
+                  labelPlacement="inside"
+                  label="Imię"
                 />
-                <CheckboxLabel
-                  htmlFor="privacy-checkbox"
-                  className="checkbox-label"
+                <Input
+                  variant="bordered"
+                  labelPlacement="inside"
+                  label="Nazwisko"
                 />
+              </div>
+              <div className="flex flex-row justify-around gap-3">
+                <Input
+                  variant="bordered"
+                  type="email"
+                  labelPlacement="inside"
+                  label="E-mail"
+                />
+                <Input
+                  variant="bordered"
+                  labelPlacement="inside"
+                  label="Numer telefonu"
+                />
+              </div>
+              <div>
+                <Textarea
+                  variant="bordered"
+                  labelPlacement="inside"
+                  label="Wiadomość"
+                />
+              </div>
+              <div className="flex flex-row gap-4">
+                <Button
+                  radius="sm"
+                  variant="bordered"
+                  className={"text-white border-primary bg-primary"}
+                >
+                  Wyślij
+                </Button>
                 <p>
-                  Potwierdzam iż, zapoznałem się z{" "}
-                  <span className="cursor-pointer underline font-[600]">
-                    polityką prywatności
-                  </span>{" "}
-                  i wyrażam zgodę na przetwarzanie moich danych osobowych w celu
-                  udzielenia odpowiedzi na moją wiadomość.
+                  Wysyłając potwierdzam iż, zapoznałem się z{" "}
+                  <a className="underline font-bold" href="#">
+                    {" "}
+                    polityką prywatności{" "}
+                  </a>{" "}
+                  i wyrażam zgodę na przetwarzanie moich danych osobowych.
                 </p>
               </div>
-              <Button
-                color="primary"
-                size="lg"
-                variant="flat"
-                className="w-full lg:w-auto"
-              >
-                Wyślij
-              </Button>
-            </SubmitSection>
-            <p className="mt-[25px]">
-              Kontakt bezpośredni:{" "}
-              <span className="cursor-pointer text-[#006fee] text-[14px] font-[500]">
-                example@example.com
-              </span>
-            </p>
+            </div>
           </ContactForm>
         </div>
         <RectImg src={FOOTER_RECT} />
       </SectionWrapper>
       <div className="footer-info_wrapper border-t border-[#c5cee0] px-0 lg:px-6 py-[64px] text-[#192038] text-[14px] max-w-[1200px] mx-auto">
         <FooterInfo>
-          <div className="left">
-            <Image className="mb-[24px]" src={LOGO} />
-            <ul>
-              <li className="mb-[12px]">Nazwa spółki/działaności</li>
-              <li className="mb-[12px]">Numer REGON</li>
-              <li className="mb-[12px]">NIP</li>
-              <li className="mb-[12px] cursor-pointer text-[#006fee]">
-                example@example.com
-              </li>
-              <li className=" cursor-pointer text-[#006fee]">
-                +48 123 456 789
-              </li>
-            </ul>
+          <div className="flex flex-row gap-20">
+            <div className="left flex flex-col justify-end">
+              <Image className="mb-[24px]" src={LOGO} />
+              <ul>
+                <li className="mb-[12px]">Nazwa spółki/działaności</li>
+                <li className="mb-[12px]">Numer REGON</li>
+                <li className="mb-[12px]">NIP</li>
+                <li className="mb-[12px] cursor-pointer">
+                  example@example.com
+                </li>
+                <li className=" cursor-pointer">+48 123 456 789</li>
+              </ul>
+            </div>
+            <div className="right flex flex-col justify-end">
+              <ul>
+                <li className="mb-[12px]">Generuj więcej rozmów</li>
+                <li className="mb-[12px]">Pod</li>
+                <li className="mb-[12px]">Zalety</li>
+                <li className="mb-[12px]">Fukcjonalności</li>
+                <li>Kontakt</li>
+              </ul>
+            </div>
           </div>
-          <div className="right mt-[42px]">
-            <h4 className="mb-[24px] text-[#2e3a59] text-[16px] font-[500]">
-              Nawigacja
-            </h4>
-            <ul>
-              <li className="mb-[12px]">Generuj więcej rozmów</li>
-              <li className="mb-[12px]">Pod</li>
-              <li className="mb-[12px]">Zalety</li>
-              <li className="mb-[12px]">Fukcjonalności</li>
-              <li>Kontakt</li>
-            </ul>
+          <div className="flex flex-col gap-4">
+            <Claim title="Dołącz do newslettera" />
+            <div className="flex flex-row items-center gap-4">
+              <Input size="sm" label="Email" variant="bordered" />
+              <Button
+                size="lg"
+                radius="sm"
+                variant="bordered"
+                className={"text-white border-primary bg-primary"}
+              >
+                Wyślij
+              </Button>
+            </div>
           </div>
         </FooterInfo>
       </div>

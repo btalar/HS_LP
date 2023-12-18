@@ -1,71 +1,47 @@
 import React from "react";
 import { Card, CardFooter, Image, CardHeader } from "@nextui-org/react";
-import { POD1, POD2, POD3 } from "../../assets";
+import {
+  POD1,
+  POD10,
+  POD11,
+  POD12,
+  POD2,
+  POD3,
+  POD4,
+  POD5,
+} from "../../assets";
 import { Claim, SectionWrapper } from "../../components";
+import { ChooseVariant } from "../../components/ChooseVariant";
 export const About = () => {
   return (
     <SectionWrapper>
-      <SectionWrapper noGap>
-        <Claim title="Cyfrowy" description="Woman listing to music" />
-      </SectionWrapper>
-
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
-        <div className="col-span-1 h-300 lg:h-656">
-          <Card isFooterBlurred radius="lg" className="border-none">
-            <Image
-              isZoomed
-              alt="Lorem Ipsum has been the industry's standard dummy text ever since the 1500s"
-              className="object-cover"
-              height={600}
-              src={POD1}
-              width={600}
-            />
-            <CardFooter className="justify-between before:bg-white/10 border-white/20 border-1 overflow-hidden py-1 absolute before:rounded-xl rounded-large bottom-1 w-[calc(100%_-_8px)] shadow-small ml-1 z-10">
-              <p className="text-tiny text-white/80">Available soon.</p>
-            </CardFooter>
-          </Card>
+      <div className="flex gap-[50px] max-h-[600px]">
+        <div className="gap-[10px] flex flex-col">
+          <Claim
+            title="wyjątkowy niepowtarzalny design"
+            description="Cyfrowy concierge to aplikacja, która służy do zapewnienia
+dostępu do informacji 24/7, prezentacji wszelkich udogodnień
+hotelowych, a także promocji ofert specjalnych
+za pomocą technologii cyfrowej."
+          />
+          <ChooseVariant />
+          <div>
+            <Image src={POD4} />
+          </div>
         </div>
-        <div className="col-span-1 flex-1 flex flex-col gap-4 justify-between">
-          <div className="h-300 flex-1">
-            <Card isFooterBlurred radius="lg" className="border-none">
-              <CardHeader className="absolute z-10 top-1 flex-col !items-start">
-                <p className="text-tiny text-white/60 uppercase font-bold">
-                  What to watchsss
-                </p>
-                <h4 className="text-white font-medium text-large">
-                  Stream the Acme event
-                </h4>
-              </CardHeader>
-              <Image
-                isZoomed
-                alt="Woman listing to music"
-                className="object-cover"
-                height={300}
-                src={POD2}
-                width={600}
-              />
-              <CardFooter className="justify-between before:bg-white/10 border-white/20 border-1 overflow-hidden py-1 absolute before:rounded-xl rounded-large bottom-1 w-[calc(100%_-_8px)] shadow-small ml-1 z-10">
-                <p className="text-tiny text-white/80">Available soon.</p>
-              </CardFooter>
-            </Card>
-          </div>
-          <div className="h-300 ">
-            <div className="h-300">
-              <Card isFooterBlurred radius="lg" className="border-none">
-                <Image
-                  isZoomed
-                  alt="Woman listing to music"
-                  className="object-cover"
-                  height={300}
-                  src={POD3}
-                  width={600}
-                />
-                <CardFooter className="justify-between before:bg-white/10 border-white/20 border-1 overflow-hidden py-1 absolute before:rounded-xl rounded-large bottom-1 w-[calc(100%_-_8px)] shadow-small ml-1 z-10">
-                  <p className="text-tiny text-white/80">Available soon.</p>
-                </CardFooter>
-              </Card>
-            </div>
-          </div>
+        <div className="">
+          <Image
+            classNames={{
+              wrapper: "h-full",
+            }}
+            className="h-full"
+            src={POD5}
+          />
+        </div>
+        <div className="flex flex-col justify-between">
+          <Image src={POD10} />
+          <Image src={POD11} />
+          <Image src={POD12} />
         </div>
       </div>
     </SectionWrapper>

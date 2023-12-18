@@ -1,6 +1,6 @@
-import React, { useEffect, useState } from "react";
-
-import { navbarClassNames, NavbarStyled , Item} from "./Navbar.styled";
+import React, { useState } from "react";
+import { Navbar as NextNavbar } from "@nextui-org/react";
+import { navbarClassNames, Item } from "./Navbar.styled";
 import {
   NavbarBrand,
   NavbarContent,
@@ -10,10 +10,13 @@ import {
   NavbarMenuToggle,
   NavbarMenu,
   NavbarMenuItem,
-  Dropdown, DropdownTrigger, DropdownMenu, DropdownItem
+  Dropdown,
+  DropdownTrigger,
+  DropdownMenu,
+  DropdownItem,
 } from "@nextui-org/react";
 
-import { LOGO } from "../../assets";
+import { LOGO, LOGO_WHITE } from "../../assets";
 
 const navbarItems = [
   { text: "Home", href: "#" },
@@ -26,13 +29,13 @@ const navbarItems = [
 export const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   return (
-    <NavbarStyled
+    <NextNavbar
       isMenuOpen={isMenuOpen}
       onMenuOpenChange={setIsMenuOpen}
       classNames={navbarClassNames}
     >
       <NavbarBrand>
-        <img src={LOGO} />
+        <img src={LOGO_WHITE} />
       </NavbarBrand>
       <NavbarMenuToggle className="lg:hidden" />
       <NavbarContent className="lg:flex hidden gap-4" justify="center">
@@ -43,21 +46,16 @@ export const Navbar = () => {
             </Link>
           </NavbarItem>
         ))}
-        <Button  radius="full"  variant="bordered" className={"text-white border-primary bg-primary"}>
+        <Button size="lg" variant="bordered" className="text-white">
           Umów prezentacje
         </Button>
         <Dropdown>
           <DropdownTrigger>
-            <Button
-                variant="bordered"
-                color="transparent"
-            >
-             PL
+            <Button size="lg" variant="bordered" className="text-white">
+              PL
             </Button>
           </DropdownTrigger>
-          <DropdownMenu className={''}
-              onAction={(key) => alert(key)}
-          >
+          <DropdownMenu className={""} onAction={(key) => alert(key)}>
             <DropdownItem key="new"> English</DropdownItem>
             <DropdownItem key="copy">Deutch</DropdownItem>
             <DropdownItem key="edit">Franch</DropdownItem>
@@ -79,6 +77,6 @@ export const Navbar = () => {
           </NavbarMenuItem>
         ))}
       </NavbarMenu>
-    </NavbarStyled>
+    </NextNavbar>
   );
 };

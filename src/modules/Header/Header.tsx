@@ -1,17 +1,18 @@
 import React from "react";
-import { HERO_BG, HERO_BG_MOBILE } from "../../assets";
+import { BLOCK9 } from "../../assets";
 import { Claim, ClaimType } from "../../components";
 import styled from "styled-components";
 
 const ClaimProperties: ClaimType = {
-  title: "Intuicyjna aplikacja cyfrowego concierge dla hoteli na 24' dotykowym ekranie ",
+  title:
+    "Intuicyjna aplikacja cyfrowego concierge dla hoteli na 24' dotykowym ekranie ",
   description: `Interaktywny cyfrowy concierge hotelowy z dotykowym ekranem,
   który zapewnia gościom wszystkie niezbędne informacje dotyczące udogodnień
   oraz wszystkich usług hotelowych, rekomendacje lokalnych wydarzeń, wycieczek,
   restauracji.`,
   hasSeparator: true,
   buttonSecondaryText: "Dowiedz się więcej",
-  buttonPrimaryText: "Umów prezentacje ",
+  theme: "dark",
 };
 
 const HeaderStyled = styled.div<{
@@ -27,9 +28,9 @@ const HeaderStyled = styled.div<{
 export const Header = () => {
   return (
     <HeaderStyled
-      background={HERO_BG}
-      mobileBackground={HERO_BG_MOBILE}
-      className="h-screen bg-center bg-cover flex justify-center"
+      background={BLOCK9}
+      mobileBackground={BLOCK9}
+      className="h-screen bg-center bg-cover flex justify-center -mt-[64px]"
     >
       <div className="flex px-6 gap-8 w-full h-full flex-col justify-center max-w-[1200px] m-auto">
         <Claim {...ClaimProperties} />
