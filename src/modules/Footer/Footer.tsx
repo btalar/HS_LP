@@ -4,22 +4,29 @@ import { ContactForm, FooterInfo, RectImg } from "./Footer.styled";
 import { Button, Image, Input, Textarea } from "@nextui-org/react";
 import { FOOTER_RECT } from "../../assets";
 import { LOGO } from "../../assets";
+import { useIntl } from "gatsby-plugin-intl";
+
 export const Footer = () => {
+  const intl = useIntl();
+
+  console.log(intl.formatMessage({ id: "title" }));
   return (
-    <SectionWrapper noMarginVertical isFluid className="bg-[#F5F5F5] py-8">
+    <SectionWrapper noMarginVertical isFluid className="py-8">
       <SectionWrapper
         className="mt-0 max-w-[1440px] flex gap-x-6 justify-between lg:px-6 px-0"
         noGap
       >
         <div>
           <Claim titleClassName="text-[60px]" title="Skontaktuj się" />
-          Skontaktuj się bezpośrednio poprzez telefon:
-          <h2 className="text-[32px] font-[600] mt-[12px]">+48 123 456 789</h2>
-          <h2 className="text-[32px] font-[600] mt-[12px]">
+          <div className="my-[40px]">
+            Skontaktuj się bezpośrednio poprzez telefon:
+          </div>
+          <h2 className="text-[32px] font-[600] mt-[25px]">+48 123 456 789</h2>
+          <h2 className="my-[25px] text-[32px] font-[600] mt-[12px]">
             office@hotelspot.com
           </h2>
           <ContactForm>
-            <div className="flex flex-col gap-3">
+            <div className="flex flex-col gap-[30px]">
               <div className="flex flex-row justify-around gap-3">
                 <Input
                   variant="bordered"
@@ -47,16 +54,16 @@ export const Footer = () => {
               </div>
               <div>
                 <Textarea
+                  className="textarea"
                   variant="bordered"
                   labelPlacement="inside"
                   label="Wiadomość"
                 />
               </div>
-              <div className="flex flex-row gap-4">
+              <div className="flex flex-row gap-[30px]">
                 <Button
                   radius="sm"
-                  variant="bordered"
-                  className={"text-white border-primary bg-primary"}
+                  className={"text-white !borer-none bg-primary"}
                 >
                   Wyślij
                 </Button>
@@ -78,7 +85,7 @@ export const Footer = () => {
         <FooterInfo>
           <div className="flex-1 flex flex-row gap-20">
             <div className="left flex flex-col justify-end">
-              <Image className="mb-[24px]" src={LOGO} />
+              <Image className="mb-[80px]" src={LOGO} />
               <ul className="">
                 <li className="mb-[12px] text-[14px]">
                   Nazwa spółki/działaności
@@ -88,11 +95,13 @@ export const Footer = () => {
                 <li className="mb-[12px] text-[14px] cursor-pointer">
                   example@example.com
                 </li>
-                <li className=" cursor-pointer">+48 123 456 789</li>
+                <li className="mb-[12px] text-[14px]  cursor-pointer">
+                  +48 123 456 789
+                </li>
               </ul>
             </div>
             <div className="right flex flex-col justify-end">
-              <ul>
+              <ul className="flex flex-col justify-end">
                 <li className="mb-[12px] text-[14px] font-bold">
                   Generuj więcej rozmów
                 </li>
@@ -101,18 +110,18 @@ export const Footer = () => {
                 <li className="mb-[12px] text-[14px] font-bold">
                   Fukcjonalności
                 </li>
-                <li>Kontakt</li>
+                <li className="mb-[12px] text-[14px] font-bold">Kontakt</li>
               </ul>
             </div>
           </div>
-          <div className="flex flex-1 flex-col gap-4">
+          <div className="flex flex-1 flex-col gap-[80px]">
             <Claim title="Dołącz do newslettera" titleClassName="text-[32px]" />
-            <div className="flex flex-row items-center gap-4">
+            <div className="flex flex-row  gap-4">
               <Input size="sm" label="Email" variant="bordered" />
               <Button
+                className="text-[12px] text-white bg-black"
                 size="lg"
                 radius="sm"
-                className={"text-white border-primary bg-primary"}
               >
                 Wyślij
               </Button>
@@ -137,7 +146,7 @@ export const Footer = () => {
           />
         </svg>
         <div className="line border-t border-[#c5cee0] w-[100%]"></div>
-        <p className="min-w-[180px]">© Copyright 2023 nazwa spółki</p>
+        <p className="min-w-[180px]">© Copyright 2023 Hotelspot</p>
       </div>
     </SectionWrapper>
   );

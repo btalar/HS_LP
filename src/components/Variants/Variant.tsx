@@ -17,7 +17,7 @@ import { Icon } from "../Functional/Functional";
 export const Variant = () => {
   return (
     <SectionWrapper className="">
-      <div className="flex flex-col gap-[40px]">
+      <div className="flex flex-col gap-[80px]">
         <div>
           <Claim title="Warianty" />
         </div>
