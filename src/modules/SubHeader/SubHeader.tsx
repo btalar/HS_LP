@@ -8,7 +8,7 @@ import { Claim } from "../../components";
 export const SubHeader = () => {
   return (
     <div className="py-20 bg-[#F5F5F5] flex justify-center">
-      <div className="max-w-[1200px] flex-1 flex flex-col lg:flex-row gap-x-20">
+      <div className="max-w-[1440px] flex-1 flex flex-col lg:flex-row gap-x-20">
         <Image width={512} height={512} src={HOME_POD_MINI} />
         <div className="flex flex-col gap-8 justify-center px-8">
           <Claim

@@ -8,6 +8,6 @@ export const Item = styled.p`
 `;
 
 export const navbarClassNames = {
-  base: "bg-transparent",
-  wrapper: "max-w-[1200px]",
+  base: "bg-transparent p-[10px]",
+  wrapper: "max-w-[1440px]",
 };

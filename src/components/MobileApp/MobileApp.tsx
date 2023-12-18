@@ -8,10 +8,15 @@ export const MobileApp = () => {
   return (
     <SectionWrapper>
       <div className="flex flex-row">
-        <div className="flex-1 flex flex-col gap-[20px] justify-center">
+        <div className="flex-1 flex flex-col gap-[40px] justify-center">
           <Claim
-            title="Aplikacja
-mobilna"
+            titleClassName="text-[60px] leading-none"
+            title={
+              <>
+                Aplikacja <br /> mobilna
+              </>
+            }
+            descriptionClassName="max-w-[400px]"
             description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ultricies dolor sed volutpat laoreet."
           />
           <div className="flex gap-[10px]">

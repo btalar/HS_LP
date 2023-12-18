@@ -10,7 +10,7 @@ module.exports = {
   theme: {
     extend: {
       backgroundColor: {
-        primary: "#A36A2F",
+        primary: "#A58754",
         "primary-hover": "#825526",
         secondary: "#F5EEE8",
         black: "#000",

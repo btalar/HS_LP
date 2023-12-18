@@ -8,14 +8,14 @@ export const Footer = () => {
   return (
     <SectionWrapper noMarginVertical isFluid className="bg-[#F5F5F5] py-8">
       <SectionWrapper
-        className="mt-0 max-w-[1200px] flex gap-x-6 justify-between lg:px-6 px-0"
+        className="mt-0 max-w-[1440px] flex gap-x-6 justify-between lg:px-6 px-0"
         noGap
       >
         <div>
-          <Claim title="Skontaktuj się" />
+          <Claim titleClassName="text-[60px]" title="Skontaktuj się" />
           Skontaktuj się bezpośrednio poprzez telefon:
-          <h2 className="text-[24px] font-[600] mt-[12px]">+48 123 456 789</h2>
-          <h2 className="text-[24px] font-[600] mt-[12px]">
+          <h2 className="text-[32px] font-[600] mt-[12px]">+48 123 456 789</h2>
+          <h2 className="text-[32px] font-[600] mt-[12px]">
             office@hotelspot.com
           </h2>
           <ContactForm>
@@ -74,16 +74,18 @@ export const Footer = () => {
         </div>
         <RectImg src={FOOTER_RECT} />
       </SectionWrapper>
-      <div className="footer-info_wrapper border-t border-[#c5cee0] px-0 lg:px-6 py-[64px] text-[#192038] text-[14px] max-w-[1200px] mx-auto">
+      <div className="footer-info_wrapper border-t border-[#c5cee0] px-0 lg:px-6 py-[64px] text-[#192038] text-[14px] max-w-[1440px] mx-auto">
         <FooterInfo>
-          <div className="flex flex-row gap-20">
+          <div className="flex-1 flex flex-row gap-20">
             <div className="left flex flex-col justify-end">
               <Image className="mb-[24px]" src={LOGO} />
-              <ul>
-                <li className="mb-[12px]">Nazwa spółki/działaności</li>
-                <li className="mb-[12px]">Numer REGON</li>
-                <li className="mb-[12px]">NIP</li>
-                <li className="mb-[12px] cursor-pointer">
+              <ul className="">
+                <li className="mb-[12px] text-[14px]">
+                  Nazwa spółki/działaności
+                </li>
+                <li className="mb-[12px] text-[14px]">Numer REGON</li>
+                <li className="mb-[12px] text-[14px]">NIP</li>
+                <li className="mb-[12px] text-[14px] cursor-pointer">
                   example@example.com
                 </li>
                 <li className=" cursor-pointer">+48 123 456 789</li>
@@ -91,22 +93,25 @@ export const Footer = () => {
             </div>
             <div className="right flex flex-col justify-end">
               <ul>
-                <li className="mb-[12px]">Generuj więcej rozmów</li>
-                <li className="mb-[12px]">Pod</li>
-                <li className="mb-[12px]">Zalety</li>
-                <li className="mb-[12px]">Fukcjonalności</li>
+                <li className="mb-[12px] text-[14px] font-bold">
+                  Generuj więcej rozmów
+                </li>
+                <li className="mb-[12px] text-[14px] font-bold">Pod</li>
+                <li className="mb-[12px] text-[14px] font-bold">Zalety</li>
+                <li className="mb-[12px] text-[14px] font-bold">
+                  Fukcjonalności
+                </li>
                 <li>Kontakt</li>
               </ul>
             </div>
           </div>
-          <div className="flex flex-col gap-4">
-            <Claim title="Dołącz do newslettera" />
+          <div className="flex flex-1 flex-col gap-4">
+            <Claim title="Dołącz do newslettera" titleClassName="text-[32px]" />
             <div className="flex flex-row items-center gap-4">
               <Input size="sm" label="Email" variant="bordered" />
               <Button
                 size="lg"
                 radius="sm"
-                variant="bordered"
                 className={"text-white border-primary bg-primary"}
               >
                 Wyślij
@@ -115,7 +120,7 @@ export const Footer = () => {
           </div>
         </FooterInfo>
       </div>
-      <div className="footer-copyright flex items-center justify-between text-[12px] text-[#2e3a59] gap-[24px] max-w-[1200px] mx-auto">
+      <div className="footer-copyright flex items-center justify-between text-[12px] text-[#2e3a59] gap-[24px] max-w-[1440px] mx-auto">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           width="40"

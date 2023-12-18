@@ -6,7 +6,7 @@ import { Image } from "@nextui-org/react";
 
 export const Icon = ({ src }: { src: any }) => {
   return (
-    <div className="left-[20px] top-[20px] absolute w-[80px] h-[80px] bg-white rounded-full flex justify-center items-center  shadow-lg ">
+    <div className="left-[50px] top-[50px] absolute w-[80px] h-[80px] bg-white rounded-full flex justify-center items-center  shadow-lg ">
       <Image src={src} />
     </div>
   );
@@ -15,10 +15,10 @@ export const Icon = ({ src }: { src: any }) => {
 export const Functional = () => {
   return (
     <SectionWrapper className="flex gap-[40px] flex-col">
-      <Claim title="Funkcje" />
+      <Claim title="Funkcje" titleClassName="text-[60px]" />
       <div className="flex gap-[50px] flex- h-[700px]">
         <div
-          className="flex-1 bg-center rounded-xl relative p-[50px] flex flex-col justify-end gap-[10px]"
+          className="flex-1 bg-center relative p-[50px] flex flex-col justify-end gap-[10px] bg-cover rounded-[50px]"
           style={{ backgroundImage: `url("${BLOCK1}")` }}
         >
           <Icon src={SVG1} />
@@ -30,7 +30,7 @@ export const Functional = () => {
         </div>
         <div className="flex-1 flex flex-col gap-[50px] relative">
           <div
-            className="flex-1 bg-center rounded-xl relative p-[50px] flex flex-col justify-end gap-[10px]"
+            className="flex-1 bg-center bg-cover rounded-xl relative p-[50px] flex flex-col justify-end gap-[10px] rounded-[50px]"
             style={{ backgroundImage: `url("${BLOCK2}")` }}
           >
             <Icon src={SVG3} />
@@ -41,7 +41,7 @@ export const Functional = () => {
             </p>
           </div>
           <div
-            className="flex-1 bg-center rounded-xl relative p-[50px] flex flex-col justify-end gap-[10px]"
+            className="flex-1 bg-center bg-cover rounded-xl relative p-[50px] flex flex-col justify-end gap-[10px] rounded-[50px]"
             style={{ backgroundImage: `url("${BLOCK3}")` }}
           >
             <Icon src={SVG2} />
