@@ -23,23 +23,35 @@ export const Variant = () => {
         </div>
         <div className="flex flex-row gap-[50px] h-[700px]">
           <div
-            className="flex-1 bg-center rounded-[50px] relative p-[50px] flex flex-col justify-end gap-[10px]"
-            style={{ backgroundImage: `url("${BLOCK5}")` }}
+            className="flex-1 bg-center rounded-[50px] relative p-[50px] flex flex-col justify-end items-start gap-[10px]"
+            style={{
+              background: `linear-gradient(to bottom, rgba(255,255,255,0),rgba(255,255,255,0),
+              rgba(255,255,255,1)), url("${BLOCK6}")`,
+            }}
           >
             <Icon src={SVG4} />
-            <h3 className="text-white text-[40px]">Asystent głosowy</h3>
-            <p className="text-white text-[16px]">
+            <div className="bg-black text-white py-1 px-4 rounded-[50px]">
+              STACJONARNY POD
+            </div>
+            <h3 className="text-black text-[40px]">Asystent głosowy</h3>
+            <p className="text-black text-[16px]">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus
               sed volutpat laoreet. Mauris blandit interdum magna.
             </p>
           </div>
           <div
-            className="flex-1 bg-center rounded-[50px] relative p-[50px] flex flex-col justify-end gap-[10px]"
-            style={{ backgroundImage: `url("${BLOCK6}")` }}
+            className="flex-1 bg-center rounded-[50px] relative p-[50px] flex flex-col justify-end gap-[10px] items-start"
+            style={{
+              background: `linear-gradient(to bottom, rgba(255,255,255,0),rgba(255,255,255,0),
+              rgba(255,255,255,1)), url("${BLOCK5}")`,
+            }}
           >
             <Icon src={SVG5} />
-            <h3 className="text-white text-[40px]">Asystent tekstowy</h3>
-            <p className="text-white text-[16px]">
+            <div className="bg-black text-white py-1 px-4 rounded-[50px] font-normal uppercase">
+              Aplikacja mobilna
+            </div>
+            <h3 className="text-black text-[40px]">Asystent tekstowy</h3>
+            <p className="text-black text-[16px]">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus
               sed volutpat laoreet. Mauris blandit interdum magna.
             </p>

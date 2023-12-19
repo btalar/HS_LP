@@ -63,7 +63,7 @@ export const Footer = () => {
               <div className="flex flex-row gap-[30px]">
                 <Button
                   radius="sm"
-                  className={"text-white !borer-none bg-primary"}
+                  className={"text-white !borer-none bg-primary rounded-full"}
                 >
                   Wyślij
                 </Button>
@@ -119,7 +119,7 @@ export const Footer = () => {
             <div className="flex flex-row  gap-4">
               <Input size="sm" label="Email" variant="bordered" />
               <Button
-                className="text-[12px] text-white bg-black"
+                className="text-[12px] text-white bg-black rounded-full"
                 size="lg"
                 radius="sm"
               >

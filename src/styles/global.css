@@ -8,13 +8,13 @@
     transform: translate(10px,-27px) !important;
     background: white !important;
     padding:1px 5px !important;
-    color:#007BE5
+    color:#908573 !important;
 }
 #___gatsby .footer-info_wrapper label{
     transform: translate(10px,-23px) !important;
     background: white !important;
     padding:1px 5px !important;
-    color:#007BE5
+    color:#908573 !important;
 }
 
 #___gatsby .textarea label{
@@ -24,7 +24,7 @@
 }
 
 .group[data-filled-within="true"] .group-data-\[filled-within\=true\]\:text-foreground-600{
-    color: #007BE5 !important;
+    color: #908573 !important;
 }
 html{
     font-family: 'Inter', sans-serif;

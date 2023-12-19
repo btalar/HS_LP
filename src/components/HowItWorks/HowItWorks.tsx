@@ -69,7 +69,7 @@ sed volutpat laoreet. Mauris blandit"
               <Carousel
                 dotListClass="custom"
                 responsive={getCarouselResponsive}
-                showDots
+                showDots={false}
                 arrows={false}
               >
                 <div className="h-[300px]">

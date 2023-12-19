@@ -35,6 +35,15 @@ import block7 from "./../assets/blocks/7.png";
 import block8 from "./../assets/blocks/8.png";
 import block9 from "./../assets/blocks/9.png";
 
+import block13 from "./../assets/blocks/13.png";
+import block14 from "./../assets/blocks/14.png";
+import block15 from "./../assets/blocks/15.png";
+
+export const BLOCK15 = block15;
+
+export const BLOCK13 = block13;
+export const BLOCK14 = block14;
+
 import svg1 from "./../assets/svg/1.svg";
 import svg2 from "./../assets/svg/2.svg";
 import svg3 from "./../assets/svg/3.svg";
@@ -42,6 +51,14 @@ import svg4 from "./../assets/svg/4.svg";
 import svg5 from "./../assets/svg/5.svg";
 import svg6 from "./../assets/svg/6.svg";
 import svg7 from "./../assets/svg/7.svg";
+import svg8 from "./../assets/svg/8.svg";
+import svg9 from "./../assets/svg/9.svg";
+import svg10 from "./../assets/svg/10.svg";
+
+export const SVG8 = svg8;
+export const SVG9 = svg9;
+
+export const SVG10 = svg10;
 
 import pod10 from "./../assets/blocks/10.png";
 import pod11 from "./../assets/blocks/11.png";
