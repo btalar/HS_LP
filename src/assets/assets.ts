@@ -51,6 +51,16 @@ import rect from "./../assets/rect.png";
 import appstore from "./../assets/app-store.svg";
 import googleplay from "./../assets/google-play.svg";
 import cover from "./../assets/cover2.png";
+import assets1 from "./../assets/store/1.png";
+import assets2 from "./../assets/store/2.png";
+import checkBlack from "./../assets/checkBlack.svg";
+import checkWhite from "./../assets/checkWhite.svg";
+
+export const CHECK_BLACK = checkBlack;
+export const CHECK_WHITE = checkWhite;
+
+export const ASSETS1 = assets1;
+export const ASSETS2 = assets2;
 
 export const APP_STORE = appstore;
 export const GOOGLE_PLAY = googleplay;

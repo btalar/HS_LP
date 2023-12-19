@@ -1,6 +1,14 @@
 import React, { FC } from "react";
 import { PageProps } from "gatsby";
-import {About, Layout, Header, Advantage, Navbar, Footer, Hero} from "../modules";
+import {
+  About,
+  Layout,
+  Header,
+  Advantage,
+  Navbar,
+  Footer,
+  Hero,
+} from "../modules";
 
 import { SectionImage } from "../modules/SectionImage";
 import { Functional } from "../components/Functional/Functional";
@@ -9,6 +17,7 @@ import { Details } from "../components/Details/Details";
 import { MobileApp } from "../components/MobileApp/MobileApp";
 import HowItWorks from "../components/HowItWorks/HowItWorks";
 import Store from "../components/Store/Store";
+import { Pricing } from "../components/Pricing/Pricing";
 
 const IndexPage: FC<PageProps> = () => {
   return (
@@ -23,6 +32,7 @@ const IndexPage: FC<PageProps> = () => {
       <Variant />
       <MobileApp />
       <Store />
+      <Pricing />
       <Footer />
     </Layout>
   );
