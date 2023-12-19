@@ -32,11 +32,13 @@ export const Footer = () => {
                   variant="bordered"
                   labelPlacement="inside"
                   label="Imię"
+                  radius="full"
                 />
                 <Input
                   variant="bordered"
                   labelPlacement="inside"
                   label="Nazwisko"
+                  radius="full"
                 />
               </div>
               <div className="flex flex-row justify-around gap-3">
@@ -45,11 +47,13 @@ export const Footer = () => {
                   type="email"
                   labelPlacement="inside"
                   label="E-mail"
+                  radius="full"
                 />
                 <Input
                   variant="bordered"
                   labelPlacement="inside"
                   label="Numer telefonu"
+                  radius="full"
                 />
               </div>
               <div>
@@ -58,6 +62,7 @@ export const Footer = () => {
                   variant="bordered"
                   labelPlacement="inside"
                   label="Wiadomość"
+                  radius="full"
                 />
               </div>
               <div className="flex flex-row gap-[30px]">
@@ -117,7 +122,7 @@ export const Footer = () => {
           <div className="flex flex-1 flex-col gap-[80px]">
             <Claim title="Dołącz do newslettera" titleClassName="text-[32px]" />
             <div className="flex flex-row  gap-4">
-              <Input size="sm" label="Email" variant="bordered" />
+              <Input radius="full" size="sm" label="Email" variant="bordered" />
               <Button
                 className="text-[12px] text-white bg-black rounded-full"
                 size="lg"
@@ -139,8 +144,8 @@ export const Footer = () => {
           className="min-h-[40px] min-w-[40px]"
         >
           <path
-            fill-rule="evenodd"
-            clip-rule="evenodd"
+            fillRule="evenodd"
+            clipRule="evenodd"
             d="M20 6.66675C22.4833 6.69509 24.7268 7.30542 26.7304 8.49776C28.7101 9.6663 30.3569 11.3232 31.5134 13.31C32.6985 15.3256 33.3051 17.5827 33.3334 20.0812C33.263 23.4997 32.1848 26.4195 30.0987 28.8405C28.0126 31.2615 25.3408 32.7592 22.575 33.3334V23.7489H25.1898L25.7812 19.9824H21.8217V17.5155C21.7997 17.0041 21.9614 16.5017 22.2776 16.0991C22.5943 15.6955 23.1519 15.4833 23.9505 15.4626H26.3415V12.1633C26.3072 12.1522 25.9816 12.1086 25.3649 12.0323C24.6654 11.9505 23.962 11.9068 23.2578 11.9014C21.6639 11.9087 20.4034 12.3583 19.4762 13.2502C18.5489 14.1418 18.0753 15.4317 18.0552 17.12V19.9824H15.042V23.7489H18.0552V33.3334C14.6592 32.7592 11.9874 31.2615 9.9013 28.8405C7.8152 26.4195 6.73702 23.4997 6.66663 20.0812C6.69479 17.5826 7.30144 15.3255 8.48657 13.31C9.64303 11.3232 11.2899 9.6663 13.2696 8.49776C15.2731 7.30565 17.5166 6.69532 20 6.66675Z"
             fill="#2E3A59"
           />

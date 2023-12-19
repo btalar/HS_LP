@@ -1,8 +1,8 @@
 import React from "react";
-import {BLOCK9, COVER} from "../../assets";
+import { BLOCK9, COVER } from "../../assets";
 import { Claim, ClaimType } from "../../components";
 import styled from "styled-components";
-import {Navbar} from "../Navbar";
+import { Navbar } from "../Navbar";
 
 const ClaimProperties: ClaimType = {
   title: "Intuicyjna aplikacja cyfrowego concierge dla hoteli",
@@ -29,9 +29,8 @@ export const Header = () => {
     <HeaderStyled
       background={COVER}
       mobileBackground={COVER}
-      className="h-[1000px] bg-cover  justify-center   rounded-b-[100px] max-w-[1920px] m-auto"
+      className="h-[1000px] bg-cover  justify-center -mt-[124px] rounded-b-[100px] max-w-[1920px] m-auto"
     >
-     <Navbar/>
       <div className="flex px-6 gap-8 w-full h-[720px] flex-col justify-center max-w-[1440px] m-auto">
         <Claim {...ClaimProperties} theme={"light"} />
       </div>

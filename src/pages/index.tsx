@@ -22,6 +22,7 @@ import { Pricing } from "../components/Pricing/Pricing";
 const IndexPage: FC<PageProps> = () => {
   return (
     <Layout>
+      <Navbar />
       <Header />
       <SectionImage />
       <About />

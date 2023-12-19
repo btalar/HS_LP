@@ -35,7 +35,10 @@ const Column = ({ isBlack }: ColumnType) => {
       <div className="flex flex-col flex-1 gap-[33px]">
         {[...Array(4)].map(() => (
           <div className="flex items-center gap-[15px]">
-            <img src={isBlack ? CHECK_WHITE : CHECK_BLACK} />
+            <img
+              className="w-[15px] h-[15px]"
+              src={isBlack ? CHECK_WHITE : CHECK_BLACK}
+            />
             <p
               className={`text-[15px] ${isBlack ? "text-white" : "text-black"}`}
             >

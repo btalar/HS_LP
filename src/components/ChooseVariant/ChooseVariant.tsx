@@ -1,11 +1,13 @@
-import React, { useState } from "react";
+import React, { Dispatch, SetStateAction, useState } from "react";
 import black from "./../../assets/variants/black.png";
 import white from "./../../assets/variants/white.png";
 import { Image } from "@nextui-org/react";
 
-export const ChooseVariant = () => {
-  const [variant, setVariant] = useState<"black" | "white">("black");
-
+type ChooseVariantType = {
+  setVariant: Dispatch<SetStateAction<"black" | "white">>;
+  variant: "black" | "white";
+};
+export const ChooseVariant = ({ setVariant, variant }: ChooseVariantType) => {
   return (
     <div className="flex flex-col gap-3">
       <div className="text-[20px] font-semibold">Wybierz wariant:</div>

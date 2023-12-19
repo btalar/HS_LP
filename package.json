@@ -35,6 +35,7 @@
     "postcss": "^8.4.31",
     "prettier": "^3.0.3",
     "react": "^18.2.0",
+    "react-animation": "^1.2.2",
     "react-dom": "^18.2.0",
     "react-multi-carousel": "^2.8.4",
     "react-responsive-carousel": "^3.2.23",
