@@ -1,77 +1,99 @@
-import React, { useState } from "react";
+import React, { useRef, useState } from "react";
 import { SectionWrapper } from "../SectionWrapper";
 import { Claim } from "../Claim";
+import "react-multi-carousel/lib/styles.css";
+import MultiCarousel, { ResponsiveType } from "react-multi-carousel";
+import { AnimateOnChange } from "react-animation";
+import { Button } from "@nextui-org/react";
+import classNames from "classnames";
+import { BLOCK14, BLOCK3, BLOCK5, CARD1, CARD4, LEFT } from "../../assets";
+import TaxiCard from "../Cards/TaxiCard";
+import RentBikeCard from "../Cards/RentBikeCard";
+import WeatherCard from "../Cards/WeatherCard";
 
-export const getCarouselResponsive = {
+const responsive: ResponsiveType = {
   superLargeDesktop: {
-    breakpoint: { min: 1536, max: 99999 },
-    items: 1,
-  },
-  largeDesktop: {
-    breakpoint: { min: 1280, max: 1536 },
-    items: 1,
+    breakpoint: { max: 4000, min: 3000 },
+    items: 3,
+    slidesToSlide: 1,
   },
   desktop: {
-    breakpoint: { max: 1280, min: 1024 },
-    items: 1,
+    breakpoint: { max: 3000, min: 1024 },
+    items: 3,
+    slidesToSlide: 1,
   },
   tablet: {
     breakpoint: { max: 1024, min: 464 },
-    items: 1,
+    items: 3,
     slidesToSlide: 1,
   },
   mobile: {
     breakpoint: { max: 464, min: 0 },
-    items: 1,
+    items: 3,
     slidesToSlide: 1,
   },
 };
-import { AnimateOnChange } from "react-animation";
-import { Button } from "@nextui-org/react";
-import classNames from "classnames";
-import { BLOCK14 } from "../../assets";
+
 const HowItWorks = () => {
   const [currentStep, setCurrentStep] = useState<number>(0);
 
-  const goToNextStep = () => {
-    setCurrentStep(currentStep + 1 === 7 ? 1 : currentStep + 1);
-  };
+  const carouselRef = useRef<MultiCarousel>(null);
 
-  const goToPreviousStep = () =>
-    setCurrentStep(currentStep - 1 === -1 ? 6 : currentStep - 1);
+  const header = (
+    <AnimateOnChange>
+      {
+        {
+          ["0"]: (
+            <Claim
+              title="Zamów taxi"
+              titleClassName="text-[40px]"
+              description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ultricies dolor sed volutpat laoreet. Mauris blandit interdum magna sit amet mattis. Nam faucibus purus leo."
+            />
+          ),
+          ["1"]: (
+            <Claim
+              title="Weź rOwer"
+              titleClassName="text-[40px]"
+              description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ultricies dolor sed volutpat laoreet. Mauris blandit interdum magna sit amet mattis. Nam faucibus purus leo."
+            />
+          ),
+          ["2"]: (
+            <Claim
+              title="Pogoda"
+              titleClassName="text-[40px]"
+              description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ultricies dolor sed volutpat laoreet. Mauris blandit interdum magna sit amet mattis. Nam faucibus purus leo."
+            />
+          ),
+        }[currentStep]
+      }
+    </AnimateOnChange>
+  );
 
-  const firstStep = (
-    <div className="flex flex-row gap-[50px] flex-1 justify-between">
-      <div className="flex-1 justify-between flex-col flex items-start">
-        <div className="flex flex-col gap-[20px]">
-          <Claim
-            title="Zamów taxi"
-            titleClassName="text-[40px]"
-            description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ultricies dolor sed volutpat laoreet. Mauris blandit interdum magna sit amet mattis. Nam faucibus purus leo."
-          />
-        </div>
-        <div className="flex flex-row gap-4">
-          <Button
-            onPress={goToPreviousStep}
-            className="bg-black text-white"
-            size="lg"
-          >
-            Cofnij
-          </Button>
-          <Button
-            onPress={goToNextStep}
-            className="bg-black text-white"
-            size="lg"
-          >
-            Dalej
-          </Button>
-        </div>
-      </div>
-      <img
-        className="h-[644px] w-[448px] object-cover rounded-[50px]"
-        src={BLOCK14}
-      />
-    </div>
+  const image = (
+    <AnimateOnChange>
+      {
+        {
+          ["0"]: (
+            <img
+              className="h-[644px] w-[448px] object-cover rounded-[50px]"
+              src={BLOCK14}
+            />
+          ),
+          ["1"]: (
+            <img
+              className="h-[644px] w-[448px] object-cover rounded-[50px]"
+              src={BLOCK5}
+            />
+          ),
+          ["2"]: (
+            <img
+              className="h-[644px] w-[448px] object-cover rounded-[50px]"
+              src={BLOCK3}
+            />
+          ),
+        }[currentStep]
+      }
+    </AnimateOnChange>
   );
 
   return (
@@ -81,36 +103,81 @@ const HowItWorks = () => {
           <div className="flex flex-col gap-[40px]">
             <Claim title="Jak to działa?" />
             <div className="flex gap-[15px]">
-              {[...Array(5)].map((_e, index) => {
+              {[...Array(3)].map((_e, index) => {
                 return (
                   <button
                     onClick={() => setCurrentStep(index)}
                     key={index}
                     className={classNames(
-                      ` w-[60px] h-[10px] rounded-full `,
-                      index === currentStep ? "bg-black" : "bg-[#F5F5F5]",
+                      ` w-[15px] h-[15px] rounded-full `,
+                      index === currentStep
+                        ? "w-[65px] bg-black"
+                        : "bg-[#F5F5F5]",
                     )}
                   />
                 );
               })}
             </div>
             <div>1 z 5</div>
-            <Button onPress={() => setCurrentStep(currentStep + 1)}>
-              click
-            </Button>
-            <AnimateOnChange>
-              {
-                {
-                  ["0"]: firstStep,
-                  ["1"]: firstStep,
-                  ["2"]: firstStep,
-                  ["3"]: firstStep,
-                  ["4"]: firstStep,
-                  ["5"]: firstStep,
-                  ["6"]: firstStep,
-                }[currentStep]
-              }
-            </AnimateOnChange>
+            <div className="flex flex-row gap-[50px] flex-1 justify-between">
+              <div className="flex-1 justify-between flex-col flex items-start">
+                <div className="flex flex-col gap-[20px]">
+                  {header}
+                  <div className="w-[700px] h-[400px]">
+                    <MultiCarousel
+                      beforeChange={(e, { currentSlide }) => {
+                        if (e > currentSlide) {
+                          setCurrentStep(
+                            currentStep + 1 === 3 ? 0 : currentStep + 1,
+                          );
+                        } else {
+                          setCurrentStep(
+                            currentStep - 1 === -1 ? 2 : currentStep - 1,
+                          );
+                        }
+                      }}
+                      ref={carouselRef}
+                      slidesToSlide={1}
+                      infinite={true}
+                      renderButtonGroupOutside={true}
+                      responsive={responsive}
+                    >
+                      <TaxiCard isActive={currentStep === 0} />
+                      <RentBikeCard isActive={currentStep === 1} />
+                      <WeatherCard isActive={currentStep === 2} />
+                    </MultiCarousel>
+                  </div>
+                </div>
+                <div className="flex flex-row gap-4">
+                  <Button
+                    style={{
+                      borderColor: "#908573",
+                      padding: 0,
+                      minWidth: 50,
+                      display: "flex",
+                      justifyContent: "center",
+                      alignItems: "center",
+                    }}
+                    variant="bordered"
+                    radius="full"
+                    className="bg-white text-white max-w-[40px] !px-0"
+                    size="lg"
+                    onPress={(e) => carouselRef?.current?.previous(1)}
+                  >
+                    <img src={LEFT} />
+                  </Button>
+                  <Button
+                    onPress={(e) => carouselRef?.current?.next(1)}
+                    radius="full"
+                    className="bg-black text-white"
+                    size="lg"
+                  >
+                    Dalej
+                  </Button>
+                </div>
+              </div>
+              {image}
+            </div>
           </div>
         </div>
       </SectionWrapper>

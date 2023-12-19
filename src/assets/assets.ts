@@ -38,7 +38,22 @@ import block9 from "./../assets/blocks/9.png";
 import block13 from "./../assets/blocks/13.png";
 import block14 from "./../assets/blocks/14.png";
 import block15 from "./../assets/blocks/15.png";
+import left from "./../assets/left.svg";
+import card1 from "./../assets/cards/1.svg";
+import card2 from "./../assets/cards/2.svg";
+import card3 from "./../assets/cards/3.svg";
+import card4 from "./../assets/cards/4.svg";
+import card5 from "./../assets/cards/5.svg";
+import card6 from "./../assets/cards/6.svg";
 
+export const CARD1 = card1;
+export const CARD2 = card2;
+export const CARD3 = card3;
+export const CARD4 = card4;
+export const CARD5 = card5;
+export const CARD6 = card6;
+
+export const LEFT = left;
 export const BLOCK15 = block15;
 
 export const BLOCK13 = block13;

@@ -41,3 +41,6 @@ html {
 #___gatsby .react-multi-carousel-dot--active button {
   background: rgb(163 106 47);
 }
+.react-multi-carousel-track {
+  padding: 20px 0 !important;
+}
