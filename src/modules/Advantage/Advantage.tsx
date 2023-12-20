@@ -48,7 +48,7 @@ const Item = ({ title, description, src }: ListType) => {
   return (
     <div className="w-[400px] h-[307px] flex flex-col gap-6 items-center">
       <Image src={src} />
-      <h3 className="text-[28px] font-bold text-center">{title}</h3>
+      <h3 className="text-[24px] font-bold text-center">{title}</h3>
       <p className="text-center text-[15px]">{description}</p>
     </div>
   );
@@ -58,7 +58,7 @@ export const Advantage = () => {
   return (
     <SectionWrapper className="py-8 px-10 gap-[100px] flex flex-col">
       <div className="flex flex-row justify-center">
-        <Claim titleClassName="text-[60px]" title="Korzyści" />
+        <Claim title="Korzyści" />
       </div>
       <div className="flex flex-row flex-wrap justify-between">
         {list.map((props) => (

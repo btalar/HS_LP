@@ -52,18 +52,19 @@ const Row = ({ image, isPromoted, description, title }: RowType) => {
       <Image className="hidden md:block" src={image} />
       <div className="flex-1 flex flex-col items-start justify-end gap-[15px]">
         {isPromoted && (
-          <div className="hidden lg:block py px-4 bg-[#908573] rounded-[50px] text-white">
-            POPULARNE
+          <div className="hidden lg:block py px-4 bg-[#908573] rounded-[50px] text-white text-[14px]">
+            Bestseller
           </div>
         )}
-        <div className="text-[40px]">{title}</div>
-        <div className="text-[16px]">{description}</div>
+        <div className="text-[24px]">{title}</div>
+        <div className="text-[15px]">{description}</div>
       </div>
       <Button
         size="lg"
-        className="text-[16px] rounded-full bg-black text-white"
+        disabled={true}
+        className="text-[16px] rounded-full bg-[#C7C5C7] text-white"
       >
-        Więcej
+        Dostępne wkrótce
       </Button>
     </div>
   );
@@ -75,7 +76,6 @@ const Store = () => {
       <SectionWrapper>
         <div className="flex flex-col gap-[40px] md:gap-[80px] ">
           <Claim
-            titleClassName="text-[40px] md:text-[60px]"
             title="Hotelspot Store"
           />
           <div className="flex flex-col gap-[50px]">

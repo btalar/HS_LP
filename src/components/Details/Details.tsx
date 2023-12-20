@@ -8,7 +8,7 @@ export const Details = () => {
       className="bg-cover rounded-t-[50px] bg-center h-[500px] flex flex-col gap-[40px] items-center justify-center"
       style={{ backgroundImage: `url('${BLOCK4}')` }}
     >
-      <div className="text-white text-[60px] font-bold text-center leading-none">
+      <div className="text-white text-[48px] font-bold text-center leading-none">
         Porozmawiajmy
         <br /> o szczegółach
       </div>
