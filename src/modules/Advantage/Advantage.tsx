@@ -60,7 +60,7 @@ export const Advantage = () => {
       <div className="flex flex-row justify-center">
         <Claim title="Korzyści" />
       </div>
-      <div className="flex flex-row flex-wrap justify-between">
+      <div className="flex flex-row flex-wrap justify-center md:justify-between">
         {list.map((props) => (
           <Item {...props} />
         ))}

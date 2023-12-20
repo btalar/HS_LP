@@ -72,8 +72,14 @@ import svg10 from "./../assets/svg/10.svg";
 
 export const SVG8 = svg8;
 export const SVG9 = svg9;
+import card7 from "./../assets/cards/7.svg";
 
+export const CARD7 = card7;
 export const SVG10 = svg10;
+
+import block16 from "./../assets/blocks/16.png";
+
+export const BLOCK16 = block16;
 
 import pod10 from "./../assets/blocks/10.png";
 import pod11 from "./../assets/blocks/11.png";

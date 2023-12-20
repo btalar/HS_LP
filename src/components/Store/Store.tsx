@@ -2,13 +2,14 @@ import React from "react";
 import { SectionWrapper } from "../SectionWrapper";
 import { Claim } from "../Claim";
 import { Button, Image } from "@nextui-org/react";
-import { ASSETS1, ASSETS2 } from "../../assets";
+import { ASSETS1, ASSETS2, CARD7 } from "../../assets";
 
 type RowType = {
   title: string;
   isPromoted?: boolean;
   description: string;
   image: any;
+  isLastIndex?: boolean;
 };
 
 const mocks: RowType[] = [
@@ -36,9 +37,22 @@ const mocks: RowType[] = [
   },
 ];
 
-const Row = ({ image, isPromoted, description, title }: RowType) => {
+const Row = ({
+  image,
+  isPromoted,
+  description,
+  title,
+  isLastIndex,
+}: RowType) => {
+  console.log(isLastIndex);
   return (
-    <div className="p-[35px] bg-[#F5F5F5] rounded-[25px] md:rounded-[50px] flex flex-col gap-[25px] md:gap-[50px]  items-start md:items-center md:flex-row">
+    <div
+      className={`${
+        isLastIndex
+          ? "bg-gradient-to-b from-neutral-50 to-transparent opacity-[0.6] "
+          : "bg-[#F5F5F5]"
+      }  p-[35px] rounded-[25px] md:rounded-[50px] flex flex-col gap-[25px] md:gap-[50px]  items-start md:items-center md:flex-row`}
+    >
       <div
         className="md:hidden h-[200px] w-full bg-cover bg-center rounded-[20px] flex justify-start items-end p-[14px]"
         style={{ backgroundImage: `url(${image})` }}
@@ -75,13 +89,20 @@ const Store = () => {
     <div>
       <SectionWrapper>
         <div className="flex flex-col gap-[40px] md:gap-[80px] ">
-          <Claim
-            title="Hotelspot Store"
-          />
+          <Claim title="Hotelspot Store" />
           <div className="flex flex-col gap-[50px]">
-            {mocks.map((props) => (
-              <Row {...props} />
+            {mocks.map((props, index, array) => (
+              <Row {...props} isLastIndex={index + 1 === array.length} />
             ))}
+            <div className="flex justify-center">
+              <Button
+                size="lg"
+                radius="full"
+                className="text-black bg-[#EAEAEA] flex items-center"
+              >
+                <span>Pokaż więcej</span> <img src={CARD7} />
+              </Button>
+            </div>
           </div>
         </div>
       </SectionWrapper>

@@ -5,8 +5,12 @@ import { ReactNode } from "react";
 import { useSpring, animated } from "react-spring";
 type AnimationOnChangeType = {
   children: ReactNode;
+  className?: string;
 };
-export const AnimateOnChange = ({ children }: AnimationOnChangeType) => {
+export const AnimateOnChange = ({
+  children,
+  className,
+}: AnimationOnChangeType) => {
   const [key, setKey] = useState(0);
   useEffect(() => {
     setKey(key + 1);
@@ -19,5 +23,9 @@ export const AnimateOnChange = ({ children }: AnimationOnChangeType) => {
     key: key,
   });
 
-  return <animated.div style={props}>{children}</animated.div>;
+  return (
+    <animated.div className={className} style={props}>
+      {children}
+    </animated.div>
+  );
 };

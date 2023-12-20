@@ -1,7 +1,16 @@
 import React, { useEffect, useState } from "react";
-import {navbarClassNames, Item, NavbarWrapper, LangFlag, LangName, LangTriggerWrapper, FlagList, FlagListItem} from "./Navbar.styled";
-import { countries } from 'country-flag-icons'
-import { PL, DE, FR, GB} from 'country-flag-icons/react/1x1'
+import {
+  navbarClassNames,
+  Item,
+  NavbarWrapper,
+  LangFlag,
+  LangName,
+  LangTriggerWrapper,
+  FlagList,
+  FlagListItem,
+} from "./Navbar.styled";
+import { countries } from "country-flag-icons";
+import { PL, DE, FR, GB } from "country-flag-icons/react/1x1";
 import {
   NavbarBrand,
   NavbarContent,
@@ -11,7 +20,10 @@ import {
   NavbarMenuToggle,
   NavbarMenu,
   NavbarMenuItem,
-  Popover, PopoverTrigger, PopoverContent, Input
+  Popover,
+  PopoverTrigger,
+  PopoverContent,
+  Input,
 } from "@nextui-org/react";
 import { useIntl } from "gatsby-plugin-intl";
 
@@ -27,7 +39,7 @@ const navbarItems = [
 export const Navbar = () => {
   const intl = useIntl();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-   console.log(countries)
+  console.log(countries);
   const [scrollDirection, setScrollDirection] = useState<"down" | "up">("up");
   const [scrollPosition, setScrollPosition] = useState<boolean>(false);
 
@@ -92,25 +104,36 @@ export const Navbar = () => {
             Kontakt z konsultantem
           </Button>
 
-          <Popover
-              showArrow={false}
-              placement="bottom"
-              backdrop="opaque"
-          >
+          <Popover showArrow={false} placement="bottom" backdrop="opaque">
             <PopoverTrigger>
               <LangTriggerWrapper>
-              <LangFlag>
-                <PL title="Polska" />
-              </LangFlag>
-                <LangName>PL</LangName>
+                <LangFlag>
+                  {
+                    {
+                      pl: <PL title="Polska" />,
+                      en: <GB title="Englisch" />,
+                    }[intl.locale]
+                  }
+                  <PL title="Polska" />
+                </LangFlag>
+                <LangName>{intl.locale.toUpperCase()}</LangName>
               </LangTriggerWrapper>
             </PopoverTrigger>
-            <PopoverContent className="w-[140px]  bg-transparent " >
+            <PopoverContent className="w-[140px]  bg-transparent ">
               <FlagList>
-                <FlagListItem><LangFlag><PL title="Polski" /> </LangFlag>  <LangName>Polski</LangName></FlagListItem>
-                <FlagListItem><LangFlag><GB title="Englisch" /> </LangFlag>  <LangName>English</LangName></FlagListItem>
+                <FlagListItem onClick={() => (window.location = `/pl`)}>
+                  <LangFlag>
+                    <PL title="Polski" />
+                  </LangFlag>
+                  <LangName>Polski</LangName>
+                </FlagListItem>
+                <FlagListItem onClick={() => (window.location = `/en`)}>
+                  <LangFlag>
+                    <GB title="Englisch" />
+                  </LangFlag>
+                  <LangName>English</LangName>
+                </FlagListItem>
               </FlagList>
-
             </PopoverContent>
           </Popover>
 

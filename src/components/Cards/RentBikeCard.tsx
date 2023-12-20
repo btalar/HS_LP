@@ -11,7 +11,7 @@ const RentBikeCard = ({ isActive }: CardType) => (
   >
     <div className="flex flex-row items-center justify-start bg-[#F5F5F5] h-[70px] px-[30px] gap-[15px]">
       <img className="w-[30px] h-[30px]" src={CARD2} />
-      <h3>Wyporzyć rower</h3>
+      <h3>Wypożycz rower</h3>
     </div>
     <div className="flex flex-1 flex-col gap-[30px] py-[30px] items-center justify-around">
       <img className="w-[100px]" src={CARD5} />

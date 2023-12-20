@@ -30,7 +30,7 @@ const responsive: ResponsiveType = {
   },
   mobile: {
     breakpoint: { max: 464, min: 0 },
-    items: 3,
+    items: 2,
     slidesToSlide: 1,
   },
 };
@@ -41,7 +41,7 @@ const HowItWorks = () => {
   const carouselRef = useRef<MultiCarousel>(null);
 
   const header = (
-    <AnimateOnChange>
+    <AnimateOnChange className="flex flex-col gap-5">
       {
         {
           ["0"]: (
@@ -53,7 +53,7 @@ const HowItWorks = () => {
           ),
           ["1"]: (
             <Claim
-              title="Weź rOwer"
+              title="Wypożycz rower"
               titleClassName="text-[40px]"
               description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ultricies dolor sed volutpat laoreet. Mauris blandit interdum magna sit amet mattis. Nam faucibus purus leo."
             />
@@ -101,7 +101,7 @@ const HowItWorks = () => {
     <div>
       <SectionWrapper>
         <div className="flex flex-row flex-1 justify-between">
-          <div className="flex flex-col gap-[40px]">
+          <div className="flex flex-col gap-[40px] flex-1">
             <Claim title="Jak to działa?" />
             <div className="flex gap-[15px]">
               {[...Array(3)].map((_e, index) => {
@@ -119,7 +119,7 @@ const HowItWorks = () => {
                 );
               })}
             </div>
-            <div>1 z 5</div>
+            <div>{currentStep + 1} z 3</div>
             <div className="flex flex-row gap-[50px] flex-1 justify-between">
               <div className="flex-1 justify-between flex-col flex items-start">
                 <div className="flex flex-col gap-[20px]">

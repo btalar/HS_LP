@@ -125,7 +125,7 @@ export const Footer = () => {
           <div className="flex flex-1 flex-col gap-[40px] md:gap-[80px]">
             <Claim
               title="Dołącz do newslettera"
-              titleClassName="text-center text-[32px]"
+              titleClassName="text-center md:text-left text-[32px]"
             />
             <div className="flex flex-row  gap-4">
               <Input radius="full" size="sm" label="Email" variant="bordered" />
