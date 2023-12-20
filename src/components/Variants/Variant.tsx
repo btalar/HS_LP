@@ -17,13 +17,13 @@ import { Icon } from "../Functional/Functional";
 export const Variant = () => {
   return (
     <SectionWrapper className="">
-      <div className="flex flex-col gap-[80px]">
+      <div className="flex flex-col gap-[30px] md:gap-[80px]">
         <div>
           <Claim title="Warianty" />
         </div>
-        <div className="flex flex-row gap-[50px] h-[700px]">
+        <div className="flex md:flex-row flex-col gap-[50px] md:h-[700px] h-[1200px]">
           <div
-            className="flex-1 bg-center rounded-[50px] relative p-[50px] flex flex-col justify-end items-start gap-[10px]"
+            className="flex-1 bg-center rounded-[50px] relative py-[50px]  px-[50px] flex flex-col justify-end items-start gap-[10px]"
             style={{
               background: `linear-gradient(to bottom, rgba(255,255,255,0),rgba(255,255,255,0),
               rgba(255,255,255,1)), url("${BLOCK6}")`,
@@ -40,7 +40,7 @@ export const Variant = () => {
             </p>
           </div>
           <div
-            className="flex-1 bg-center rounded-[50px] relative p-[50px] flex flex-col justify-end gap-[10px] items-start"
+            className="flex-1 bg-center rounded-[50px] relative py-[50px]  px-[50px]  flex flex-col justify-end gap-[10px] items-start"
             style={{
               background: `linear-gradient(to bottom, rgba(255,255,255,0),rgba(255,255,255,0),
               rgba(255,255,255,1)), url("${BLOCK5}")`,

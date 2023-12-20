@@ -17,8 +17,11 @@ export const Footer = () => {
         noGap
       >
         <div>
-          <Claim  title="Skontaktuj się" />
-          <div className="my-[40px]">
+          <Claim
+            titleClassName="text-[40px] md:text-[60px]"
+            title="Skontaktuj się"
+          />
+          <div className="my-[20px] md:my-[40px]">
             Skontaktuj się bezpośrednio poprzez telefon:
           </div>
           <h2 className="text-[32px] font-[600] mt-[25px]">+48 123 456 789</h2>
@@ -27,7 +30,7 @@ export const Footer = () => {
           </h2>
           <ContactForm>
             <div className="flex flex-col gap-[30px]">
-              <div className="flex flex-row justify-around gap-3">
+              <div className="flex flex-col md:flex-row  justify-around md:gap-3 gap-[30px]">
                 <Input
                   variant="bordered"
                   labelPlacement="inside"
@@ -41,7 +44,7 @@ export const Footer = () => {
                   radius="full"
                 />
               </div>
-              <div className="flex flex-row justify-around gap-3">
+              <div className="flex flex-col md:flex-row  justify-around md:gap-3 gap-[30px]">
                 <Input
                   variant="bordered"
                   type="email"
@@ -65,7 +68,7 @@ export const Footer = () => {
                   radius="full"
                 />
               </div>
-              <div className="flex flex-row gap-[30px]">
+              <div className="flex flex-row gap-[20px] items-center md:gap-[30px]">
                 <Button
                   radius="sm"
                   className={"text-white !borer-none bg-primary rounded-full"}
@@ -88,9 +91,9 @@ export const Footer = () => {
       </SectionWrapper>
       <div className="footer-info_wrapper border-t border-[#c5cee0] px-0 lg:px-6 py-[64px] text-[#192038] text-[14px] max-w-[1440px] mx-auto">
         <FooterInfo>
-          <div className="flex-1 flex flex-row gap-20">
-            <div className="left flex flex-col justify-end">
-              <Image className="mb-[80px]" src={LOGO} />
+          <div className="flex-1 flex flex-col items-center md:flex-row gap-5 md:gap-20 ">
+            <div className="left flex flex-col justify-end text-center md:text-left">
+              <Image className="mb-[40px] md:mb-[80px]" src={LOGO} />
               <ul className="">
                 <li className="mb-[12px] text-[14px]">
                   Nazwa spółki/działaności
@@ -105,7 +108,7 @@ export const Footer = () => {
                 </li>
               </ul>
             </div>
-            <div className="right flex flex-col justify-end">
+            <div className="right flex flex-col justify-end h-full text-center md:text-left">
               <ul className="flex flex-col justify-end">
                 <li className="mb-[12px] text-[14px] font-bold">
                   Generuj więcej rozmów
@@ -119,8 +122,11 @@ export const Footer = () => {
               </ul>
             </div>
           </div>
-          <div className="flex flex-1 flex-col gap-[80px]">
-            <Claim title="Dołącz do newslettera" titleClassName="text-[32px]" />
+          <div className="flex flex-1 flex-col gap-[40px] md:gap-[80px]">
+            <Claim
+              title="Dołącz do newslettera"
+              titleClassName="text-center text-[32px]"
+            />
             <div className="flex flex-row  gap-4">
               <Input radius="full" size="sm" label="Email" variant="bordered" />
               <Button
@@ -134,7 +140,7 @@ export const Footer = () => {
           </div>
         </FooterInfo>
       </div>
-      <div className="footer-copyright flex items-center justify-between text-[12px] text-[#2e3a59] gap-[24px] max-w-[1440px] mx-auto">
+      <div className="footer-copyright flex items-center justify-between text-[12px] text-[#2e3a59] gap-[6px] md:gap-[24px] max-w-[1440px] mx-auto">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           width="40"
@@ -150,8 +156,8 @@ export const Footer = () => {
             fill="#2E3A59"
           />
         </svg>
-        <div className="line border-t border-[#c5cee0] w-[100%]"></div>
-        <p className="min-w-[180px]">© Copyright 2023 Hotelspot</p>
+        <div className="line border-t border-[#c5cee0] w-[100%] flex-1"></div>
+        <p>© Copyright 2023 Hotelspot</p>
       </div>
     </SectionWrapper>
   );

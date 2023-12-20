@@ -38,11 +38,21 @@ const mocks: RowType[] = [
 
 const Row = ({ image, isPromoted, description, title }: RowType) => {
   return (
-    <div className="p-[35px] bg-[#F5F5F5] rounded-[50px] flex gap-[50px] items-center">
-      <Image src={image} />
+    <div className="p-[35px] bg-[#F5F5F5] rounded-[25px] md:rounded-[50px] flex flex-col gap-[25px] md:gap-[50px]  items-start md:items-center md:flex-row">
+      <div
+        className="md:hidden h-[200px] w-full bg-cover bg-center rounded-[20px] flex justify-start items-end p-[14px]"
+        style={{ backgroundImage: `url(${image})` }}
+      >
+        {isPromoted && (
+          <div className=" lg:hidden py px-4 bg-[#908573] rounded-[50px] text-white">
+            POPULARNE
+          </div>
+        )}
+      </div>
+      <Image className="hidden md:block" src={image} />
       <div className="flex-1 flex flex-col items-start justify-end gap-[15px]">
         {isPromoted && (
-          <div className="py px-4 bg-[#908573] rounded-[50px] text-white text-[14px]">
+          <div className="hidden lg:block py px-4 bg-[#908573] rounded-[50px] text-white text-[14px]">
             Bestseller
           </div>
         )}
@@ -64,8 +74,10 @@ const Store = () => {
   return (
     <div>
       <SectionWrapper>
-        <div className="flex flex-col gap-[80px]">
-          <Claim   title="Hotelspot Store" />
+        <div className="flex flex-col gap-[40px] md:gap-[80px] ">
+          <Claim
+            title="Hotelspot Store"
+          />
           <div className="flex flex-col gap-[50px]">
             {mocks.map((props) => (
               <Row {...props} />

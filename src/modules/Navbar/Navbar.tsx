@@ -37,20 +37,20 @@ export const Navbar = () => {
     const updateScrollDirection = () => {
       const scrollY = window.pageYOffset;
       const direction = scrollY > lastScrollY ? "down" : "up";
-      if ( direction !== scrollDirection && (scrollY - lastScrollY > 10 || scrollY - lastScrollY < -10))
-      {
+      if (
+        direction !== scrollDirection &&
+        (scrollY - lastScrollY > 10 || scrollY - lastScrollY < -10)
+      ) {
         setScrollDirection(direction);
       }
       lastScrollY = scrollY > 0 ? scrollY : 0;
 
-      if(lastScrollY > 20){
-        setScrollPosition(true)
-      }else {
-        setScrollPosition(false)
+      if (lastScrollY > 20) {
+        setScrollPosition(true);
+      } else {
+        setScrollPosition(false);
       }
-
     };
-
 
     window.addEventListener("scroll", updateScrollDirection); // add event listener
     return () => {
@@ -58,10 +58,9 @@ export const Navbar = () => {
     };
   }, [scrollDirection]);
 
-
   return (
     <NavbarWrapper
-        isDark={scrollPosition}
+      isDark={scrollPosition}
       direction={scrollDirection}
       isMenuOpen={isMenuOpen}
       onMenuOpenChange={setIsMenuOpen}
@@ -134,7 +133,7 @@ export const Navbar = () => {
           {/*</Dropdown>*/}
         </div>
       </NavbarContent>
-      <NavbarMenu>
+      <NavbarMenu className="pt-6">
         {navbarItems.map(({ text, href }, index) => (
           <NavbarMenuItem key={`${text}-${index}`}>
             <Link
