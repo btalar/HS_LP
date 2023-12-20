@@ -54,9 +54,7 @@ za pomocą technologii cyfrowej."
   const blackSection = (
     <div className="flex gap-[50px] ">
       <div className="gap-[10px] flex flex-col max-w-[400px] justify-between ">
-        <Claim
-          titleClassName="text-[60px]"
-          title="Wyjątkowy,
+        <Claim title="Wyjątkowy,
 niepowtarzalny
 design"
           descriptionClassName="text-[15px]"

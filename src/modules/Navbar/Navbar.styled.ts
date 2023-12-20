@@ -16,6 +16,46 @@ export const Item = styled.p`
   color: white;
 `;
 
+
+
+export const LangTriggerWrapper = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  margin-left: 15px;
+`;
+
+export const LangFlag = styled.div`
+  width: 25px;
+  height: 25px;
+  border-radius: 100px; 
+  overflow: hidden; 
+`;
+
+export const LangName = styled.div`
+  color: #fff;
+  margin-left:8px;
+`;
+
+
+export const FlagList = styled.ul`
+ 
+  margin: 10px 0;
+  width: 100%;  
+`;
+
+export const FlagListItem = styled.li`
+  height: 35px; 
+  overflow: hidden;
+  margin: 10px 0;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 5px;
+`;
+
 export const navbarClassNames = {
   wrapper: "max-w-[1440px]",
 };

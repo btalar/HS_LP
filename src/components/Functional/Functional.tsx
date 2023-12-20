@@ -29,7 +29,7 @@ export const Icon = ({ src }: { src: any }) => {
 export const Functional = () => {
   return (
     <SectionWrapper className="flex gap-[40px] flex-col">
-      <Claim title="Funkcje" titleClassName="text-[60px]" />
+      <Claim title="Funkcje"  />
       <div className="flex gap-[50px] flex- h-[700px]">
         <div
           className="flex-1 bg-center relative p-[50px] flex flex-col justify-end gap-[10px] bg-cover rounded-[50px]"
