@@ -1,5 +1,5 @@
 import React, { useRef, useState } from "react";
-import { Card, CardFooter, Image, CardHeader } from "@nextui-org/react";
+import { Image } from "@nextui-org/react";
 import {
   BLOCK4,
   POD1,
@@ -13,7 +13,7 @@ import {
 } from "../../assets";
 import { Claim, SectionWrapper } from "../../components";
 import { ChooseVariant } from "../../components/ChooseVariant";
-import { AnimateOnChange } from "react-animation";
+import { AnimateOnChange } from "../../components/AnimationOnChange/AnimationOnChange";
 
 export const About = () => {
   const ref = useRef(null);

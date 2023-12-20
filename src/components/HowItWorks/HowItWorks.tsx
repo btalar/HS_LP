@@ -1,15 +1,16 @@
+"use client";
 import React, { useRef, useState } from "react";
 import { SectionWrapper } from "../SectionWrapper";
 import { Claim } from "../Claim";
 import "react-multi-carousel/lib/styles.css";
 import MultiCarousel, { ResponsiveType } from "react-multi-carousel";
-import { AnimateOnChange } from "react-animation";
 import { Button } from "@nextui-org/react";
 import classNames from "classnames";
 import { BLOCK14, BLOCK3, BLOCK5, CARD1, CARD4, LEFT } from "../../assets";
 import TaxiCard from "../Cards/TaxiCard";
 import RentBikeCard from "../Cards/RentBikeCard";
 import WeatherCard from "../Cards/WeatherCard";
+import { AnimateOnChange } from "../AnimationOnChange/AnimationOnChange";
 
 const responsive: ResponsiveType = {
   superLargeDesktop: {
