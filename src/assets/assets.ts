@@ -82,7 +82,7 @@ import logoWhite from "./../assets/logo_white.png";
 import rect from "./../assets/rect.png";
 import appstore from "./../assets/app-store.svg";
 import googleplay from "./../assets/google-play.svg";
-import cover from "./../assets/cover2.png";
+import cover from "./../assets/cover3.png";
 import assets1 from "./../assets/store/1.png";
 import assets2 from "./../assets/store/2.png";
 import checkBlack from "./../assets/checkBlack.svg";

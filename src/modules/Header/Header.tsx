@@ -17,8 +17,18 @@ const HeaderStyled = styled.div<{
   background: string;
   mobileBackground: string;
 }>`
-  background-image: url("${(props) => props.background}");
-  background-repeat: no-repeat;
+  background: #44584D url("${(props) => props.background}");
+  background-repeat: no-repeat; 
+  position: relative;
+  &::after {
+    content: '';
+    height: 200px;
+    width: 100%;
+    top:0;
+    left: 0;
+    position: absolute;
+    background: linear-gradient(to bottom, rgba(37, 48, 42, 1), rgba(37, 48, 42, 0));
+  }
   @media (max-width: 996px) {
     background-image: url("${(props) => props.mobileBackground}");
   }
@@ -31,8 +41,8 @@ export const Header = () => {
       mobileBackground={COVER}
       className="h-[1000px] bg-cover  justify-center -mt-[124px] rounded-b-[100px] max-w-[1920px] m-auto"
     >
-      <div className="flex px-6 gap-8 w-full h-[720px] flex-col justify-center max-w-[1440px] m-auto">
-        <Claim {...ClaimProperties} theme={"light"} />
+      <div className="flex px-6 gap-8 w-full h-[920px] flex-col justify-center max-w-[1440px] m-auto">
+        <Claim {...ClaimProperties}  />
       </div>
     </HeaderStyled>
   );

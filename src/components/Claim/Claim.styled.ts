@@ -1,9 +1,9 @@
 import styled from "styled-components";
 
 export const Title = styled.h1`
-  font-size: 60px;
+  font-size: 48px;
   color: #192038;
-  font-weight: 400;
+  font-weight: 600;
   line-height: 1.1; 
   max-width: 600px; 
   @media (max-width: 768px) {

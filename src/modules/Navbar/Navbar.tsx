@@ -30,6 +30,7 @@ export const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const [scrollDirection, setScrollDirection] = useState<"down" | "up">("up");
+  const [scrollPosition, setScrollPosition] = useState<boolean>(false);
 
   useEffect(() => {
     let lastScrollY = window.pageYOffset;
@@ -37,22 +38,31 @@ export const Navbar = () => {
     const updateScrollDirection = () => {
       const scrollY = window.pageYOffset;
       const direction = scrollY > lastScrollY ? "down" : "up";
-      if (
-        direction !== scrollDirection &&
-        (scrollY - lastScrollY > 10 || scrollY - lastScrollY < -10)
-      ) {
+      if ( direction !== scrollDirection && (scrollY - lastScrollY > 10 || scrollY - lastScrollY < -10))
+      {
         setScrollDirection(direction);
       }
       lastScrollY = scrollY > 0 ? scrollY : 0;
+
+      if(lastScrollY > 20){
+        setScrollPosition(true)
+      }else {
+        setScrollPosition(false)
+      }
+
     };
+
+
     window.addEventListener("scroll", updateScrollDirection); // add event listener
     return () => {
       window.removeEventListener("scroll", updateScrollDirection); // clean up
     };
   }, [scrollDirection]);
 
+
   return (
     <NavbarWrapper
+        isDark={scrollPosition}
       direction={scrollDirection}
       isMenuOpen={isMenuOpen}
       onMenuOpenChange={setIsMenuOpen}
@@ -64,7 +74,7 @@ export const Navbar = () => {
       </NavbarBrand>
       <NavbarMenuToggle className="lg:hidden" />
       <NavbarContent className="lg:flex hidden gap-4 justify-between flex-1">
-        <div className="flex flex-1 gap-[60px]">
+        <div className="flex flex-1 gap-[20px]">
           {navbarItems.map(({ href, text }, index) => (
             <NavbarItem key={index}>
               <Link color="foreground" href={href}>
@@ -75,31 +85,31 @@ export const Navbar = () => {
         </div>
         <div className="flex flex-1 gap-2 justify-end">
           <Button
-            style={{ fontSize: 15, height: 60 }}
+            style={{ fontSize: 15, height: 40 }}
             size="lg"
             variant="bordered"
-            className="text-white"
             radius="full"
+            className="text-white relative overflow-visible rounded-full  after:content-[''] after:absolute after:rounded-full after:inset-0   after:z-[-1] after:transition after:!duration-500 hover:after:scale-150 hover:after:opacity-0"
           >
             Kontakt z konsultantem
           </Button>
-          <Dropdown backdrop="blur">
-            <DropdownTrigger>
-              <Button
-                style={{ fontSize: 16, height: 60 }}
-                size="lg"
-                variant="bordered"
-                className="text-white"
-              >
-                {intl.locale}
-              </Button>
-            </DropdownTrigger>
-            <DropdownMenu onAction={(e) => (window.location = `/${e}`)}>
-              <DropdownItem key="pl">PL</DropdownItem>
-              <DropdownItem key="en">EN</DropdownItem>
-              <DropdownItem key="de">DE</DropdownItem>
-            </DropdownMenu>
-          </Dropdown>
+          {/*<Dropdown backdrop="blur">*/}
+          {/*  <DropdownTrigger>*/}
+          {/*    <Button*/}
+          {/*      style={{ fontSize: 16, height: 40 }}*/}
+          {/*      size="lg"*/}
+          {/*      variant="bordered"*/}
+          {/*      className="text-white"*/}
+          {/*    >*/}
+          {/*      {intl.locale}*/}
+          {/*    </Button>*/}
+          {/*  </DropdownTrigger>*/}
+          {/*  <DropdownMenu onAction={(e) => (window.location = `/${e}`)}>*/}
+          {/*    <DropdownItem key="pl">PL</DropdownItem>*/}
+          {/*    <DropdownItem key="en">EN</DropdownItem>*/}
+          {/*    <DropdownItem key="de">DE</DropdownItem>*/}
+          {/*  </DropdownMenu>*/}
+          {/*</Dropdown>*/}
         </div>
       </NavbarContent>
       <NavbarMenu>
