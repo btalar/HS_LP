@@ -17,7 +17,7 @@ export const Footer = () => {
         noGap
       >
         <div>
-          <Claim titleClassName="text-[60px]" title="Skontaktuj się" />
+          <Claim  title="Skontaktuj się" />
           <div className="my-[40px]">
             Skontaktuj się bezpośrednio poprzez telefon:
           </div>

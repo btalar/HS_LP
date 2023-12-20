@@ -18,7 +18,6 @@ const ClaimProperties: ClaimType = {
 export const Hero = () => {
     return (
         <HeroWrapper background={BLOCK9} mobileBackground={BLOCK9}>
-
             <Claim {...ClaimProperties} />
         </HeroWrapper>
     );
