@@ -16,8 +16,6 @@ export const Item = styled.p`
   color: white;
 `;
 
-
-
 export const LangTriggerWrapper = styled.div`
   display: flex;
   align-items: center;
