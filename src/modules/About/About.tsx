@@ -29,8 +29,10 @@ export const About = () => {
 
   return (
     <SectionWrapper>
+
       <SectionAbout>
         <ColLeft>
+
           <Claim
             title="Wyjątkowy niepowtarzalny design"
             description="Cyfrowy concierge to aplikacja, która służy do zapewnienia dostępu do informacji 24/7, prezentacji wszelkich udogodnień  hotelowych, a także promocji ofert specjalnych za pomocą technologii cyfrowej."

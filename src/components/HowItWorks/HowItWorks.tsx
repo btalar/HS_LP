@@ -1,5 +1,5 @@
 "use client";
-import React, { useRef, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { SectionWrapper } from "../SectionWrapper";
 import { Claim } from "../Claim";
 import "react-multi-carousel/lib/styles.css";
@@ -25,13 +25,15 @@ const responsive: ResponsiveType = {
   },
   tablet: {
     breakpoint: { max: 1024, min: 464 },
-    items: 3,
+    items: 1,
+    paritialVisibilityGutter: 100,
     slidesToSlide: 1,
   },
   mobile: {
     breakpoint: { max: 464, min: 0 },
-    items: 2,
+    items: 1,
     slidesToSlide: 1,
+    paritialVisibilityGutter: 100,
   },
 };
 
@@ -39,6 +41,13 @@ const HowItWorks = () => {
   const [currentStep, setCurrentStep] = useState<number>(0);
 
   const carouselRef = useRef<MultiCarousel>(null);
+
+  const handleGoTo = (index: number) => {
+    console.log(index);
+    carouselRef?.current?.goToSlide(index + 2, {
+      skipBeforeChange: true,
+    });
+  };
 
   const header = (
     <AnimateOnChange className="flex flex-col gap-5">
@@ -99,7 +108,7 @@ const HowItWorks = () => {
 
   return (
     <div>
-      <SectionWrapper>
+      <SectionWrapper id="jaktodziala">
         <div className="flex flex-row flex-1 justify-between">
           <div className="flex flex-col gap-[40px] flex-1">
             <Claim title="Jak to działa?" />
@@ -107,7 +116,10 @@ const HowItWorks = () => {
               {[...Array(3)].map((_e, index) => {
                 return (
                   <button
-                    onClick={() => setCurrentStep(index)}
+                    onClick={() => {
+                      setCurrentStep(index);
+                      handleGoTo(index);
+                    }}
                     key={index}
                     className={classNames(
                       ` w-[15px] h-[15px] rounded-full `,
@@ -124,19 +136,18 @@ const HowItWorks = () => {
               <div className="flex-1 justify-between flex-col flex items-start">
                 <div className="flex flex-col gap-[20px]">
                   {header}
-                  <div className="w-[700px] h-[400px]">
+                  <div className="w-[400px] lg:w-[700px]">
                     <MultiCarousel
                       beforeChange={(e, { currentSlide }) => {
-                        if (e > currentSlide) {
-                          setCurrentStep(
-                            currentStep + 1 === 3 ? 0 : currentStep + 1,
-                          );
-                        } else {
-                          setCurrentStep(
-                            currentStep - 1 === -1 ? 2 : currentStep - 1,
-                          );
-                        }
+                        const plusIndex =
+                          currentStep + 1 === 3 ? 0 : currentStep + 1;
+                        const minusIndex =
+                          currentStep - 1 === -1 ? 2 : currentStep - 1;
+                        setCurrentStep(
+                          e > currentSlide ? plusIndex : minusIndex,
+                        );
                       }}
+                      partialVisbile
                       ref={carouselRef}
                       slidesToSlide={1}
                       infinite={true}
@@ -177,7 +188,7 @@ const HowItWorks = () => {
                   </Button>
                 </div>
               </div>
-              {image}
+              <div className="hidden lg:block">{image}</div>
             </div>
           </div>
         </div>

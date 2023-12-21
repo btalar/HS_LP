@@ -16,7 +16,7 @@ import { Claim } from "../Claim";
 import { Icon } from "../Functional/Functional";
 export const Variant = () => {
   return (
-    <SectionWrapper className="">
+    <SectionWrapper id="warianty" className="">
       <div className="flex flex-col gap-[30px] md:gap-[80px]">
         <div>
           <Claim title="Warianty" />
@@ -35,8 +35,9 @@ export const Variant = () => {
             </div>
             <h3 className="text-black text-[40px]">Asystent głosowy</h3>
             <p className="text-black text-[16px]">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus
-              sed volutpat laoreet. Mauris blandit interdum magna.
+              Za sprawą zaawansowanego rozpoznawania mowy i natychmiastowego
+              dostępu do informacji, asystent głosowy błyskawicznie udzieli
+              odpowiedzi w dowolnym języku!
             </p>
           </div>
           <div
@@ -52,8 +53,9 @@ export const Variant = () => {
             </div>
             <h3 className="text-black text-[40px]">Asystent tekstowy</h3>
             <p className="text-black text-[16px]">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus
-              sed volutpat laoreet. Mauris blandit interdum magna.
+              Asystent tekstowy Odkryj nowy wymiar komunikacji z Gośćmi
+              podnosząc jakość ich doświadczeń dzięki najnowszym rozwiązaniom
+              opartym na sztucznej inteligencji.
             </p>
           </div>
         </div>

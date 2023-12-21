@@ -28,12 +28,17 @@ import {
 import { useIntl } from "gatsby-plugin-intl";
 
 import { LOGO, LOGO_WHITE } from "../../assets";
-
+import { Spin as Hamburger } from "hamburger-react";
 const navbarItems = [
   { text: "Home", href: "#" },
-  { text: "Produkt", href: "#" },
-  { text: "Funkcje", href: "#" },
-  { text: "Kontakt", href: "#" },
+  { text: "Produkt", href: "#product" },
+  { text: "Korzyści", href: "#korzysci" },
+  { text: "Funkcje", href: "#funkcje" },
+  { text: "Jak to działa", href: "#jaktodziala" },
+  { text: "Szczegóły", href: "#szczegoly" },
+  { text: "Warianty", href: "#warianty" },
+  { text: "Aplikacja", href: "#aplikacja" },
+  { text: "Kontakt", href: "#footer" },
 ];
 
 export const Navbar = () => {
@@ -64,9 +69,9 @@ export const Navbar = () => {
       }
     };
 
-    window.addEventListener("scroll", updateScrollDirection); // add event listener
+    window.addEventListener("scroll", updateScrollDirection);
     return () => {
-      window.removeEventListener("scroll", updateScrollDirection); // clean up
+      window.removeEventListener("scroll", updateScrollDirection);
     };
   }, [scrollDirection]);
 
@@ -82,7 +87,10 @@ export const Navbar = () => {
       <NavbarBrand className="flex-0 mr-[70px]" style={{ flex: "unset" }}>
         <img src={LOGO_WHITE} />
       </NavbarBrand>
-      <NavbarMenuToggle className="lg:hidden" />
+      <NavbarMenuToggle
+        icon={(isOpen) => <Hamburger toggled={isOpen} />}
+        className="lg:hidden text-white w-[48px] h-[48px]"
+      />
       <NavbarContent className="lg:flex hidden gap-4 justify-between flex-1">
         <div className="flex flex-1 gap-[20px]">
           {navbarItems.map(({ href, text }, index) => (
