@@ -10,35 +10,35 @@ const list: ListType[] = [
     src: AD1,
     title: "Zwiększone przychody",
     description:
-      "Cross-selling i up-selling. Dzięki promocji i rekomendacji wszystkich hotelowych usług zwiększysz przychody hotelu",
+      "Dzięki promocji i rekomendacji wszystkich hotelowych usług, a także lokalnych atrakcji, widocznie zwiększysz przychody hotelu.\n",
   },
   {
     src: AD2,
-    title: "Usprawnienie obsługi",
+    title: "Usprawnienie obsługi gościa",
     description:
-      "Digital POD dostarcza szybką i skuteczną informacje dla gości 24/7 eliminując potrzebę czekania przy recepcji",
+      "Digital POD dostarczy szybką i skuteczną informację dla gości 24/7 eliminując potrzebę czekania przy recepcji. Efektywnie zwiększaj zadowolenie gości.\n",
   },
   {
     src: AD3,
-    title: "Automatyzacja zadań",
+    title: "Automatyzacja zadań rutynowych",
     description:
-      "Cyfrowy concierge automatyzuje wiele rutynowych zadań, takich jak infomnacje o godzinach otwarcia, atrakcjach etc.",
+      "Cyfrowy concierge automatyzuje wiele rutynowych zadań co pozwala pracownikom skupić się na bardziej skomplikowanych czynnościach.\n",
   },
   {
     src: AD4,
     title: "Oszczędność czasu",
     description:
-      "Goście szybko uzyskają odpowiedzi na pytania bez konieczności oczekiwania w kolejkach",
+      "Goście szybko uzyskają odpowiedzi na pytania bez konieczności oczekiwania w kolejkach. \n",
   },
   {
     src: AD5,
-    title: "Personalizacja doświadczeń",
+    title: "Personalizacja doświadczeń gości",
     description:
-      "Dzięki analizie danych i sztucznej inteligencji, cyfrowy concierge dostarcza spersonalizowane rekomendacje, porady i oferty",
+      "Dzięki analizie danych i sztucznej inteligencji, cyfrowy concierge dostarczy spersonalizowane rekomendacje, porady i informacje.\n",
   },
   {
     src: AD6,
-    title: "Personalizacja doświadczeń",
+    title: "Redukcja kosztów",
     description:
       "Dzięki analizie danych i sztucznej inteligencji, cyfrowy concierge dostarcza spersonalizowane rekomendacje, porady i oferty",
   },
@@ -56,7 +56,10 @@ const Item = ({ title, description, src }: ListType) => {
 
 export const Advantage = () => {
   return (
-    <SectionWrapper className="py-8 px-10 gap-[100px] flex flex-col">
+    <SectionWrapper
+      id="korzysci"
+      className="py-8 px-10 gap-[100px] flex flex-col"
+    >
       <div className="flex flex-row justify-center">
         <Claim title="Korzyści" />
       </div>

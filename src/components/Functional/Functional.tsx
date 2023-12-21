@@ -28,7 +28,7 @@ export const Icon = ({ src }: { src: any }) => {
 
 export const Functional = () => {
   return (
-    <SectionWrapper className="flex gap-[40px] flex-col">
+    <SectionWrapper id="funkcje" className="flex gap-[40px] flex-col">
       <Claim title="Funkcje" />
       <div className="flex gap-[20px] md:gap-[50px] md:flex-row flex-col md:h-[700px]">
         <div

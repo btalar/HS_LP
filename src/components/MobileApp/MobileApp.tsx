@@ -1,12 +1,12 @@
 import React from "react";
 import { Image } from "@nextui-org/react";
-import { APP_STORE, BLOCK7, GOOGLE_PLAY, SVG6, SVG7 } from "../../assets";
+import { APP_STORE, BLOCK7, GOOGLE_PLAY } from "../../assets";
 import { SectionWrapper } from "../SectionWrapper";
 import { Claim } from "../Claim";
 
 export const MobileApp = () => {
   return (
-    <SectionWrapper>
+    <SectionWrapper id="aplikacja">
       <div className="flex lg:flex-row flex-col gap-4">
         <div className="flex-1 flex flex-col gap-[40px] justify-center">
           <Claim

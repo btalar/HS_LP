@@ -21,7 +21,10 @@ export const About = () => {
 
   return (
     <SectionWrapper>
-      <div className="flex gap-4 lg:gap-[50px] lg:flex-row flex-col ">
+      <div
+        id="product"
+        className="flex gap-4 lg:gap-[50px] lg:flex-row flex-col "
+      >
         <div className="gap-[10px] flex flex-col lgmax-w-[400px] items-center lg:items-start max-w-full justify-between ">
           <Claim
             titleClassName="text-[60px] text-center lg:text-left"

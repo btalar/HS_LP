@@ -9,9 +9,8 @@ import { useIntl } from "gatsby-plugin-intl";
 export const Footer = () => {
   const intl = useIntl();
 
-  console.log(intl.formatMessage({ id: "title" }));
   return (
-    <SectionWrapper noMarginVertical isFluid className="py-8">
+    <SectionWrapper id="footer" noMarginVertical isFluid className="py-8">
       <SectionWrapper
         className="mt-0 max-w-[1440px] flex gap-x-6 justify-between lg:px-6 px-0"
         noGap
