@@ -18,10 +18,9 @@ export const Details = () => {
         <br /> o szczegółach
       </div>
       <p className="text-white text-center text-[16px]">
-        Uzyskaj odpowiedzi na nurtujące Cię pytania w ramach indywidualnej
-        <br />
-        rozmowy z jednym z naszych ekspertów. Wspólnie znajdziemy najlepsze
-        rozwiązanie dla Twojego hotelu.
+        Uzyskaj odpowiedzi na nurtujące Cię pytania <br />w ramach indywidualnej
+        rozmowy z jednym z naszych ekspertów. <br /> Wspólnie znajdziemy
+        najlepsze rozwiązanie dla Twojego hotelu.
       </p>
       <Button
         className="bg-white text-black"

@@ -1,23 +1,25 @@
-import { CARD1, CARD2, CARD4, CARD5 } from "../../assets";
+import { CARD2, CARD5, OPINIONS_ASSETS } from "../../assets";
 import { Button } from "@nextui-org/react";
 import React from "react";
-import { CardType } from "./WeatherCard";
+import { CardType } from "./RestaurantCard";
 
-const RentBikeCard = ({ isActive }: CardType) => (
+const OpinionCard = ({ isActive }: CardType) => (
   <div
     className={`mx-[20px] rounded-[50px] flex flex-col overflow-hidden h-[300px]  ${
       isActive ? "shadow-lg" : "shadow"
     }`}
   >
     <div className="flex flex-row items-center justify-start bg-[#F5F5F5] h-[70px] px-[30px] gap-[15px]">
-      <img className="w-[30px] h-[30px]" src={CARD2} />
-      <h3>Wypożycz rower</h3>
+      <h3>Pozostaw opinie</h3>
     </div>
     <div className="flex flex-1 flex-col gap-[30px] py-[30px] items-center justify-around">
-      <img className="w-[100px]" src={CARD5} />
-      <Button radius="full">Wyporzycz</Button>
+      <div className="text-white bg-[#C7A581] text-[48px] px-2 rounded-2xl">
+        4.9
+      </div>
+      <img className="w-[100px]" src={OPINIONS_ASSETS} />
+      <Button radius="full">Dodaj opinie</Button>
     </div>
   </div>
 );
 
-export default RentBikeCard;
+export default OpinionCard;

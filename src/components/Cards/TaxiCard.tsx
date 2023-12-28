@@ -1,7 +1,7 @@
 import { CARD1, CARD4 } from "../../assets";
 import { Button } from "@nextui-org/react";
 import React from "react";
-import { CardType } from "./WeatherCard";
+import { CardType } from "./RestaurantCard";
 
 const TaxiCard = ({ isActive }: CardType) => (
   <div

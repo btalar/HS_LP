@@ -13,6 +13,9 @@ import pieChart from "./advantages/pie-chart.png";
 import trendingUp from "./advantages/trending-up.png";
 import heroBackgroundMobile from "./hero-img-mobile.webp";
 
+import opinionAsset from "./../assets/svg/opinie.svg";
+
+export const OPINIONS_ASSETS = opinionAsset;
 import arrowLeft from "./../assets/arrow-left.svg";
 import arrowRight from "./../assets/arrow-right.svg";
 import businessman from "./businessman.png";
@@ -58,6 +61,13 @@ export const BLOCK15 = block15;
 
 export const BLOCK13 = block13;
 export const BLOCK14 = block14;
+import assets21 from "./blocks/21.png";
+
+export const ASSETS21 = assets21;
+
+import block20 from "./blocks/20.png";
+
+export const BLOCK20 = block20;
 
 import svg1 from "./../assets/svg/1.svg";
 import svg2 from "./../assets/svg/2.svg";

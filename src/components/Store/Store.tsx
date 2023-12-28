@@ -18,22 +18,17 @@ const mocks: RowType[] = [
     title: "Aplikacja do zarządzania usterkami",
     isPromoted: true,
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit.\n" +
-      "Phasellus ultricies dolor sed volutpat laoreet.",
+      "Aplikacja do komunikacji w zespole hotelowym oraz do zarządzania usterkami",
   },
   {
     image: ASSETS2,
     title: "Zarządzanie konferencjami",
-    description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit.\n" +
-      "Phasellus ultricies dolor sed volutpat laoreet.",
+    description: "Aplikacja do sprzedaży, zarządzania i realizacji eventów",
   },
   {
     image: ASSETS2,
     title: "Oferta dla hoteli",
-    description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit.\n" +
-      "Phasellus ultricies dolor sed volutpat laoreet.",
+    description: "Jeszcze więcej cyfrowych możliwości.",
   },
 ];
 
@@ -70,15 +65,15 @@ const Row = ({
             Bestseller
           </div>
         )}
-        <div className="text-[24px]">{title}</div>
-        <div className="text-[15px]">{description}</div>
+        <div className="text-[40px] font-bold">{title}</div>
+        <div className="text-[16px] font-semibold">{description}</div>
       </div>
       <Button
         size="lg"
         disabled={true}
-        className="text-[16px] rounded-full bg-[#C7C5C7] text-white"
+        className="text-[16px] rounded-full bg-black text-white"
       >
-        Dostępne wkrótce
+        Więcej
       </Button>
     </div>
   );

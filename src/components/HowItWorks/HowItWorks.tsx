@@ -6,11 +6,13 @@ import "react-multi-carousel/lib/styles.css";
 import MultiCarousel, { ResponsiveType } from "react-multi-carousel";
 import { Button } from "@nextui-org/react";
 import classNames from "classnames";
-import { BLOCK14, BLOCK3, BLOCK5, CARD1, CARD4, LEFT } from "../../assets";
+import { ASSETS21, LEFT } from "../../assets";
 import TaxiCard from "../Cards/TaxiCard";
-import RentBikeCard from "../Cards/RentBikeCard";
-import WeatherCard from "../Cards/WeatherCard";
+import OpinionCard from "../Cards/OpinionCard";
 import { AnimateOnChange } from "../AnimationOnChange/AnimationOnChange";
+import RestaurantCard from "../Cards/RestaurantCard";
+import OfferSpecialCard from "../Cards/OfferSpecialCard";
+import HotelEventsCard from "../Cards/HotelEventsCard";
 
 const responsive: ResponsiveType = {
   superLargeDesktop: {
@@ -49,29 +51,50 @@ const HowItWorks = () => {
     });
   };
 
+  console.log(currentStep);
+
   const header = (
     <AnimateOnChange className="flex flex-col gap-5">
       {
         {
           ["0"]: (
             <Claim
-              title="Zamów taxi"
+              title="Restauracja hotelowa"
               titleClassName="text-[40px]"
-              description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ultricies dolor sed volutpat laoreet. Mauris blandit interdum magna sit amet mattis. Nam faucibus purus leo."
+              descriptionClassName="h-10"
+              description="Menu sezonowe lub specjalna oferta lunchowa? Dzięki naszej aplikacji zwiększysz liczbę rezerwacji i gości w restauracji."
             />
           ),
           ["1"]: (
             <Claim
-              title="Wypożycz rower"
+              title="Zamów taxi"
               titleClassName="text-[40px]"
-              description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ultricies dolor sed volutpat laoreet. Mauris blandit interdum magna sit amet mattis. Nam faucibus purus leo."
+              descriptionClassName="h-10"
+              description="Goście hotelowi z łatwością zamówią taksówkę bezpośrednio z PODa bez konieczności angażowania obsługi."
             />
           ),
           ["2"]: (
             <Claim
-              title="Pogoda"
+              title="Oferty specjalne"
               titleClassName="text-[40px]"
-              description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ultricies dolor sed volutpat laoreet. Mauris blandit interdum magna sit amet mattis. Nam faucibus purus leo."
+              description="Promuj oferty specjalne z wyprzedzeniem i zwiększ szanse na bezpośrednie rezerwacje oraz powrót gości."
+              descriptionClassName="h-10"
+            />
+          ),
+          ["3"]: (
+            <Claim
+              title="Wydarzenia hotelowe"
+              titleClassName="text-[40px]"
+              descriptionClassName="h-10"
+              description="Organizujesz seanse filmowe, animacje dla dzieci, wspólne kibicowanie? Poinformuj gości o wydarzeniach organizowanych w hotelu i zyskaj dodatkowy przychód."
+            />
+          ),
+          ["4"]: (
+            <Claim
+              title="Pozostaw opinię"
+              descriptionClassName="h-10"
+              titleClassName="text-[40px]"
+              description="Dzięki opiniom i ich analizie podniesiesz jakość oferowanych usług"
             />
           ),
         }[currentStep]
@@ -86,19 +109,31 @@ const HowItWorks = () => {
           ["0"]: (
             <img
               className="h-[644px] w-[448px] object-cover rounded-[50px]"
-              src={BLOCK14}
+              src={ASSETS21}
             />
           ),
           ["1"]: (
             <img
               className="h-[644px] w-[448px] object-cover rounded-[50px]"
-              src={BLOCK5}
+              src={ASSETS21}
             />
           ),
           ["2"]: (
             <img
               className="h-[644px] w-[448px] object-cover rounded-[50px]"
-              src={BLOCK3}
+              src={ASSETS21}
+            />
+          ),
+          ["3"]: (
+            <img
+              className="h-[644px] w-[448px] object-cover rounded-[50px]"
+              src={ASSETS21}
+            />
+          ),
+          ["4"]: (
+            <img
+              className="h-[644px] w-[448px] object-cover rounded-[50px]"
+              src={ASSETS21}
             />
           ),
         }[currentStep]
@@ -113,7 +148,7 @@ const HowItWorks = () => {
           <div className="flex flex-col gap-[40px] flex-1">
             <Claim title="Jak to działa?" />
             <div className="flex gap-[15px]">
-              {[...Array(3)].map((_e, index) => {
+              {[...Array(5)].map((_e, index) => {
                 return (
                   <button
                     onClick={() => {
@@ -131,16 +166,16 @@ const HowItWorks = () => {
                 );
               })}
             </div>
-            <div>{currentStep + 1} z 3</div>
+            <div>{currentStep + 1} z 5</div>
             <div className="flex flex-row gap-[50px] flex-1 justify-between">
               <div className="flex-1 justify-between flex-col flex items-start">
                 <div className="flex flex-col gap-[20px]">
                   {header}
-                  <div className="w-[400px] lg:w-[700px]">
+                  <div id="carousel-container">
                     <MultiCarousel
                       beforeChange={(e, { currentSlide }) => {
                         const plusIndex =
-                          currentStep + 1 === 3 ? 0 : currentStep + 1;
+                          currentStep + 1 === 5 ? 0 : currentStep + 1;
                         const minusIndex =
                           currentStep - 1 === -1 ? 2 : currentStep - 1;
                         setCurrentStep(
@@ -154,9 +189,11 @@ const HowItWorks = () => {
                       renderButtonGroupOutside={true}
                       responsive={responsive}
                     >
-                      <TaxiCard isActive={currentStep === 0} />
-                      <RentBikeCard isActive={currentStep === 1} />
-                      <WeatherCard isActive={currentStep === 2} />
+                      <RestaurantCard isActive={currentStep === 0} />
+                      <TaxiCard isActive={currentStep === 1} />
+                      <OfferSpecialCard isActive={currentStep === 2} />
+                      <HotelEventsCard isActive={currentStep === 3} />
+                      <OpinionCard isActive={currentStep === 4} />
                     </MultiCarousel>
                   </div>
                 </div>

@@ -35,7 +35,7 @@ export const About = () => {
 
           <Claim
             title="Wyjątkowy niepowtarzalny design"
-            description="Cyfrowy concierge to aplikacja, która służy do zapewnienia dostępu do informacji 24/7, prezentacji wszelkich udogodnień  hotelowych, a także promocji ofert specjalnych za pomocą technologii cyfrowej."
+            description="Cyfrowy concierge to aplikacja z dostępem do informacji 24/7, prezentacji wszystkich udogodnień hotelowych oraz promocji ofert specjalnych za pomocą technologii cyfrowej"
           />
           <VariantSwitcher>
             <ChooseVariant variant={variant} setVariant={setVariant} />

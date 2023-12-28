@@ -16,8 +16,8 @@ export const MobileApp = () => {
                 Aplikacja <br /> mobilna
               </>
             }
-            descriptionClassName="max-w-[300px]"
-            description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ultricies dolor sed volutpat laoreet."
+            descriptionClassName="max-w-[300px] text-justify"
+            description="Usługa dostępna także jako aplikacja dostępna dla wszystkich gości, niezależnie od tego, czy korzystają ze smartfona, tabletu, czy komputera."
           />
           <div className="hidden lg:flex gap-[10px]">
             <Image className="border" src={APP_STORE} />

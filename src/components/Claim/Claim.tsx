@@ -26,13 +26,17 @@ export const Claim = ({
   theme = "light",
 }: ClaimType) => (
   <>
-    <Title className={theme === "dark" ? "!text-white" : "" + titleClassName}>
+    <Title
+      className={(theme === "dark" ? "!text-white " : "") + titleClassName}
+    >
       {title}
     </Title>
     {hasSeparator && <Separator />}
     {description && (
       <Description
-        className={theme === "dark" ? "!text-white" : "" + descriptionClassName}
+        className={
+          (theme === "dark" ? "!text-white " : "") + descriptionClassName
+        }
       >
         {description}
       </Description>
@@ -51,7 +55,7 @@ export const Claim = ({
             >
               {buttonPrimaryText}
             </Button>
-           )}
+          )}
           {buttonSecondaryText && (
             <Button
               radius="full"

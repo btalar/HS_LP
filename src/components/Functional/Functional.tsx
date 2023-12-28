@@ -7,6 +7,7 @@ import {
   BLOCK14,
   BLOCK15,
   BLOCK2,
+  BLOCK20,
   BLOCK3,
   BLOCK6,
   SVG1,
@@ -39,9 +40,9 @@ export const Functional = () => {
           <h3 className="text-white text-[40px] mt-[100px] md:mt-0 mt-[100px] md:mt-0">
             Asystent głosowy
           </h3>
-          <p className="text-white text-[16px]">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus
-            sed volutpat laoreet. Mauris blandit interdum magna.
+          <p className="text-white text-[16px] text-justify">
+            Odpowiadaj w ojczystym języku swoich gości <br />
+            dzięki wbudowanemu narzędziu do automatycznego tłumaczenia
           </p>
         </div>
         <div className="flex-1 flex flex-col gap-[20px] md:gap-[50px] relative">
@@ -56,15 +57,14 @@ export const Functional = () => {
               Lokalne Atrakcje
             </h3>
             <p className="text-white text-[16px]">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus
-              sed volutpat laoreet. Mauris blandit interdum magna.
+              Podziel się rekomendacjami lokalnych atrakcji:
+              <br /> muzea, ciekawe miejsca, wydarzenia, restauracje.
             </p>
           </div>
           <div
             className="flex-1 overflow-hidden bg-center bg-cover relative p-[30px] md:p-[50px] flex flex-col justify-end gap-[10px] rounded-[50px]"
             style={{
-              background:
-                "linear-gradient(102deg, #638C76 0%, #44584D 100.03%)",
+              background: `url("${BLOCK20}")`,
             }}
           >
             <img className="absolute -right-[20%] top-[10%]" src={BLOCK15} />
@@ -73,8 +73,8 @@ export const Functional = () => {
               Aplikacja mobilna
             </h3>
             <p className="text-white text-[16px]">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus
-              sed volutpat laoreet. Mauris blandit interdum magna.
+              Przenieś swoją ofertę na wyższy poziom. <br /> Informuj i
+              sprzedawaj swoje usługi bezpośrednio w aplikacji mobilnej.
             </p>
           </div>
         </div>

@@ -10,19 +10,19 @@ const list: ListType[] = [
     src: AD1,
     title: "Zwiększone przychody",
     description:
-      "Dzięki promocji i rekomendacji wszystkich hotelowych usług, a także lokalnych atrakcji, widocznie zwiększysz przychody hotelu.\n",
+      "Dzięki promocji i rekomendacji wszystkich hotelowych usług, a także lokalnych atrakcji, widocznie zwiększysz przychody hotelu.",
   },
   {
     src: AD2,
     title: "Usprawnienie obsługi gościa",
     description:
-      "Digital POD dostarczy szybką i skuteczną informację dla gości 24/7 eliminując potrzebę czekania przy recepcji. Efektywnie zwiększaj zadowolenie gości.\n",
+      "Digital POD dostarczy szybką i skuteczną informację \ndla gości 24/7 eliminując potrzebę czekania przy recepcji. Efektywnie zwiększaj zadowolenie gości.\n",
   },
   {
     src: AD3,
     title: "Automatyzacja zadań rutynowych",
     description:
-      "Cyfrowy concierge automatyzuje wiele rutynowych zadań co pozwala pracownikom skupić się na bardziej skomplikowanych czynnościach.\n",
+      "Cyfrowy concierge automatyzuje wiele rutynowych zadań\nco pozwala pracownikom skupić się na bardziej skomplikowanych czynnościach.\n",
   },
   {
     src: AD4,
@@ -40,16 +40,18 @@ const list: ListType[] = [
     src: AD6,
     title: "Redukcja kosztów",
     description:
-      "Dzięki analizie danych i sztucznej inteligencji, cyfrowy concierge dostarcza spersonalizowane rekomendacje, porady i oferty",
+      "Widocznie obniżone koszty operacyjne poprzez np. redukcję wydruku materiałów reklamowych informacyjnych, optymalizację liczby recepcjonistów i wiele innych.\n",
   },
 ];
 
 const Item = ({ title, description, src }: ListType) => {
   return (
     <div className="w-[400px] h-[307px] flex flex-col gap-6 items-center">
-      <Image src={src} />
+      <Image width={70} height={70} src={src} />
       <h3 className="text-[24px] font-bold text-center">{title}</h3>
-      <p className="text-center text-[15px]">{description}</p>
+      <p className="text-center whitespace-pre-wrap text-[15px] text-justify">
+        {description}
+      </p>
     </div>
   );
 };
