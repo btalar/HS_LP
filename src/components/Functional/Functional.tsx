@@ -22,7 +22,11 @@ import { Image } from "@nextui-org/react";
 export const Icon = ({ src }: { src: any }) => {
   return (
     <div className="left-[20px] top-[20px] md:left-[50px] md:top-[50px] absolute w-[48px] h-[48px] md:w-[80px] md:h-[80px] bg-white rounded-full flex justify-center items-center  shadow-lg ">
-      <Image className="md:w-[40px] md:h-[40px] w-[20px] h-[20px]" src={src} />
+      <Image
+        radius="none"
+        className="md:w-[40px] md:h-[40px] w-[20px] h-[20px]"
+        src={src}
+      />
     </div>
   );
 };

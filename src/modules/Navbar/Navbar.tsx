@@ -137,7 +137,7 @@ export const Navbar = () => {
                 </FlagListItem>
                 <FlagListItem onClick={() => (window.location = `/en`)}>
                   <LangFlag>
-                    <GB title="Englisch" />
+                    <GB title="English" />
                   </LangFlag>
                   <LangName>English</LangName>
                 </FlagListItem>

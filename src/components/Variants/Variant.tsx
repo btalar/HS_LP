@@ -51,7 +51,7 @@ export const Variant = () => {
             <div className="bg-black text-white py-1 px-4 rounded-[50px] font-normal uppercase">
               Aplikacja mobilna
             </div>
-            <h3 className="text-black text-[40px]">Asystent tekstowy</h3>
+            <h3 className="text-black text-[40px]">Chat Bot</h3>
             <p className="text-black text-[16px] text-justify">
               Asystent tekstowy Odkryj nowy wymiar komunikacji z Gośćmi
               podnosząc jakość ich doświadczeń dzięki najnowszym rozwiązaniom
