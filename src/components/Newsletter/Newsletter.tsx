@@ -26,10 +26,10 @@ export const Newsletter = () => {
     formState: { errors },
   } = useForm<Inputs>();
   const onSubmit: SubmitHandler<Inputs> = async ({ email, policy }) => {
-    console.log({ policy });
     if (!policy) {
       toast.error("Konieczne jest zaakceptowanie polityki prywatności");
       setFormState("error");
+      return;
     }
 
     try {
