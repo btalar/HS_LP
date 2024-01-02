@@ -18,10 +18,13 @@ import { MobileApp } from "../components/MobileApp/MobileApp";
 import HowItWorks from "../components/HowItWorks/HowItWorks";
 import Store from "../components/Store/Store";
 import { Pricing } from "../components/Pricing/Pricing";
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const IndexPage: FC<PageProps> = () => {
   return (
     <Layout>
+      <ToastContainer />
       <Navbar />
       <Header />
       <SectionImage />

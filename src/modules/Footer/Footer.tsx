@@ -5,9 +5,23 @@ import { Button, Image, Input, Textarea } from "@nextui-org/react";
 import { FOOTER_RECT } from "../../assets";
 import { LOGO } from "../../assets";
 import { useIntl } from "gatsby-plugin-intl";
+import { useForm } from "react-hook-form";
+import { Newsletter } from "../../components/Newsletter";
+
+type Inputs = {
+  example: string;
+  exampleRequired: string;
+};
 
 export const Footer = () => {
   const intl = useIntl();
+
+  const {
+    register,
+    handleSubmit,
+    watch,
+    formState: { errors },
+  } = useForm<Inputs>();
 
   return (
     <SectionWrapper id="footer" noMarginVertical isFluid className="py-8">
@@ -121,22 +135,7 @@ export const Footer = () => {
               </ul>
             </div>
           </div>
-          <div className="flex flex-1 flex-col gap-[40px] md:gap-[80px]">
-            <Claim
-              title="Dołącz do newslettera"
-              titleClassName="text-center md:text-left text-[32px]"
-            />
-            <div className="flex flex-row  gap-4">
-              <Input radius="full" size="sm" label="Email" variant="bordered" />
-              <Button
-                className="text-[12px] text-white bg-black rounded-full"
-                size="lg"
-                radius="sm"
-              >
-                Wyślij
-              </Button>
-            </div>
-          </div>
+          <Newsletter />
         </FooterInfo>
       </div>
       <div className="footer-copyright flex items-center justify-between text-[12px] text-[#2e3a59] gap-[6px] md:gap-[24px] max-w-[1440px] mx-auto">

@@ -1,0 +1,15 @@
+import axios from "axios";
+
+const baseURL = "https://connect.mailerlite.com/api/";
+const token =
+  "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiI0IiwianRpIjoiOWExMWIzNmUzMjNjZDcyMzNhMmJjNzdmOTk3MGVhNjM1NTgwM2U2OGNkMTFiYTczOGUyZmI3ZDg4NzFlN2NkNWU3M2VhZmJmMTgzZjU1ZDMiLCJpYXQiOjE3MDQxOTMzOTcuNDkyMjAyLCJuYmYiOjE3MDQxOTMzOTcuNDkyMjA5LCJleHAiOjQ4NTk4NjY5OTcuNDgwODc0LCJzdWIiOiI3NzA3NTIiLCJzY29wZXMiOltdfQ.aULrcxMYrWP44DpzMZz9WbImV43tW_Z8YqJ8bJigsB6WFksMFUXrh0m6zoQtVRBj__TwSQ1R7SR6586chvbJAYzC9vrzzZ3Ik6e2Fdfmp64QspauXEYFjspt4x3kgdpEe3Nc1BmeNYE65ADL-pia8uDxGTCqwZeaYOneDhM1vgcAuk7RgeV_-nK1uR37OEeLyXuL2I6G2YVElX44oEEK0TT34WmthdrN2zwxhb9S0axR1CgZ6DC3ccmWzRhLbw-KXfkV8n5E6XrAzFvYInIAn3r6idXw5q80qwKGgduXdaxI7qMGiyHKm2NX0i4F4cQx_SVcZ6qPcK3dqfQQ3R-ZVK-ulHwB4X1tbtheVu18EXi8djlyPni9MZxECpr9kUAGWXKb3-tcx6BUKSPLKb9hYTO-DSRbt4VXY9VxereY2Zk40fd3W6IdIA_FrQgaEvw_Qubd7Nie0H5lM78l9gKTcdU_ej2ItykNbtxyhPchum4ZX6cC-3pkBqa_GAp6tNy2gj7jwTrrxc17wdItuJUJrFI1PwhGTYNV_lMocoVxSRtFG88yosUpf3zXEDUXtl6_Vh176A43UJgh5CfuWJ2ODzJBsZ6upBSbtJTE7KzGBHjWDjKi8iOjlji5I6ts9zDuGHZXYu46DKB333euzVYs9kVfYo0GYDSNQzRbS1gaFrM";
+
+const instance = axios.create({
+  baseURL,
+  headers: {
+    "Content-Type": "application/json",
+    Authorization: `Bearer ${token}`,
+  },
+});
+
+export default instance;
