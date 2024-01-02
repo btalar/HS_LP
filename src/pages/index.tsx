@@ -1,4 +1,4 @@
-import React, { FC } from "react";
+import React, { FC, useEffect } from "react";
 import { PageProps } from "gatsby";
 import {
   About,
@@ -20,6 +20,7 @@ import Store from "../components/Store/Store";
 import { Pricing } from "../components/Pricing/Pricing";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import { Script } from "../components/Script/Script";
 
 const IndexPage: FC<PageProps> = () => {
   return (
@@ -37,7 +38,7 @@ const IndexPage: FC<PageProps> = () => {
       <MobileApp />
       <Store />
       <Pricing />
-      <Footer />
+      <Footer />C{" "}
     </Layout>
   );
 };

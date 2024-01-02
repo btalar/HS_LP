@@ -103,6 +103,7 @@ export const Navbar = () => {
         </div>
         <div className="flex flex-1 gap-2 justify-end">
           <Button
+            onClick={() => (window.location.href = "https://cpnow.me/d/VYZY")}
             style={{ fontSize: 15, height: 40 }}
             size="lg"
             variant="bordered"
