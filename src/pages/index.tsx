@@ -20,11 +20,12 @@ import Store from "../components/Store/Store";
 import { Pricing } from "../components/Pricing/Pricing";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import { Script } from "../components/Script/Script";
+import CallPageWidget from "../components/CallpageWidget/CallpageWidget";
 
 const IndexPage: FC<PageProps> = () => {
   return (
     <Layout>
+       <CallPageWidget/>
       <ToastContainer />
       <Navbar />
       <Header />
@@ -38,7 +39,7 @@ const IndexPage: FC<PageProps> = () => {
       <MobileApp />
       <Store />
       <Pricing />
-      <Footer />C{" "}
+      <Footer />
     </Layout>
   );
 };

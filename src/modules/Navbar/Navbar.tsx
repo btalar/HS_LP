@@ -103,12 +103,12 @@ export const Navbar = () => {
         </div>
         <div className="flex flex-1 gap-2 justify-end">
           <Button
-            onClick={() => (window.location.href = "https://cpnow.me/d/VYZY")}
             style={{ fontSize: 15, height: 40 }}
             size="lg"
             variant="bordered"
             radius="full"
-            className="text-white relative overflow-visible rounded-full  after:content-[''] after:absolute after:rounded-full after:inset-0   after:z-[-1] after:transition after:!duration-500 hover:after:scale-150 hover:after:opacity-0"
+            id={'cp-trigger'}
+            className="cp-trigger text-white relative overflow-visible rounded-full  after:content-[''] after:absolute after:rounded-full after:inset-0   after:z-[-1] after:transition after:!duration-500 hover:after:scale-150 hover:after:opacity-0 "
           >
             Kontakt z konsultantem
           </Button>
@@ -145,24 +145,6 @@ export const Navbar = () => {
               </FlagList>
             </PopoverContent>
           </Popover>
-
-          {/*<Dropdown backdrop="blur">*/}
-          {/*  <DropdownTrigger>*/}
-          {/*    <Button*/}
-          {/*      style={{ fontSize: 16, height: 40 }}*/}
-          {/*      size="lg"*/}
-          {/*      variant="bordered"*/}
-          {/*      className="text-white"*/}
-          {/*    >*/}
-          {/*      {intl.locale}*/}
-          {/*    </Button>*/}
-          {/*  </DropdownTrigger>*/}
-          {/*  <DropdownMenu onAction={(e) => (window.location = `/${e}`)}>*/}
-          {/*    <DropdownItem key="pl">PL</DropdownItem>*/}
-          {/*    <DropdownItem key="en">EN</DropdownItem>*/}
-          {/*    <DropdownItem key="de">DE</DropdownItem>*/}
-          {/*  </DropdownMenu>*/}
-          {/*</Dropdown>*/}
         </div>
       </NavbarContent>
       <NavbarMenu className="pt-6">
