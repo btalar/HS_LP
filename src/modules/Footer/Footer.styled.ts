@@ -35,7 +35,7 @@ export const RectImg = styled.img`
   }
 `;
 
-export const ContactForm = styled.div`
+export const ContactForm = styled.form`
   max-width: 628px;
   margin-top: 24px;
   font-size: 12px;

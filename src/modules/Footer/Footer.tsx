@@ -1,12 +1,13 @@
 import React from "react";
 import { Claim, SectionWrapper } from "../../components";
-import { ContactForm, FooterInfo, RectImg } from "./Footer.styled";
+import { FooterInfo, RectImg } from "./Footer.styled";
 import { Button, Image, Input, Textarea } from "@nextui-org/react";
 import { FOOTER_RECT } from "../../assets";
 import { LOGO } from "../../assets";
 import { useIntl } from "gatsby-plugin-intl";
 import { useForm } from "react-hook-form";
 import { Newsletter } from "../../components/Newsletter";
+import { ContactForm } from "../../components/Contact";
 
 type Inputs = {
   example: string;
@@ -41,64 +42,7 @@ export const Footer = () => {
           <h2 className="my-[25px] text-[32px] font-[600] mt-[12px]">
             office@hotelspot.com
           </h2>
-          <ContactForm>
-            <div className="flex flex-col gap-[30px]">
-              <div className="flex flex-col md:flex-row  justify-around md:gap-3 gap-[30px]">
-                <Input
-                  variant="bordered"
-                  labelPlacement="inside"
-                  label="Imię"
-                  radius="full"
-                />
-                <Input
-                  variant="bordered"
-                  labelPlacement="inside"
-                  label="Nazwisko"
-                  radius="full"
-                />
-              </div>
-              <div className="flex flex-col md:flex-row  justify-around md:gap-3 gap-[30px]">
-                <Input
-                  variant="bordered"
-                  type="email"
-                  labelPlacement="inside"
-                  label="E-mail"
-                  radius="full"
-                />
-                <Input
-                  variant="bordered"
-                  labelPlacement="inside"
-                  label="Numer telefonu"
-                  radius="full"
-                />
-              </div>
-              <div>
-                <Textarea
-                  className="textarea"
-                  variant="bordered"
-                  labelPlacement="inside"
-                  label="Wiadomość"
-                  radius="full"
-                />
-              </div>
-              <div className="flex flex-row gap-[20px] items-center md:gap-[30px]">
-                <Button
-                  radius="sm"
-                  className={"text-white !borer-none bg-primary rounded-full"}
-                >
-                  Wyślij
-                </Button>
-                <p>
-                  Wysyłając potwierdzam iż, zapoznałem się z{" "}
-                  <a className="underline font-bold" href="#">
-                    {" "}
-                    polityką prywatności{" "}
-                  </a>{" "}
-                  i wyrażam zgodę na przetwarzanie moich danych osobowych.
-                </p>
-              </div>
-            </div>
-          </ContactForm>
+          <ContactForm />
         </div>
         <RectImg src={FOOTER_RECT} />
       </SectionWrapper>
