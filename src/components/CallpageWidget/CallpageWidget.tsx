@@ -6,14 +6,14 @@ const CallPageWidget: React.FC = () => {
             const script = document.createElement('script');
             script.async = true;
             if (script.readyState) {
-                script.onreadystatechange = () => {
+                script.onreadystatechange = function () {
                     if (script.readyState === 'loaded' || script.readyState === 'complete') {
                         script.onreadystatechange = null;
                         callback(window, document);
                     }
                 };
             } else {
-                script.onload = () => {
+                script.onload = function () {
                     callback(window, document);
                 };
             }
@@ -37,7 +37,7 @@ const CallPageWidget: React.FC = () => {
             return version;
         };
 
-        const loadWidget = (window: Window, document: Document) => {
+        const loadWidget = function (window: Window, document: Document) {
             const __cp = { "id": "sKJXV7RAICOom6apMk-g36lf0Rg2Ltn_dP74ciJ-hhw", "version": "1.1" };
             const cp = document.createElement('script');
             cp.type = 'text/javascript';
@@ -46,9 +46,9 @@ const CallPageWidget: React.FC = () => {
             const s = document.getElementsByTagName('script')[0];
             s.parentNode?.insertBefore(cp, s);
             if (window.callpage) {
-                console.error('You could have only 1 CallPage code on your website!');
+                alert('You could have only 1 CallPage code on your website!');
             } else {
-                window.callpage = (method: string) => {
+                window.callpage = function (method: string) {
                     if (method === '__getQueue') {
                         return this.methods;
                     } else if (method) {
@@ -64,12 +64,11 @@ const CallPageWidget: React.FC = () => {
             }
         };
 
-        loadBabel('https://cdnjs.cloudflare.com/ajax/libs/babel-polyfill/6.26.0/polyfill.min.js', () => {
+        loadBabel('https://cdnjs.cloudflare.com/ajax/libs/babel-polyfill/6.26.0/polyfill.min.js', function () {
             return loadWidget(window, document);
         });
     }, []); // Empty dependency array ensures the effect runs once after the initial render
 
     return null; // Since this is a script, no need to render anything
 };
-
 export default CallPageWidget;

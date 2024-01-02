@@ -14,7 +14,7 @@ const config: GatsbyConfig = {
         path: `${__dirname}/src/intl`,
         languages: [`pl`, `en`, `de`],
         defaultLanguage: `pl`,
-        redirect: true,
+        redirect: false,
       },
     },
     "gatsby-plugin-styled-components",

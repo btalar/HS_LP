@@ -44,7 +44,6 @@ const navbarItems = [
 export const Navbar = () => {
   const intl = useIntl();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  console.log(countries);
   const [scrollDirection, setScrollDirection] = useState<"down" | "up">("up");
   const [scrollPosition, setScrollPosition] = useState<boolean>(false);
 
