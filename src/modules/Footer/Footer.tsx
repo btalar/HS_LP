@@ -99,7 +99,7 @@ export const Footer = () => {
           />
         </svg>
         <div className="line border-t border-[#c5cee0] w-[100%] flex-1"></div>
-        <p>© Copyright 2023 Hotelspot</p>
+        <p>© Copyright 2024 Hotelspot</p>
       </div>
     </SectionWrapper>
   );

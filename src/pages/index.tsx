@@ -25,7 +25,7 @@ import CallPageWidget from "../components/CallpageWidget/CallpageWidget";
 const IndexPage: FC<PageProps> = () => {
   return (
     <Layout>
-       <CallPageWidget/>
+        <CallPageWidget/>
       <ToastContainer />
       <Navbar />
       <Header />
