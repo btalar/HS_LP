@@ -30,10 +30,10 @@ export const Variant = () => {
             }}
           >
             <Icon src={SVG4} />
-            <div className="bg-black text-white py-1 px-4 rounded-[50px]">
+            <div className="bg-black text-white py-1 text-[12px] px-4 rounded-[50px]">
               STACJONARNY POD
             </div>
-            <h3 className="text-black text-[40px]">Asystent głosowy</h3>
+            <h3 className="text-black text-[30px]">Asystent głosowy</h3>
             <p className="text-black text-[16px] text-justify">
               Za sprawą zaawansowanego rozpoznawania mowy i natychmiastowego
               dostępu do informacji, asystent głosowy błyskawicznie udzieli
@@ -48,10 +48,10 @@ export const Variant = () => {
             }}
           >
             <Icon src={SVG5} />
-            <div className="bg-black text-white py-1 px-4 rounded-[50px] font-normal uppercase">
+            <div className="bg-black text-white py-1 text-[12px] px-4 rounded-[50px] font-normal uppercase">
               Aplikacja mobilna
             </div>
-            <h3 className="text-black text-[40px]">Chat Bot</h3>
+            <h3 className="text-black text-[30px]">Chat Bot</h3>
             <p className="text-black text-[16px] text-justify">
               Asystent tekstowy Odkryj nowy wymiar komunikacji z Gośćmi
               podnosząc jakość ich doświadczeń dzięki najnowszym rozwiązaniom

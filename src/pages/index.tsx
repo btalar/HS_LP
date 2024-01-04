@@ -29,7 +29,6 @@ const IndexPage: FC<PageProps> = () => {
       <ToastContainer />
       <Navbar />
       <Header />
-      <SectionImage />
       <About />
       <Advantage />
       <Functional />
@@ -38,7 +37,7 @@ const IndexPage: FC<PageProps> = () => {
       <Variant />
       <MobileApp />
       <Store />
-      <Pricing />
+      {/*<Pricing />*/}
       <Footer />
     </Layout>
   );

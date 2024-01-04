@@ -36,11 +36,11 @@ export const Footer = () => {
             title="Skontaktuj się"
           />
           <div className="my-[20px] md:my-[40px]">
-            Skontaktuj się bezpośrednio poprzez telefon:
+            Skontaktuj się bezpośrednio poprzez telefon. <br /> Jesteśmy dostępni, aby odpowiedzieć na Twoje pytania i udzielić niezbędnej pomocy.
           </div>
-          <h2 className="text-[32px] font-[600] mt-[25px]">+48 123 456 789</h2>
+          <h2 className="text-[32px] font-[600] mt-[25px]">+48 794 099 609</h2>
           <h2 className="my-[25px] text-[32px] font-[600] mt-[12px]">
-            office@hotelspot.com
+            kontakt@hotelspot.pl
           </h2>
           <ContactForm />
         </div>
@@ -53,28 +53,25 @@ export const Footer = () => {
               <Image className="mb-[40px] md:mb-[80px]" src={LOGO} />
               <ul className="">
                 <li className="mb-[12px] text-[14px]">
-                  Nazwa spółki/działaności
+                  <strong>IntCode</strong>
                 </li>
-                <li className="mb-[12px] text-[14px]">Numer REGON</li>
-                <li className="mb-[12px] text-[14px]">NIP</li>
+                <li className="mb-[12px] text-[14px]">Nip: 7343535738</li>
+                <li className="mb-[12px] text-[14px]">Regon: 363126560</li>
                 <li className="mb-[12px] text-[14px] cursor-pointer">
-                  example@example.com
+                  kontakt@hotelspot.pl
                 </li>
                 <li className="mb-[12px] text-[14px]  cursor-pointer">
-                  +48 123 456 789
+                  +48 794 099 609
                 </li>
               </ul>
             </div>
             <div className="right flex flex-col justify-end h-full text-center md:text-left">
               <ul className="flex flex-col justify-end">
                 <li className="mb-[12px] text-[14px] font-bold">
-                  Generuj więcej rozmów
+                  Produkt
                 </li>
-                <li className="mb-[12px] text-[14px] font-bold">Pod</li>
-                <li className="mb-[12px] text-[14px] font-bold">Zalety</li>
-                <li className="mb-[12px] text-[14px] font-bold">
-                  Fukcjonalności
-                </li>
+                <li className="mb-[12px] text-[14px] font-bold">Funkcje</li>
+                <li className="mb-[12px] text-[14px] font-bold">Jak to działa</li>
                 <li className="mb-[12px] text-[14px] font-bold">Kontakt</li>
               </ul>
             </div>

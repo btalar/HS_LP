@@ -10,10 +10,10 @@ export const MobileApp = () => {
       <div className="flex lg:flex-row flex-col gap-4">
         <div className="flex-1 flex flex-col gap-[40px] justify-center">
           <Claim
-            titleClassName="text-[60px] leading-none"
+            titleClassName="  leading-none"
             title={
               <>
-                Aplikacja <br /> mobilna
+                Aplikacja mobilna
               </>
             }
             descriptionClassName="max-w-[300px] text-justify"

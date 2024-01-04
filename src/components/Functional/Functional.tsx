@@ -41,7 +41,7 @@ export const Functional = () => {
           style={{ backgroundImage: `url("${BLOCK13}")` }}
         >
           <Icon src={SVG8} />
-          <h3 className="text-white text-[40px] mt-[100px] md:mt-0 mt-[100px] md:mt-0">
+          <h3 className="text-white text-[30px] mt-[100px] md:mt-0 mt-[100px] md:mt-0">
             Asystent głosowy
           </h3>
           <p className="text-white text-[16px] text-justify">
@@ -57,7 +57,7 @@ export const Functional = () => {
             }}
           >
             <Icon src={SVG9} />
-            <h3 className="text-white text-[40px] mt-[100px] md:mt-0">
+            <h3 className="text-white text-[30px] mt-[100px] md:mt-0">
               Lokalne Atrakcje
             </h3>
             <p className="text-white text-[16px]">
@@ -73,7 +73,7 @@ export const Functional = () => {
           >
             <img className="absolute -right-[20%] top-[10%]" src={BLOCK15} />
             <Icon src={SVG10} />
-            <h3 className="text-white text-[40px] mt-[100px] md:mt-0">
+            <h3 className="text-white text-[30px] mt-[100px] md:mt-0">
               Aplikacja mobilna
             </h3>
             <p className="text-white text-[16px]">

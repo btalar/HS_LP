@@ -1,15 +1,16 @@
-import React, { useRef, useState, useEffect } from "react";
-import { Image, Spinner } from "@nextui-org/react";
+import React, {useState } from "react";
+import { Image } from "@nextui-org/react";
 import {
-  BLOCK4,
-  POD1,
-  POD10,
-  POD11,
-  POD12,
-  POD2,
-  POD3,
-  POD4,
-  POD5,
+  POD_1_W,
+  POD_2_W,
+  POD_3_W,
+  POD_4_W,
+  POD_5_W,
+  POD_1_B,
+  POD_2_B,
+  POD_3_B,
+  POD_4_B,
+  POD_5_B,
 } from "../../assets";
 
 import {SectionAbout, Col, ColLeft, ImageFull, ImageSmall, VariantSwitcher, SpinnerPlaceholder} from "./About.styled";
@@ -18,14 +19,6 @@ import {ChooseVariant} from "../../components/ChooseVariant";
 
 export const About = () => {
   const [variant, setVariant] = useState<"black" | "white">("black");
-  const [loader, setLoader] = useState<boolean>(false);
-
-  useEffect(() => {
-    setLoader(true)
-    setTimeout(() => setLoader(false), 1000);
-  }, [variant]);
-
-
 
   return (
     <SectionWrapper>
@@ -40,31 +33,24 @@ export const About = () => {
           <VariantSwitcher>
             <ChooseVariant variant={variant} setVariant={setVariant} />
           </VariantSwitcher>
-          <Image src={POD4} />
+          <Image src={variant === 'white' ? POD_1_W : POD_1_B} />
         </ColLeft>
 
-          {loader
-              ?
-              <SpinnerPlaceholder>
-                <Spinner label="Loading..." />
-              </SpinnerPlaceholder>
-
-              :
           <Col>
             <ImageFull>
-             <Image src={POD5} />}
+             <Image src={variant === 'white' ? POD_2_W : POD_2_B} />}
             </ImageFull>
             <ImageSmall>
-              <Image src={POD4} />
+              <Image src={variant === 'white' ? POD_3_W : POD_3_B}/>
             </ImageSmall>
             <ImageSmall>
-              <Image src={POD4} />
+              <Image src={variant === 'white' ? POD_4_W : POD_4_B} />
             </ImageSmall>
             <ImageSmall>
-              <Image src={POD4} />
+              <Image src={variant === 'white' ? POD_5_W : POD_5_B} />
             </ImageSmall>
           </Col>
-          }
+
 
 
       </SectionAbout>

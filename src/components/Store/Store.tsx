@@ -15,20 +15,20 @@ type RowType = {
 const mocks: RowType[] = [
   {
     image: ASSETS1,
-    title: "Aplikacja do zarządzania usterkami",
-    isPromoted: true,
+    title: "Zarządzania usterkami",
+    isPromoted: false,
     description:
-      "Aplikacja do komunikacji w zespole hotelowym oraz do zarządzania usterkami",
+      "Aplikacja do zarządzania usterkami dla hoteli to innowacyjne narzędzie, które umożliwia efektywne monitorowanie i raportowanie wszelkich problemów technicznych czy uszkodzeń w obiekcie hotelowym.",
   },
   {
     image: ASSETS2,
     title: "Zarządzanie konferencjami",
-    description: "Aplikacja do sprzedaży, zarządzania i realizacji eventów",
+    description: "Aplikacja do zarządzania konferencjami to wszechstronne narzędzie, które umożliwia organizatorom skuteczne planowanie, monitorowanie i koordynację wszelkich aspektów konferencji.",
   },
   {
     image: ASSETS2,
     title: "Oferta dla hoteli",
-    description: "Jeszcze więcej cyfrowych możliwości.",
+    description: "To idealne miejsce, gdzie dostawcy mogą prezentować swoje najnowsze produkty i usługi, a hotele łatwo znajdą innowacyjne rozwiązania dostosowane do swoich potrzeb. Zróżnicowana gama propozycji obejmuje odświeżające nowości w dziedzinie wyposażenia, technologii hotelowej, po luksusowe artykuły dla gości. ",
   },
 ];
 
@@ -66,14 +66,14 @@ const Row = ({
           </div>
         )}
         <div className="text-[40px] font-bold">{title}</div>
-        <div className="text-[16px] font-semibold">{description}</div>
+        <div className="text-[16px]">{description}</div>
       </div>
       <Button
         size="lg"
         disabled={true}
-        className="text-[16px] rounded-full bg-black text-white"
+        className="text-[16px] rounded-full bg-[#545454] text-white"
       >
-        Więcej
+        Dostępne wkrótce ...
       </Button>
     </div>
   );
@@ -87,17 +87,17 @@ const Store = () => {
           <Claim title="Hotelspot Store" />
           <div className="flex flex-col gap-[50px]">
             {mocks.map((props, index, array) => (
-              <Row {...props} isLastIndex={index + 1 === array.length} />
+              <Row {...props} isLastIndex={false} />
             ))}
-            <div className="flex justify-center">
-              <Button
-                size="lg"
-                radius="full"
-                className="text-black bg-[#EAEAEA] flex items-center"
-              >
-                <span>Pokaż więcej</span> <img src={CARD7} />
-              </Button>
-            </div>
+            {/*<div className="flex justify-center">*/}
+            {/*  <Button*/}
+            {/*    size="lg"*/}
+            {/*    radius="full"*/}
+            {/*    className="text-black bg-[#EAEAEA] flex items-center"*/}
+            {/*  >*/}
+            {/*    <span>Pokaż więcej</span> <img src={CARD7} />*/}
+            {/*  </Button>*/}
+            {/*</div>*/}
           </div>
         </div>
       </SectionWrapper>

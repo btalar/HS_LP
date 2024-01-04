@@ -13,6 +13,18 @@ import pieChart from "./advantages/pie-chart.png";
 import trendingUp from "./advantages/trending-up.png";
 import heroBackgroundMobile from "./hero-img-mobile.webp";
 
+import PodWhite1 from "./podpreview/PodPrev1.png";
+import PodWhite2 from "./podpreview/PodPrev2.png";
+import PodWhite3 from "./podpreview/PodPrev3.png";
+import PodWhite4 from "./podpreview/PodPrev4.png";
+import PodWhite5 from "./podpreview/PodPrev5.png";
+
+import BlackPodWhite1 from "./podpreview/BlackPodPrev1.png";
+import BlackPodWhite2 from "./podpreview/BlackPodPrev2.png";
+import BlackPodWhite3 from "./podpreview/BlackPodPrev3.png";
+import BlackPodWhite4 from "./podpreview/BlackPodPrev4.png";
+import BlackPodWhite5 from "./podpreview/BlackPodPrev5.png";
+
 import opinionAsset from "./../assets/svg/opinie.svg";
 
 export const OPINIONS_ASSETS = opinionAsset;
@@ -163,5 +175,17 @@ export const POD2 = pod2;
 export const POD3 = pod3;
 export const HERO_BG = heroBackground;
 export const HERO_BG_MOBILE = heroBackgroundMobile;
+
+export const POD_1_W = PodWhite1;
+export const POD_2_W = PodWhite2;
+export const POD_3_W = PodWhite3;
+export const POD_4_W = PodWhite4;
+export const POD_5_W = PodWhite5;
+
+export const POD_1_B = BlackPodWhite1;
+export const POD_2_B = BlackPodWhite2;
+export const POD_3_B = BlackPodWhite3;
+export const POD_4_B = BlackPodWhite4;
+export const POD_5_B = BlackPodWhite5;
 
 export const VIZ_POD_BG = vizPodBackground;

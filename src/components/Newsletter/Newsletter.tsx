@@ -108,7 +108,7 @@ export const Newsletter = () => {
             console.log(field);
             return (
               <Checkbox value={field.value} onChange={field.onChange}>
-                Polityka prywatności
+                Wysyłając potwierdzam iż, zapoznałem się z polityką prywatności i wyrażam zgodę na przetwarzanie moich danych osobowych.
               </Checkbox>
             );
           }}

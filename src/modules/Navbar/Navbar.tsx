@@ -7,10 +7,9 @@ import {
   LangName,
   LangTriggerWrapper,
   FlagList,
-  FlagListItem,
+  FlagListItem, PopoverWrapper,
 } from "./Navbar.styled";
-import { countries } from "country-flag-icons";
-import { PL, DE, FR, GB } from "country-flag-icons/react/1x1";
+import { PL, GB } from "country-flag-icons/react/1x1";
 import {
   NavbarBrand,
   NavbarContent,
@@ -24,20 +23,19 @@ import {
   PopoverTrigger,
   PopoverContent,
   Input,
+ Modal, ModalContent, ModalHeader, ModalBody, ModalFooter,  useDisclosure
 } from "@nextui-org/react";
 import { useIntl } from "gatsby-plugin-intl";
 
 import { LOGO, LOGO_WHITE } from "../../assets";
 import { Spin as Hamburger } from "hamburger-react";
+import {Modals} from "../../components/Modals";
+
+import CalendlyForm from "../../components/CalendlyForm/CalendlyForm";
 const navbarItems = [
-  { text: "Home", href: "#" },
   { text: "Produkt", href: "#product" },
-  { text: "Korzyści", href: "#korzysci" },
   { text: "Funkcje", href: "#funkcje" },
   { text: "Jak to działa", href: "#jaktodziala" },
-  { text: "Szczegóły", href: "#szczegoly" },
-  { text: "Warianty", href: "#warianty" },
-  { text: "Aplikacja", href: "#aplikacja" },
   { text: "Kontakt", href: "#footer" },
 ];
 
@@ -46,6 +44,11 @@ export const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [scrollDirection, setScrollDirection] = useState<"down" | "up">("up");
   const [scrollPosition, setScrollPosition] = useState<boolean>(false);
+  const {isOpen, onOpen, onClose} = useDisclosure();
+
+  const handleOpen = () => {
+    onOpen();
+  }
 
   useEffect(() => {
     let lastScrollY = window.pageYOffset;
@@ -75,92 +78,102 @@ export const Navbar = () => {
   }, [scrollDirection]);
 
   return (
-    <NavbarWrapper
-      isDark={scrollPosition}
-      direction={scrollDirection}
-      isMenuOpen={isMenuOpen}
-      onMenuOpenChange={setIsMenuOpen}
-      classNames={navbarClassNames}
-      isBlurred={false}
-    >
-      <NavbarBrand className="flex-0 mr-[70px]" style={{ flex: "unset" }}>
-        <img src={LOGO_WHITE} />
-      </NavbarBrand>
-      <NavbarMenuToggle
-        icon={(isOpen) => <Hamburger toggled={isOpen} />}
-        className="lg:hidden text-white w-[48px] h-[48px]"
-      />
-      <NavbarContent className="lg:flex hidden gap-4 justify-between flex-1">
-        <div className="flex flex-1 gap-[20px]">
-          {navbarItems.map(({ href, text }, index) => (
-            <NavbarItem key={index}>
-              <Link color="foreground" href={href}>
-                <Item className="font-[15px]">{text}</Item>
-              </Link>
-            </NavbarItem>
-          ))}
-        </div>
-        <div className="flex flex-1 gap-2 justify-end">
-          <Button
-            style={{ fontSize: 15, height: 40 }}
-            size="lg"
-            variant="bordered"
-            radius="full"
-            id={'cp-trigger'}
-            className="cp-trigger text-white relative overflow-visible rounded-full  after:content-[''] after:absolute after:rounded-full after:inset-0   after:z-[-1] after:transition after:!duration-500 hover:after:scale-150 hover:after:opacity-0 "
-          >
-            Kontakt z konsultantem
-          </Button>
+      <>
+        <NavbarWrapper
+          isDark={scrollPosition}
+          direction={scrollDirection}
+          isMenuOpen={isMenuOpen}
+          onMenuOpenChange={setIsMenuOpen}
+          classNames={navbarClassNames}
+          isBlurred={false}
+        >
+          <NavbarBrand className="flex-0 mr-[70px]" style={{ flex: "unset" }}>
+            <img src={LOGO_WHITE} />
+          </NavbarBrand>
+          <NavbarMenuToggle
+            icon={(isOpen) => <Hamburger toggled={isOpen} />}
+            className="lg:hidden text-white w-[48px] h-[48px]"
+          />
+          <NavbarContent className="lg:flex hidden gap-4 justify-between flex-1">
+            <div className="flex flex-1 gap-[20px]">
+              {navbarItems.map(({ href, text }, index) => (
+                <NavbarItem key={index}>
+                  <Link color="foreground" href={href}>
+                    <Item className="font-[15px]">{text}</Item>
+                  </Link>
+                </NavbarItem>
+              ))}
+            </div>
+            <div className="flex flex-1 gap-2 justify-end">
+              <Button
+                  onPress={() => handleOpen()}
+                style={{ fontSize: 15, height: 40 }}
+                size="lg"
+                variant="bordered"
+                radius="full"
+                id={'cp-trigger'}
+                className="text-white relative overflow-visible rounded-full  after:content-[''] after:absolute after:rounded-full after:inset-0   after:z-[-1] after:transition after:!duration-500 hover:after:scale-150 hover:after:opacity-0 "
+              >
+                Umów bezpłatne spotkanie
+              </Button>
 
-          <Popover showArrow={false} placement="bottom" backdrop="opaque">
-            <PopoverTrigger>
-              <LangTriggerWrapper>
-                <LangFlag>
-                  {
-                    {
-                      pl: <PL title="Polska" />,
-                      en: <GB title="Englisch" />,
-                    }[intl.locale]
-                  }
-                  <PL title="Polska" />
-                </LangFlag>
-                <LangName>{intl.locale.toUpperCase()}</LangName>
-              </LangTriggerWrapper>
-            </PopoverTrigger>
-            <PopoverContent className="w-[140px]  bg-transparent ">
-              <FlagList>
-                <FlagListItem onClick={() => (window.location = `/pl`)}>
-                  <LangFlag>
-                    <PL title="Polski" />
-                  </LangFlag>
-                  <LangName>Polski</LangName>
-                </FlagListItem>
-                <FlagListItem onClick={() => (window.location = `/en`)}>
-                  <LangFlag>
-                    <GB title="English" />
-                  </LangFlag>
-                  <LangName>English</LangName>
-                </FlagListItem>
-              </FlagList>
-            </PopoverContent>
-          </Popover>
-        </div>
-      </NavbarContent>
-      <NavbarMenu className="pt-6">
-        {navbarItems.map(({ text, href }, index) => (
-          <NavbarMenuItem key={`${text}-${index}`}>
-            <Link
-              onPress={() => setIsMenuOpen(false)}
-              className="w-full"
-              href={`#${href}`}
-              size="lg"
-              color="foreground"
-            >
-              {text}
-            </Link>
-          </NavbarMenuItem>
-        ))}
-      </NavbarMenu>
-    </NavbarWrapper>
+              <PopoverWrapper>
+              <Popover showArrow={false} placement="bottom" backdrop="opaque">
+                <PopoverTrigger>
+                  <LangTriggerWrapper>
+                    <LangFlag>
+                      {
+                        {
+                          pl: <PL title="Polska" />,
+                          en: <GB title="Englisch" />,
+                        }[intl.locale]
+                      }
+                      <PL title="Polska" />
+                    </LangFlag>
+                    <LangName>{intl.locale.toUpperCase()}</LangName>
+                  </LangTriggerWrapper>
+                </PopoverTrigger>
+                <PopoverContent className="w-[140px]  bg-transparent ">
+                  <FlagList>
+                    <FlagListItem onClick={() => (window.location = `/pl`)}>
+                      <LangFlag>
+                        <PL title="Polski" />
+                      </LangFlag>
+                      <LangName>Polski</LangName>
+                    </FlagListItem>
+                    <FlagListItem onClick={() => (window.location = `/en`)}>
+                      <LangFlag>
+                        <GB title="English" />
+                      </LangFlag>
+                      <LangName>English</LangName>
+                    </FlagListItem>
+                  </FlagList>
+                </PopoverContent>
+              </Popover>
+              </PopoverWrapper>
+            </div>
+          </NavbarContent>
+          <NavbarMenu className="pt-6">
+            {navbarItems.map(({ text, href }, index) => (
+              <NavbarMenuItem key={`${text}-${index}`}>
+                <Link
+                  onPress={() => setIsMenuOpen(false)}
+                  className="w-full"
+                  href={`#${href}`}
+                  size="lg"
+                  color="foreground"
+                >
+                  {text}
+                </Link>
+              </NavbarMenuItem>
+            ))}
+          </NavbarMenu>
+        </NavbarWrapper>
+
+        <Modals isOpen={isOpen} onClose={onClose} size={'xl'} >
+          <CalendlyForm/>
+        </Modals>
+
+      </>
   );
 };

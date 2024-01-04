@@ -1,10 +1,10 @@
 import styled from "styled-components";
 
 export const Title = styled.h1`
-  font-size: 48px;
+  font-size: 40px;
   color: #192038;
   font-weight: 600;
-  line-height: 1.2;
+  line-height: 1.4;
   @media (max-width: 768px) {
     font-size: 30px;
   }

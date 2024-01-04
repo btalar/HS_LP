@@ -43,6 +43,7 @@
     "prettier": "^3.0.3",
     "react": "^18.2.0",
     "react-animation": "^1.2.2",
+    "react-calendly": "^4.3.0",
     "react-dom": "^18.2.0",
     "react-helmet": "^6.1.0",
     "react-hook-form": "^7.49.2",
