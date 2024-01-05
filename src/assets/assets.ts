@@ -25,6 +25,12 @@ import BlackPodWhite3 from "./podpreview/BlackPodPrev3.png";
 import BlackPodWhite4 from "./podpreview/BlackPodPrev4.png";
 import BlackPodWhite5 from "./podpreview/BlackPodPrev5.png";
 
+import restaurant from "./HowItWork/restaurant.png";
+import taxi from "./HowItWork/taxi.png";
+import special from "./HowItWork/special.png";
+import opinion from "./HowItWork/opinion.png";
+import events from "./HowItWork/events.png";
+
 import opinionAsset from "./../assets/svg/opinie.svg";
 
 export const OPINIONS_ASSETS = opinionAsset;
@@ -187,5 +193,11 @@ export const POD_2_B = BlackPodWhite2;
 export const POD_3_B = BlackPodWhite3;
 export const POD_4_B = BlackPodWhite4;
 export const POD_5_B = BlackPodWhite5;
+
+export const RESTAURANT = restaurant;
+export const SPECIALOFFER = special;
+export const TAXI = taxi;
+export const OPINION = opinion;
+export const EVENTS = events;
 
 export const VIZ_POD_BG = vizPodBackground;

@@ -1,6 +1,10 @@
 import React, { useEffect } from 'react';
 
-const CallPageWidget: React.FC = () => {
+interface CallpageProps {
+    formID?: string
+}
+
+const CallPageWidget: React.FC = ({formID}: CallpageProps) => {
     useEffect(() => {
         const loadBabel = (url: string, callback: Function) => {
             const script = document.createElement('script');
@@ -38,7 +42,7 @@ const CallPageWidget: React.FC = () => {
         };
 
         const loadWidget = function (window: Window, document: Document) {
-            const __cp = { "id": "sKJXV7RAICOom6apMk-g36lf0Rg2Ltn_dP74ciJ-hhw", "version": "1.1" };
+            const __cp = { "id": `${formID}`, "version": "1.1" };
             const cp = document.createElement('script');
             cp.type = 'text/javascript';
             cp.async = true;

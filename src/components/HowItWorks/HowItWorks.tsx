@@ -6,7 +6,7 @@ import "react-multi-carousel/lib/styles.css";
 import MultiCarousel, { ResponsiveType } from "react-multi-carousel";
 import { Button } from "@nextui-org/react";
 import classNames from "classnames";
-import { ASSETS21, LEFT } from "../../assets";
+import {RESTAURANT, EVENTS, SPECIALOFFER,  LEFT, OPINION, TAXI} from "../../assets";
 import TaxiCard from "../Cards/TaxiCard";
 import OpinionCard from "../Cards/OpinionCard";
 import { AnimateOnChange } from "../AnimationOnChange/AnimationOnChange";
@@ -109,31 +109,31 @@ const HowItWorks = () => {
           ["0"]: (
             <img
               className="h-[644px] w-[448px] object-cover rounded-[50px]"
-              src={ASSETS21}
+              src={RESTAURANT}
             />
           ),
           ["1"]: (
             <img
               className="h-[644px] w-[448px] object-cover rounded-[50px]"
-              src={ASSETS21}
+              src={TAXI}
             />
           ),
           ["2"]: (
             <img
               className="h-[644px] w-[448px] object-cover rounded-[50px]"
-              src={ASSETS21}
+              src={SPECIALOFFER}
             />
           ),
           ["3"]: (
             <img
               className="h-[644px] w-[448px] object-cover rounded-[50px]"
-              src={ASSETS21}
+              src={EVENTS}
             />
           ),
           ["4"]: (
             <img
               className="h-[644px] w-[448px] object-cover rounded-[50px]"
-              src={ASSETS21}
+              src={OPINION}
             />
           ),
         }[currentStep]
