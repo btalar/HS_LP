@@ -1,17 +1,17 @@
 import React from "react";
 
 import { BLOCK16, BLOCK4 } from "../../assets";
-import {Button, useDisclosure} from "@nextui-org/react";
-import {Modals} from "../Modals";
+import { Button, useDisclosure } from "@nextui-org/react";
+import { Modals } from "../Modals";
 import CalendlyForm from "../CalendlyForm/CalendlyForm";
 export const Details = () => {
-  const {isOpen, onOpen, onClose} = useDisclosure();
+  const { isOpen, onOpen, onClose } = useDisclosure();
 
   const handleOpen = () => {
     onOpen();
-  }
+  };
   return (
-      <>
+    <>
       <div
         id="szczegoly"
         className="bg-cover rounded-t-[50px] bg-center h-[500px] relative flex flex-col gap-[40px] items-center justify-center"
@@ -25,24 +25,26 @@ export const Details = () => {
           Porozmawiajmy
           <br /> o szczegółach
         </div>
-        <p className="text-white text-center text-[16px]">
-          Uzyskaj odpowiedzi na nurtujące Cię pytania <br />w ramach indywidualnej
-          rozmowy z jednym z naszych ekspertów. <br /> Wspólnie znajdziemy
-          najlepsze rozwiązanie dla Twojego hotelu.
+        <p className="text-white  text-[16px] text-center">
+          Uzyskaj odpowiedzi na nurtujące Cię pytania <br />w ramach
+          indywidualnej rozmowy z jednym z naszych ekspertów. <br /> Wspólnie
+          znajdziemy najlepsze rozwiązanie dla Twojego hotelu.
         </p>
         <Button
           className="bg-white text-black"
           radius="sm"
-          onClick={() => {handleOpen()}}
+          onClick={() => {
+            handleOpen();
+          }}
           size="lg"
           color="success"
         >
           Umów prezentację
         </Button>
       </div>
-        <Modals isOpen={isOpen} onClose={onClose} size={'xl'}>
-          <CalendlyForm/>
-        </Modals>
+      <Modals isOpen={isOpen} onClose={onClose} size={"xl"}>
+        <CalendlyForm />
+      </Modals>
     </>
   );
 };

@@ -12,7 +12,7 @@ const Column = ({ isBlack }: ColumnType) => {
   console.log({ isBlack });
   return (
     <div
-      className={`flex-1 p-[30px] md:p-[50px] rounded-[25px] md:rounded-[50px] flex flex-col  items-center md:items-start justify-between gap-[80px] md:gap-[100px] ${
+      className={`flex-1 p-[30px] md:p-[50px] rounded-[25px] md:rounded-[25px] flex flex-col  items-center md:items-start justify-between gap-[80px] md:gap-[100px] ${
         isBlack ? "bg-black" : "bg-[#EAEAEA]"
       }`}
     >

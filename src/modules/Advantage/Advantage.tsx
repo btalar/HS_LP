@@ -49,9 +49,7 @@ const Item = ({ title, description, src }: ListType) => {
     <div className="w-[400px] h-[307px] flex flex-col gap-6 items-center">
       <Image width={70} height={70} src={src} />
       <h3 className="text-[24px] font-bold text-center">{title}</h3>
-      <p className="text-center whitespace-pre-wrap text-[15px] text-justify">
-        {description}
-      </p>
+      <p className=" text-[15px] text-justify">{description}</p>
     </div>
   );
 };

@@ -4,7 +4,7 @@ import { Button } from "@nextui-org/react";
 
 export type ClaimType = {
   title?: string | ReactNode;
-  description?: string;
+  description?: string | ReactNode;
   hasSeparator?: boolean;
   buttonPrimaryText?: string;
   buttonPrimaryAction?: () => void;

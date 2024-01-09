@@ -8,8 +8,8 @@ export type CardType = {
 
 const RestaurantCard = ({ isActive }: CardType) => (
   <div
-    className={`mx-[20px] rounded-[50px] flex flex-col overflow-hidden h-[300px]  ${
-      isActive ? "shadow-lg" : "shadow"
+    className={`mx-[20px] rounded-[25px] flex flex-col overflow-hidden h-[300px]  ${
+      isActive ? "shadow-lg border-[2px]" : "shadow"
     }`}
   >
     <div className="flex flex-row items-center justify-start bg-[#F5F5F5] h-[70px] px-[30px] gap-[15px]">

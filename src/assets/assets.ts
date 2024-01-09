@@ -30,8 +30,10 @@ import taxi from "./HowItWork/taxi.png";
 import special from "./HowItWork/special.png";
 import opinion from "./HowItWork/opinion.png";
 import events from "./HowItWork/events.png";
-
+import hero_wrapper from "./../assets/advantages/hero_wrapper.jpeg";
 import opinionAsset from "./../assets/svg/opinie.svg";
+
+export const HERO_WRAPPER = hero_wrapper;
 
 export const OPINIONS_ASSETS = opinionAsset;
 import arrowLeft from "./../assets/arrow-left.svg";
@@ -119,6 +121,7 @@ import googleplay from "./../assets/google-play.svg";
 import cover from "./../assets/cover3.png";
 import assets1 from "./../assets/store/1.png";
 import assets2 from "./../assets/store/2.png";
+import assets3 from "./../assets/store/3.png";
 import checkBlack from "./../assets/checkBlack.svg";
 import checkWhite from "./../assets/checkWhite.svg";
 
@@ -127,6 +130,7 @@ export const CHECK_WHITE = checkWhite;
 
 export const ASSETS1 = assets1;
 export const ASSETS2 = assets2;
+export const ASSETS3 = assets3;
 
 export const APP_STORE = appstore;
 export const GOOGLE_PLAY = googleplay;

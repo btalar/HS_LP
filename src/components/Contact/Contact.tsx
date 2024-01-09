@@ -139,7 +139,11 @@ export const ContactForm = () => {
           </Button>
           <p>
             Wysyłając potwierdzam iż, zapoznałem się z{" "}
-            <a className="underline font-bold" href="#">
+            <a
+              className="underline font-bold"
+              target="_blank"
+              href="/polityka_prywatnosci.pdf"
+            >
               {" "}
               polityką prywatności{" "}
             </a>{" "}

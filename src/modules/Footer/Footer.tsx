@@ -8,6 +8,7 @@ import { useIntl } from "gatsby-plugin-intl";
 import { useForm } from "react-hook-form";
 import { Newsletter } from "../../components/Newsletter";
 import { ContactForm } from "../../components/Contact";
+import { navbarItems } from "../Navbar";
 
 type Inputs = {
   example: string;
@@ -36,7 +37,9 @@ export const Footer = () => {
             title="Skontaktuj się"
           />
           <div className="my-[20px] md:my-[40px]">
-            Skontaktuj się bezpośrednio poprzez telefon. <br /> Jesteśmy dostępni, aby odpowiedzieć na Twoje pytania i udzielić niezbędnej pomocy.
+            Skontaktuj się bezpośrednio poprzez telefon. <br /> Jesteśmy
+            dostępni, aby odpowiedzieć na Twoje pytania i udzielić niezbędnej
+            pomocy.
           </div>
           <h2 className="text-[32px] font-[600] mt-[25px]">+48 794 099 609</h2>
           <h2 className="my-[25px] text-[32px] font-[600] mt-[12px]">
@@ -67,12 +70,13 @@ export const Footer = () => {
             </div>
             <div className="right flex flex-col justify-end h-full text-center md:text-left">
               <ul className="flex flex-col justify-end">
-                <li className="mb-[12px] text-[14px] font-bold">
-                  Produkt
-                </li>
-                <li className="mb-[12px] text-[14px] font-bold">Funkcje</li>
-                <li className="mb-[12px] text-[14px] font-bold">Jak to działa</li>
-                <li className="mb-[12px] text-[14px] font-bold">Kontakt</li>
+                {navbarItems.map(({ text, href }) => {
+                  return (
+                    <a href={href} className="mb-[12px] text-[14px] font-bold">
+                      {text}
+                    </a>
+                  );
+                })}
               </ul>
             </div>
           </div>

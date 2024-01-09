@@ -6,7 +6,14 @@ import "react-multi-carousel/lib/styles.css";
 import MultiCarousel, { ResponsiveType } from "react-multi-carousel";
 import { Button } from "@nextui-org/react";
 import classNames from "classnames";
-import {RESTAURANT, EVENTS, SPECIALOFFER,  LEFT, OPINION, TAXI} from "../../assets";
+import {
+  RESTAURANT,
+  EVENTS,
+  SPECIALOFFER,
+  LEFT,
+  OPINION,
+  TAXI,
+} from "../../assets";
 import TaxiCard from "../Cards/TaxiCard";
 import OpinionCard from "../Cards/OpinionCard";
 import { AnimateOnChange } from "../AnimationOnChange/AnimationOnChange";
@@ -61,8 +68,14 @@ const HowItWorks = () => {
             <Claim
               title="Restauracja hotelowa"
               titleClassName="text-[40px]"
-              descriptionClassName="h-10"
-              description="Menu sezonowe lub specjalna oferta lunchowa? Dzięki naszej aplikacji zwiększysz liczbę rezerwacji i gości w restauracji."
+              descriptionClassName="h-10 whitespace-pre-wrap"
+              description={
+                <>
+                  Menu sezonowe lub specjalna oferta lunchowa? Dzięki naszej
+                  aplikacji zwiększysz liczbę rezerwacji i gości
+                  <br />w restauracji.
+                </>
+              }
             />
           ),
           ["1"]: (
@@ -108,31 +121,31 @@ const HowItWorks = () => {
         {
           ["0"]: (
             <img
-              className="h-[644px] w-[448px] object-cover rounded-[50px]"
+              className="h-[644px] w-[448px] object-cover rounded-[25px]"
               src={RESTAURANT}
             />
           ),
           ["1"]: (
             <img
-              className="h-[644px] w-[448px] object-cover rounded-[50px]"
+              className="h-[644px] w-[448px] object-cover rounded-[25px]"
               src={TAXI}
             />
           ),
           ["2"]: (
             <img
-              className="h-[644px] w-[448px] object-cover rounded-[50px]"
+              className="h-[644px] w-[448px] object-cover rounded-[25px]"
               src={SPECIALOFFER}
             />
           ),
           ["3"]: (
             <img
-              className="h-[644px] w-[448px] object-cover rounded-[50px]"
+              className="h-[644px] w-[448px] object-cover rounded-[25px]"
               src={EVENTS}
             />
           ),
           ["4"]: (
             <img
-              className="h-[644px] w-[448px] object-cover rounded-[50px]"
+              className="h-[644px] w-[448px] object-cover rounded-[25px]"
               src={OPINION}
             />
           ),

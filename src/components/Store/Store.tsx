@@ -1,13 +1,13 @@
-import React from "react";
+import React, { ReactNode } from "react";
 import { SectionWrapper } from "../SectionWrapper";
 import { Claim } from "../Claim";
 import { Button, Image } from "@nextui-org/react";
-import { ASSETS1, ASSETS2, CARD7 } from "../../assets";
+import { ASSETS1, ASSETS2, ASSETS3, CARD7 } from "../../assets";
 
 type RowType = {
   title: string;
   isPromoted?: boolean;
-  description: string;
+  description: string | ReactNode;
   image: any;
   isLastIndex?: boolean;
 };
@@ -15,20 +15,27 @@ type RowType = {
 const mocks: RowType[] = [
   {
     image: ASSETS1,
-    title: "Zarządzania usterkami",
+    title: "Zarządzanie usterkami",
     isPromoted: false,
-    description:
-      "Aplikacja do zarządzania usterkami dla hoteli to innowacyjne narzędzie, które umożliwia efektywne monitorowanie i raportowanie wszelkich problemów technicznych czy uszkodzeń w obiekcie hotelowym.",
+    description: (
+      <>
+        Aplikacja do zarządzania usterkami dla hoteli to innowacyjne narzędzie,
+        które umożliwia efektywne monitorowanie <br />i raportowanie wszelkich
+        problemów technicznych czy uszkodzeń w obiekcie hotelowym.
+      </>
+    ),
   },
   {
     image: ASSETS2,
     title: "Zarządzanie konferencjami",
-    description: "Aplikacja do zarządzania konferencjami to wszechstronne narzędzie, które umożliwia organizatorom skuteczne planowanie, monitorowanie i koordynację wszelkich aspektów konferencji.",
+    description:
+      "Aplikacja do zarządzania konferencjami to wszechstronne narzędzie, które umożliwia organizatorom skuteczne planowanie, monitorowanie i koordynację wszelkich aspektów konferencji.",
   },
   {
-    image: ASSETS2,
+    image: ASSETS3,
     title: "Oferta dla hoteli",
-    description: "To idealne miejsce, gdzie dostawcy mogą prezentować swoje najnowsze produkty i usługi, a hotele łatwo znajdą innowacyjne rozwiązania dostosowane do swoich potrzeb. Zróżnicowana gama propozycji obejmuje odświeżające nowości w dziedzinie wyposażenia, technologii hotelowej, po luksusowe artykuły dla gości. ",
+    description:
+      "To idealne miejsce, gdzie dostawcy mogą prezentować swoje najnowsze produkty i usługi, a hotele łatwo znajdą innowacyjne rozwiązania dostosowane do swoich potrzeb. Zróżnicowana gama propozycji obejmuje odświeżające nowości w dziedzinie wyposażenia, technologii hotelowej, po luksusowe artykuły dla gości. ",
   },
 ];
 
@@ -46,14 +53,14 @@ const Row = ({
         isLastIndex
           ? "bg-gradient-to-b from-neutral-50 to-transparent opacity-[0.6] "
           : "bg-[#F5F5F5]"
-      }  p-[35px] rounded-[25px] md:rounded-[50px] flex flex-col gap-[25px] md:gap-[50px]  items-start md:items-center md:flex-row`}
+      }  p-[35px] rounded-[25px] md:rounded-[25px] flex flex-col gap-[25px] md:gap-[50px]  items-start md:items-center md:flex-row`}
     >
       <div
         className="md:hidden h-[200px] w-full bg-cover bg-center rounded-[20px] flex justify-start items-end p-[14px]"
         style={{ backgroundImage: `url(${image})` }}
       >
         {isPromoted && (
-          <div className=" lg:hidden py px-4 bg-[#908573] rounded-[50px] text-white">
+          <div className=" lg:hidden py px-4 bg-[#908573] rounded-[25px] text-white">
             POPULARNE
           </div>
         )}
@@ -61,7 +68,7 @@ const Row = ({
       <Image className="hidden md:block" src={image} />
       <div className="flex-1 flex flex-col items-start justify-end gap-[15px]">
         {isPromoted && (
-          <div className="hidden lg:block py px-4 bg-[#908573] rounded-[50px] text-white text-[14px]">
+          <div className="hidden lg:block py px-4 bg-[#908573] rounded-[25px] text-white text-[14px]">
             Bestseller
           </div>
         )}

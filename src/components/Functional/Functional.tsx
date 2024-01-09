@@ -37,7 +37,7 @@ export const Functional = () => {
       <Claim title="Funkcje" />
       <div className="flex gap-[20px] md:gap-[50px] md:flex-row flex-col md:h-[700px]">
         <div
-          className="flex-1 bg-center relative p-[30px] md:p-[50px] flex flex-col justify-end gap-[10px] bg-cover rounded-[50px]"
+          className="flex-1 bg-center relative p-[30px] md:p-[50px] flex flex-col justify-end gap-[10px] bg-cover rounded-[25px]"
           style={{ backgroundImage: `url("${BLOCK13}")` }}
         >
           <Icon src={SVG8} />
@@ -51,7 +51,7 @@ export const Functional = () => {
         </div>
         <div className="flex-1 flex flex-col gap-[20px] md:gap-[50px] relative">
           <div
-            className="flex-1 bg-center bg-cover relative p-[30px] md:p-[50px] flex flex-col justify-end gap-[10px] rounded-[50px]"
+            className="flex-1 bg-center bg-cover relative p-[30px] md:p-[50px] flex flex-col justify-end gap-[10px] rounded-[25px]"
             style={{
               background: `linear-gradient(to bottom, rgba(255,255,255,0),#153021), url("${BLOCK14}")`,
             }}
@@ -66,7 +66,7 @@ export const Functional = () => {
             </p>
           </div>
           <div
-            className="flex-1 overflow-hidden bg-center bg-cover relative p-[30px] md:p-[50px] flex flex-col justify-end gap-[10px] rounded-[50px]"
+            className="flex-1 overflow-hidden bg-center bg-cover relative p-[30px] md:p-[50px] flex flex-col justify-end gap-[10px] rounded-[25px]"
             style={{
               background: `url("${BLOCK20}")`,
             }}
