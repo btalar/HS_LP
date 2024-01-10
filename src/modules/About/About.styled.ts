@@ -68,7 +68,6 @@ export const ImageFull = styled.div`
 export const ImageSmall = styled.div`
   color: white;
   width: 281px;
-  height: 281px;
   display: flex;
   justify-content: center;
   align-self: center;

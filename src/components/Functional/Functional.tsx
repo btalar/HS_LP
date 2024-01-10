@@ -44,7 +44,7 @@ export const Functional = () => {
           <h3 className="text-white text-[30px] mt-[100px] md:mt-0 mt-[100px] md:mt-0">
             Asystent głosowy
           </h3>
-          <p className="text-white text-[16px] text-justify">
+          <p className="text-white text-[16px] md:text-justify">
             Odpowiadaj w ojczystym języku swoich gości <br />
             dzięki wbudowanemu narzędziu do automatycznego tłumaczenia
           </p>

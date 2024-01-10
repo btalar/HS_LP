@@ -21,6 +21,7 @@ export const Claim = ({
   buttonPrimaryText,
   buttonPrimaryAction,
   buttonSecondaryText,
+  buttonSecondaryAction,
   titleClassName,
   descriptionClassName,
   theme = "light",
@@ -59,7 +60,7 @@ export const Claim = ({
           {buttonSecondaryText && (
             <Button
               radius="full"
-              onClick={buttonPrimaryAction}
+              onClick={buttonSecondaryAction}
               size="lg"
               color="primary"
             >

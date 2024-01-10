@@ -61,14 +61,14 @@ const HowItWorks = () => {
   console.log(currentStep);
 
   const header = (
-    <AnimateOnChange className="flex flex-col gap-5">
+    <AnimateOnChange className="flex flex-col gap-5 pr-3 md:pr-0">
       {
         {
           ["0"]: (
             <Claim
               title="Restauracja hotelowa"
               titleClassName="text-[40px]"
-              descriptionClassName="h-10 whitespace-pre-wrap"
+              descriptionClassName="md:h-10 h-14 whitespace-pre-wrap"
               description={
                 <>
                   Menu sezonowe lub specjalna oferta lunchowa? Dzięki naszej
@@ -82,7 +82,7 @@ const HowItWorks = () => {
             <Claim
               title="Zamów taxi"
               titleClassName="text-[40px]"
-              descriptionClassName="h-10"
+              descriptionClassName="md:h-10 h-14"
               description="Goście hotelowi z łatwością zamówią taksówkę bezpośrednio z PODa bez konieczności angażowania obsługi."
             />
           ),
@@ -91,21 +91,21 @@ const HowItWorks = () => {
               title="Oferty specjalne"
               titleClassName="text-[40px]"
               description="Promuj oferty specjalne z wyprzedzeniem i zwiększ szanse na bezpośrednie rezerwacje oraz powrót gości."
-              descriptionClassName="h-10"
+              descriptionClassName="md:h-10 h-14"
             />
           ),
           ["3"]: (
             <Claim
               title="Wydarzenia hotelowe"
               titleClassName="text-[40px]"
-              descriptionClassName="h-10"
+              descriptionClassName="md:h-10 h-14"
               description="Organizujesz seanse filmowe, animacje dla dzieci, wspólne kibicowanie? Poinformuj gości o wydarzeniach organizowanych w hotelu i zyskaj dodatkowy przychód."
             />
           ),
           ["4"]: (
             <Claim
               title="Pozostaw opinię"
-              descriptionClassName="h-10"
+              descriptionClassName="md:h-10 h-14"
               titleClassName="text-[40px]"
               description="Dzięki opiniom i ich analizie podniesiesz jakość oferowanych usług"
             />

@@ -32,7 +32,9 @@ import opinion from "./HowItWork/opinion.png";
 import events from "./HowItWork/events.png";
 import hero_wrapper from "./../assets/advantages/hero_wrapper.jpeg";
 import opinionAsset from "./../assets/svg/opinie.svg";
+import hero_wrapper_mobile from "./../assets/advantages/hero_wrapper_mobile.png";
 
+export const HERO_WRAPPER_MOBILE = hero_wrapper_mobile;
 export const HERO_WRAPPER = hero_wrapper;
 
 export const OPINIONS_ASSETS = opinionAsset;

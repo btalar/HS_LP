@@ -1,8 +1,11 @@
 import React, { useEffect } from "react";
-import { BLOCK9, COVER, HERO_WRAPPER } from "../../assets";
+import { BLOCK9, COVER, HERO_WRAPPER, HERO_WRAPPER_MOBILE } from "../../assets";
 import { Claim, ClaimType } from "../../components";
 import styled from "styled-components";
 import { Navbar } from "../Navbar";
+import { Modals } from "../../components/Modals";
+import CalendlyForm from "../../components/CalendlyForm/CalendlyForm";
+import { useDisclosure } from "@nextui-org/react";
 
 const ClaimProperties: ClaimType = {
   title: "Inuticyjna aplikacja hotelspot\ncyfrowy concierge dla hoteli",
@@ -11,7 +14,7 @@ const ClaimProperties: ClaimType = {
   hasSeparator: false,
   buttonSecondaryText: "Dowiedz się więcej",
   theme: "dark",
-  titleClassName: "whitespace-pre-wrap text-justify",
+  titleClassName: "whitespace-pre-wrap md:text-justify",
   descriptionClassName: "max-w-[500px] text-justify",
 };
 
@@ -19,6 +22,7 @@ const HeaderStyled = styled.div<{
   background: string;
   mobileBackground: string;
 }>`
+  background-size: cover;
   background: center center #44584d url("${(props) => props.background}");
   background-repeat: no-repeat;
   position: relative;
@@ -53,22 +57,29 @@ const HeaderStyled = styled.div<{
 `;
 
 export const Header = () => {
+  const { isOpen, onOpen, onClose } = useDisclosure();
+
   return (
-    <HeaderStyled
-      background={HERO_WRAPPER}
-      mobileBackground={HERO_WRAPPER}
-      className="h-[1080px] bg-cover  justify-center -mt-[124px] rounded-b-[100px] max-w-[1920px] m-auto"
-    >
-      <div className="flex px-6 gap-8 w-full h-[1080px] flex-col justify-center max-w-[1440px] m-auto">
-        <Claim {...ClaimProperties} />
-      </div>
-      <span className="scroll-btn">
-        <a href="#">
-          <span className="mouse">
-            <span></span>
-          </span>
-        </a>
-      </span>
-    </HeaderStyled>
+    <>
+      <HeaderStyled
+        background={HERO_WRAPPER}
+        mobileBackground={HERO_WRAPPER_MOBILE}
+        className="h-[1080px] bg-cover  justify-center -mt-[124px] rounded-b-[100px] max-w-[1920px] m-auto"
+      >
+        <div className="flex px-6 gap-8 w-full h-[1080px] flex-col justify-center max-w-[1440px] m-auto">
+          <Claim {...ClaimProperties} buttonSecondaryAction={onOpen} />
+        </div>
+        <span className="scroll-btn">
+          <a href="#">
+            <span className="mouse">
+              <span></span>
+            </span>
+          </a>
+        </span>
+      </HeaderStyled>
+      <Modals isOpen={isOpen} onClose={onClose} size={"xl"}>
+        <CalendlyForm />
+      </Modals>
+    </>
   );
 };

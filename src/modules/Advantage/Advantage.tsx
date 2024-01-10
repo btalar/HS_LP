@@ -46,7 +46,7 @@ const list: ListType[] = [
 
 const Item = ({ title, description, src }: ListType) => {
   return (
-    <div className="w-[400px] h-[307px] flex flex-col gap-6 items-center">
+    <div className="w-[400px] md:h-[307px] flex flex-col gap-6 items-center">
       <Image width={70} height={70} src={src} />
       <h3 className="text-[24px] font-bold text-center">{title}</h3>
       <p className=" text-[15px] text-justify">{description}</p>
@@ -58,12 +58,12 @@ export const Advantage = () => {
   return (
     <SectionWrapper
       id="korzysci"
-      className="py-8 px-10 gap-[100px] flex flex-col"
+      className="py-0 my-0 px-10 gap-[100px] flex flex-col"
     >
       <div className="flex flex-row justify-center">
         <Claim title="Korzyści" />
       </div>
-      <div className="flex flex-row flex-wrap justify-center md:justify-between">
+      <div className="flex flex-row flex-wrap justify-center md:justify-between gap-10">
         {list.map((props) => (
           <Item {...props} />
         ))}

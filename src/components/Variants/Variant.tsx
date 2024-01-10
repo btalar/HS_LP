@@ -34,7 +34,7 @@ export const Variant = () => {
               STACJONARNY POD
             </div>
             <h3 className="text-black text-[30px]">Asystent głosowy</h3>
-            <p className="text-black text-[16px] text-justify">
+            <p className="text-black text-[16px] md:text-justify">
               Za sprawą zaawansowanego rozpoznawania mowy i natychmiastowego
               dostępu do informacji, asystent głosowy błyskawicznie udzieli
               odpowiedzi w dowolnym języku!
@@ -52,7 +52,7 @@ export const Variant = () => {
               Aplikacja mobilna
             </div>
             <h3 className="text-black text-[30px]">Chat Bot</h3>
-            <p className="text-black text-[16px] text-justify">
+            <p className="text-black text-[16px] md:text-justify">
               Odkryj nowy wymiar komunikacji z Gośćmi podnosząc jakość ich
               doświadczeń dzięki najnowszym rozwiązaniom opartym na sztucznej
               inteligencji.
