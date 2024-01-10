@@ -190,3 +190,22 @@ body {
   }
 }
 
+
+.element {
+  height: 100vh;
+}
+
+/* Hide the element with the class on mobile devices */
+@media only screen and (max-width: 767px) {
+  .hidden-mobile {
+    display: none;
+  }
+}
+
+/* Mobile-specific styling using the class */
+@media only screen and (max-width: 767px) {
+  .element.h-[1080px] {
+  height: 1080px;
+}
+}
+

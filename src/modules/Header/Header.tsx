@@ -64,12 +64,12 @@ export const Header = () => {
       <HeaderStyled
         background={HERO_WRAPPER}
         mobileBackground={HERO_WRAPPER_MOBILE}
-        className="h-[1080px] bg-cover  justify-center -mt-[124px] rounded-b-[100px] max-w-[1920px] m-auto"
+        className="element h-[1080px] bg-cover  justify-center -mt-[124px] rounded-b-[100px] max-w-[1920px] m-auto"
       >
         <div className="flex px-6 gap-8 w-full h-[1080px] flex-col justify-center max-w-[1440px] m-auto">
           <Claim {...ClaimProperties} buttonSecondaryAction={onOpen} />
         </div>
-        <span className="scroll-btn">
+        <span className="scroll-btn  hidden-mobile">
           <a href="#">
             <span className="mouse">
               <span></span>

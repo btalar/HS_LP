@@ -30,7 +30,7 @@ import taxi from "./HowItWork/taxi.png";
 import special from "./HowItWork/special.png";
 import opinion from "./HowItWork/opinion.png";
 import events from "./HowItWork/events.png";
-import hero_wrapper from "./../assets/advantages/hero_wrapper.jpeg";
+import hero_wrapper from "./../assets/cover3.png";
 import opinionAsset from "./../assets/svg/opinie.svg";
 import hero_wrapper_mobile from "./../assets/advantages/hero_wrapper_mobile.png";
 
