@@ -33,18 +33,14 @@ export const Details = () => {
         <Button
           className="bg-white text-black"
           radius="sm"
-          onClick={() => {
-            handleOpen();
-          }}
+          onClick={() => { window.location.href = "#cp-widget" }}
           size="lg"
           color="success"
         >
           Umów prezentację
         </Button>
       </div>
-      <Modals isOpen={isOpen} onClose={onClose} size={"xl"}>
-        <CalendlyForm />
-      </Modals>
+
     </>
   );
 };

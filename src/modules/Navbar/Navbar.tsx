@@ -106,16 +106,18 @@ export const Navbar = () => {
             ))}
           </div>
           <div className="flex flex-1 gap-2 justify-end">
+
             <Button
-              onPress={() => handleOpen()}
+                href="#cp-widget"
+                onClick={() => { window.location.href = "#cp-widget" }}
               style={{ fontSize: 15, height: 40 }}
               size="lg"
               variant="bordered"
               radius="full"
-              id={"cp-trigger"}
               className="text-white relative overflow-visible rounded-full  after:content-[''] after:absolute after:rounded-full after:inset-0   after:z-[-1] after:transition after:!duration-500 hover:after:scale-150 hover:after:opacity-0 "
             >
               Umów bezpłatne spotkanie
+
             </Button>
 
             <PopoverWrapper>

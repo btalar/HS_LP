@@ -2,8 +2,6 @@ import React, { useEffect } from "react";
 import { BLOCK9, COVER, HERO_WRAPPER, HERO_WRAPPER_MOBILE } from "../../assets";
 import { Claim, ClaimType } from "../../components";
 import styled from "styled-components";
-import { Modals } from "../../components/Modals";
-import CalendlyForm from "../../components/CalendlyForm/CalendlyForm";
 import { useDisclosure } from "@nextui-org/react";
 
 const ClaimProperties: ClaimType = {
@@ -58,8 +56,7 @@ const HeaderStyled = styled.div<{
       display: none;
     }
   }
-  @media (max-width: 1024px) {
-    background-image: url("${(props) => props.background}");
+  @media (max-width: 1024px) { 
     max-height: 820px;
     &::before{
       display: none;
@@ -78,12 +75,12 @@ export const Header = () => {
         className="element h-[1080px] bg-cover  justify-center -mt-[124px] rounded-b-[100px] max-w-[1920px] m-auto"
       >
         <div className="flex px-6 gap-8 w-full h-[1080px] flex-col justify-center max-w-[1440px] m-auto">
-          <Claim {...ClaimProperties} buttonSecondaryAction={onOpen} />
+          <Claim {...ClaimProperties} buttonSecondaryAction={() =>    {
+            window.location.href = "#cp-widget"
+          }} />
         </div>
       </HeaderStyled>
-      <Modals isOpen={isOpen} onClose={onClose} size={"xl"}>
-        <CalendlyForm />
-      </Modals>
+
     </>
   );
 };
