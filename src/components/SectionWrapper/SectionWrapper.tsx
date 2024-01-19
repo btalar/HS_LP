@@ -22,7 +22,7 @@ export const SectionWrapper = ({
     className={`${!noMarginVertical && "my-[65px]"} ${
       !noGap && "md:px-6 px-[30px]"
     } ${
-      isFluid ? "w-full " : "container mx-auto max-w-[1440px]"
+      isFluid ? "w-full " : "container mx-auto max-w-[1440px] overflow-hidden"
     }  ${className}`}
   >
     {children}

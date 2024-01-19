@@ -8,7 +8,7 @@ import {
   LangTriggerWrapper,
   FlagList,
   FlagListItem,
-  PopoverWrapper,
+  PopoverWrapper, Logo,
 } from "./Navbar.styled";
 import { PL, GB } from "country-flag-icons/react/1x1";
 import {
@@ -23,12 +23,7 @@ import {
   Popover,
   PopoverTrigger,
   PopoverContent,
-  Input,
-  Modal,
-  ModalContent,
-  ModalHeader,
-  ModalBody,
-  ModalFooter,
+
   useDisclosure,
 } from "@nextui-org/react";
 import { useIntl } from "gatsby-plugin-intl";
@@ -93,15 +88,15 @@ export const Navbar = () => {
         classNames={navbarClassNames}
         isBlurred={false}
       >
-        <NavbarBrand className="flex-0 mr-[70px]" style={{ flex: "unset" }}>
+        <Logo className="flex-0 mr-[70px]" style={{ flex: "unset" }}>
           <img src={LOGO_WHITE} />
-        </NavbarBrand>
+        </Logo>
         <NavbarMenuToggle
-          icon={(isOpen) => <Hamburger toggled={isOpen} />}
-          className="lg:hidden text-white w-[48px] h-[48px]"
+          icon={(isOpen) => <Hamburger toggled={isOpen} size={18} />}
+          className="lg:hidden text-white mr-[15px] "
         />
         <NavbarContent className="lg:flex hidden gap-4 justify-between flex-1">
-          <div className="flex flex-1 gap-[20px]">
+          <div className="flex flex-1 ">
             {navbarItems.map(({ href, text }, index) => (
               <NavbarItem key={index}>
                 <Link color="foreground" href={href}>
@@ -159,7 +154,7 @@ export const Navbar = () => {
             </PopoverWrapper>
           </div>
         </NavbarContent>
-        <NavbarMenu className="pt-6">
+        <NavbarMenu className="pt-5">
           {navbarItems.map(({ text, href }, index) => (
             <NavbarMenuItem key={`${text}-${index}`}>
               <Link
