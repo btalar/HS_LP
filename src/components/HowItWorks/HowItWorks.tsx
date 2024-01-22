@@ -3,7 +3,8 @@ import React, { useEffect, useRef, useState } from "react";
 import { SectionWrapper } from "../SectionWrapper";
 import { Claim } from "../Claim";
 import "react-multi-carousel/lib/styles.css";
-import MultiCarousel, { ResponsiveType } from "react-multi-carousel";
+import Carousel, { ResponsiveType } from "react-multi-carousel";
+
 import { Button } from "@nextui-org/react";
 import classNames from "classnames";
 import {
@@ -22,27 +23,17 @@ import OfferSpecialCard from "../Cards/OfferSpecialCard";
 import HotelEventsCard from "../Cards/HotelEventsCard";
 
 const responsive: ResponsiveType = {
-  superLargeDesktop: {
-    breakpoint: { max: 4000, min: 3000 },
-    items: 3,
-    slidesToSlide: 1,
-  },
   desktop: {
     breakpoint: { max: 3000, min: 1024 },
     items: 3,
-    slidesToSlide: 1,
   },
   tablet: {
     breakpoint: { max: 1024, min: 464 },
-    items: 1,
-    paritialVisibilityGutter: 100,
-    slidesToSlide: 1,
+    items: 2,
   },
   mobile: {
     breakpoint: { max: 464, min: 0 },
     items: 1,
-    slidesToSlide: 1,
-    paritialVisibilityGutter: 100,
   },
 };
 
@@ -73,7 +64,7 @@ const HowItWorks = () => {
                 <>
                   Menu sezonowe lub specjalna oferta lunchowa? Dzięki naszej
                   aplikacji zwiększysz liczbę rezerwacji i gości
-                  <br />w restauracji.
+                  w restauracji.
                 </>
               }
             />
@@ -172,20 +163,19 @@ const HowItWorks = () => {
                     className={classNames(
                       ` w-[15px] h-[15px] rounded-full `,
                       index === currentStep
-                        ? "w-[65px] bg-black"
+                        ? "w-[65px] bg-black animated-width"
                         : "bg-[#F5F5F5]",
                     )}
                   />
                 );
               })}
             </div>
-            <div>{currentStep + 1} z 5</div>
-            <div className="flex flex-row gap-[50px] flex-1 justify-between">
-              <div className="flex-1 justify-between flex-col flex items-start">
+            <div className="flex flex-row gap-[50px] flex-1  ">
+              <div className="flex-1 flex-col flex items-start">
                 <div className="flex flex-col gap-[20px]">
                   {header}
                   <div id="carousel-container">
-                    <MultiCarousel
+                    <Carousel
                       beforeChange={(e, { currentSlide }) => {
                         const plusIndex =
                           currentStep + 1 === 5 ? 0 : currentStep + 1;
@@ -195,19 +185,21 @@ const HowItWorks = () => {
                           e > currentSlide ? plusIndex : minusIndex,
                         );
                       }}
+                      activeItem={2}
                       partialVisbile
                       ref={carouselRef}
                       slidesToSlide={1}
                       infinite={true}
                       renderButtonGroupOutside={true}
                       responsive={responsive}
+                      arrows={false}
                     >
                       <RestaurantCard isActive={currentStep === 0} />
                       <TaxiCard isActive={currentStep === 1} />
                       <OfferSpecialCard isActive={currentStep === 2} />
                       <HotelEventsCard isActive={currentStep === 3} />
                       <OpinionCard isActive={currentStep === 4} />
-                    </MultiCarousel>
+                    </Carousel>
                   </div>
                 </div>
                 <div className="flex flex-row gap-4">

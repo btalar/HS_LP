@@ -60,3 +60,4 @@ export const FooterInfo = styled.div`
     gap: 50px;
   }
 `;
+

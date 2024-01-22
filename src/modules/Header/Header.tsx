@@ -1,8 +1,9 @@
 import React, { useEffect } from "react";
-import { BLOCK9, COVER, HERO_WRAPPER, HERO_WRAPPER_MOBILE } from "../../assets";
+import {BLOCK9, COVER, HERO_WRAPPER, HERO_WRAPPER_MOBILE, INFOICO, PERCENT, PIN} from "../../assets";
 import { Claim, ClaimType } from "../../components";
 import styled from "styled-components";
 import { useDisclosure } from "@nextui-org/react";
+import {HerderWrapper, IcoBlock, InfoIco, InfoIcoText, InfoIcoImage} from "./Header.styled"
 
 const ClaimProperties: ClaimType = {
   title: "Inuticyjna aplikacja hotelspot\ncyfrowy concierge dla hoteli",
@@ -12,7 +13,7 @@ const ClaimProperties: ClaimType = {
   buttonSecondaryText: "Dowiedz się więcej",
   theme: "dark",
   titleClassName: "whitespace-pre-wrap md:text-justify",
-  descriptionClassName: "max-w-[500px] text-justify",
+  descriptionClassName: "max-w-[500px]",
 };
 
 const HeaderStyled = styled.div<{
@@ -74,11 +75,32 @@ export const Header = () => {
         mobileBackground={HERO_WRAPPER_MOBILE}
         className="element h-[1080px] bg-cover  justify-center -mt-[124px] rounded-b-[100px] max-w-[1920px] m-auto"
       >
-        <div className="flex px-6 gap-8 w-full h-[1080px] flex-col justify-center max-w-[1440px] m-auto">
-          <Claim {...ClaimProperties} buttonSecondaryAction={() =>    {
-            window.location.href = "#cp-widget"
-          }} />
-        </div>
+        <HerderWrapper>
+          <div className="flex px-6 gap-8 w-full h-[1080px] flex-col justify-center  m-auto">
+            <Claim {...ClaimProperties} buttonSecondaryAction={() =>    {
+              window.location.href = "#cp-widget"
+            }} />
+          </div>
+          <IcoBlock>
+            <InfoIco>
+              <InfoIcoImage src={PERCENT}/>
+              <InfoIcoText>Oferty specialne</InfoIcoText>
+            </InfoIco>
+            <InfoIco>
+              <InfoIcoImage src={PIN}/>
+              <InfoIcoText>W pobliżu</InfoIcoText>
+            </InfoIco>
+            <InfoIco>
+              <InfoIcoImage src={INFOICO}/>
+              <InfoIcoText>Informacje Hotelowe</InfoIcoText>
+            </InfoIco>
+            <InfoIco>
+              <InfoIcoImage src={PERCENT}/>
+              <InfoIcoText>Zamów taxówkę</InfoIcoText>
+            </InfoIco>
+          </IcoBlock>
+        </HerderWrapper>
+
       </HeaderStyled>
 
     </>

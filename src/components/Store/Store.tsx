@@ -10,11 +10,13 @@ type RowType = {
   description: string | ReactNode;
   image: any;
   isLastIndex?: boolean;
+  isDisabled?: boolean
 };
 
 const mocks: RowType[] = [
   {
     image: ASSETS2,
+    isDisabled: false,
     title: "Zarządzanie konferencjami",
     description:
         "Aplikacja do zarządzania konferencjami to wszechstronne narzędzie, które umożliwia organizatorom skuteczne planowanie, monitorowanie i koordynację wszelkich aspektów konferencji.",
@@ -23,6 +25,7 @@ const mocks: RowType[] = [
     image: ASSETS1,
     title: "Zarządzanie usterkami",
     isPromoted: false,
+    isDisabled: true,
     description: (
       <>
         Aplikacja do zarządzania usterkami dla hoteli to innowacyjne narzędzie,
@@ -34,6 +37,7 @@ const mocks: RowType[] = [
   {
     image: ASSETS3,
     title: "Oferta dla hoteli",
+    isDisabled: true,
     description:
       "To idealne miejsce, gdzie dostawcy mogą prezentować swoje najnowsze produkty i usługi, a hotele łatwo znajdą innowacyjne rozwiązania dostosowane do swoich potrzeb. Zróżnicowana gama propozycji obejmuje odświeżające nowości w dziedzinie wyposażenia, technologii hotelowej, po luksusowe artykuły dla gości. ",
   },
@@ -44,7 +48,7 @@ const Row = ({
   isPromoted,
   description,
   title,
-  isLastIndex,
+  isLastIndex, isDisabled
 }: RowType) => {
   console.log(isLastIndex);
   return (
@@ -77,10 +81,10 @@ const Row = ({
       </div>
       <Button
         size="lg"
-        disabled={true}
+        disabled={ isDisabled }
         className="text-[16px] rounded-full bg-[#545454] text-white"
       >
-        Dostępne wkrótce ...
+        {isDisabled ? 'Dostępne w którce' : 'Więcej'}
       </Button>
     </div>
   );

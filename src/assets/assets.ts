@@ -34,6 +34,16 @@ import hero_wrapper from "./../assets/cover3.png";
 import opinionAsset from "./../assets/svg/opinie.svg";
 import hero_wrapper_mobile from "./../assets/advantages/hero_wrapper_mobile.png";
 
+import percentIcon from "./icon/percentIco.png";
+import pinIcon from "./icon/pinIcon.png";
+import infoIcon from "./icon/infoIcon.png";
+import taxiIcon from "./icon/taxiIcon.png";
+
+export const PERCENT = percentIcon;
+export const PIN = pinIcon;
+export const INFOICO = infoIcon;
+export const Taxi = taxiIcon;
+
 export const HERO_WRAPPER_MOBILE = hero_wrapper_mobile;
 export const HERO_WRAPPER = hero_wrapper;
 

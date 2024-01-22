@@ -190,6 +190,20 @@ body {
   }
 }
 
+@keyframes expandWidth {
+  from {
+    width: 15px; /* Initial width */
+  }
+  to {
+    width: 65px; /* Final width */
+  }
+}
+
+.animated-width {
+  animation: expandWidth 0.1s ease-in-out; /* Duration: 2 seconds, easing: ease-in-out */
+
+}
+
 
 .element {
   height: 100vh;

@@ -28,8 +28,16 @@ const config: GatsbyConfig = {
       options: {
         name: "images",
         path: "./src/assets/",
+        quality: 100,
       },
       __key: "images",
+    },
+    {
+      resolve: 'gatsby-plugin-image',
+      options: {
+        // set the default image quality here
+        quality: 100,
+      },
     },
   ],
 };

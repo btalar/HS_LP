@@ -8,9 +8,9 @@ import {
   LangTriggerWrapper,
   FlagList,
   FlagListItem,
-  PopoverWrapper, Logo,
+  PopoverWrapper, Logo, CurrentLangName,
 } from "./Navbar.styled";
-import { PL, GB } from "country-flag-icons/react/1x1";
+import { PL, GB, DE, FR } from "country-flag-icons/react/1x1";
 import {
   NavbarBrand,
   NavbarContent,
@@ -133,10 +133,10 @@ export const Navbar = () => {
                       }
                       <PL title="Polska" />
                     </LangFlag>
-                    <LangName>{intl.locale.toUpperCase()}</LangName>
+                    <CurrentLangName>{intl.locale.toUpperCase()}</CurrentLangName>
                   </LangTriggerWrapper>
                 </PopoverTrigger>
-                <PopoverContent className="w-[140px]  bg-transparent ">
+                <PopoverContent className="w-[140px]  bg-white ">
                   <FlagList>
                     <FlagListItem onClick={() => (window.location = `/pl`)}>
                       <LangFlag>
@@ -150,6 +150,7 @@ export const Navbar = () => {
                       </LangFlag>
                       <LangName>English</LangName>
                     </FlagListItem>
+
                   </FlagList>
                 </PopoverContent>
               </Popover>

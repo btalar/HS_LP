@@ -8,6 +8,8 @@ import { RotatingLines } from "react-loader-spinner";
 import { AxiosError } from "axios";
 import { actionAddSubscriber } from "../../actions";
 import { Checkbox } from "@nextui-org/react";
+import {PrivacyText} from "./Newsletter.styled";
+
 type Inputs = {
   email: string;
   policy: boolean;
@@ -108,7 +110,7 @@ export const Newsletter = () => {
             console.log(field);
             return (
               <Checkbox value={field.value} onChange={field.onChange}>
-                Wysyłając potwierdzam iż, zapoznałem się z polityką prywatności i wyrażam zgodę na przetwarzanie moich danych osobowych.
+                <PrivacyText>Wysyłając potwierdzam iż, zapoznałem się z polityką prywatności i wyrażam zgodę na przetwarzanie moich danych osobowych.</PrivacyText>
               </Checkbox>
             );
           }}

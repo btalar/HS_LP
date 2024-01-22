@@ -1,5 +1,5 @@
 import React, { ReactNode } from "react";
-import { Description, Separator, Title } from "./Claim.styled";
+import { Description, Separator, Title, ButtonWrapper } from "./Claim.styled";
 import { Button } from "@nextui-org/react";
 
 export type ClaimType = {
@@ -58,14 +58,14 @@ export const Claim = ({
             </Button>
           )}
           {buttonSecondaryText && (
-            <Button
-              radius="full"
-              onClick={buttonSecondaryAction}
-              size="lg"
-              color="primary"
-            >
-              {buttonSecondaryText}
-            </Button>
+                <ButtonWrapper
+                  radius="full"
+                  onClick={buttonSecondaryAction}
+                  size="lg"
+                  color="primary"
+                >
+                  {buttonSecondaryText}
+                </ButtonWrapper>
           )}
         </section>
       ))}

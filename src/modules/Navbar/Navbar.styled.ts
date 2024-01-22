@@ -45,13 +45,22 @@ export const LangTriggerWrapper = styled.div`
 export const LangFlag = styled.div`
   width: 25px;
   height: 25px;
-  border-radius: 100px; 
-  overflow: hidden; 
+  border-radius: 100px;
+  overflow: hidden;
+  border: 1px solid #a9a6a6;
 `;
 
 export const LangName = styled.div`
-  color: #fff;
+  color: #000;
   margin-left:8px;
+  &:hover{
+    text-decoration: underline;
+  }
+`;
+
+export const CurrentLangName = styled.div`
+  color: #fff;
+  margin-left:8px; 
 `;
 
 
@@ -69,7 +78,8 @@ export const FlagListItem = styled.li`
   display: flex;
   align-items: center;
   justify-content: flex-start;
-  padding: 5px;
+  padding: 5px; 
+  color: #000;
 `;
 
 export const navbarClassNames = {

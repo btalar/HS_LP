@@ -32,7 +32,7 @@ export const Details = () => {
         </p>
         <Button
           className="bg-white text-black"
-          radius="sm"
+          radius="full"
           onClick={() => { window.location.href = "#cp-widget" }}
           size="lg"
           color="success"
