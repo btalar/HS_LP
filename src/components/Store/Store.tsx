@@ -16,7 +16,7 @@ type RowType = {
 const mocks: RowType[] = [
   {
     image: ASSETS2,
-    isDisabled: false,
+    isDisabled: true,
     title: "Zarządzanie konferencjami",
     description:
         "Aplikacja do zarządzania konferencjami to wszechstronne narzędzie, które umożliwia organizatorom skuteczne planowanie, monitorowanie i koordynację wszelkich aspektów konferencji.",

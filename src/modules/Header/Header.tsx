@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import {BLOCK9, COVER, HERO_WRAPPER, HERO_WRAPPER_MOBILE, INFOICO, PERCENT, PIN} from "../../assets";
+import {BLOCK9, COVER, HERO_WRAPPER, HERO_WRAPPER_MOBILE, INFOICO, PERCENT, PIN, TAXIICO} from "../../assets";
 import { Claim, ClaimType } from "../../components";
 import styled from "styled-components";
 import { useDisclosure } from "@nextui-org/react";
@@ -95,7 +95,7 @@ export const Header = () => {
               <InfoIcoText>Informacje Hotelowe</InfoIcoText>
             </InfoIco>
             <InfoIco>
-              <InfoIcoImage src={PERCENT}/>
+              <InfoIcoImage src={TAXIICO}/>
               <InfoIcoText>Zamów taxówkę</InfoIcoText>
             </InfoIco>
           </IcoBlock>
