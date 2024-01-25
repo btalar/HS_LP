@@ -21,6 +21,7 @@ import { AnimateOnChange } from "../AnimationOnChange/AnimationOnChange";
 import RestaurantCard from "../Cards/RestaurantCard";
 import OfferSpecialCard from "../Cards/OfferSpecialCard";
 import HotelEventsCard from "../Cards/HotelEventsCard";
+import {useIntl} from "gatsby-plugin-intl";
 
 const responsive: ResponsiveType = {
   desktop: {
@@ -38,6 +39,7 @@ const responsive: ResponsiveType = {
 };
 
 const HowItWorks = () => {
+  const intl = useIntl();
   const [currentStep, setCurrentStep] = useState<number>(0);
 
   const carouselRef = useRef<MultiCarousel>(null);
@@ -57,48 +59,46 @@ const HowItWorks = () => {
         {
           ["0"]: (
             <Claim
-              title="Restauracja hotelowa"
+              title={intl.formatMessage({ id: 'howItWorks.RestaurantHotel.title' })}
               titleClassName="text-[40px]"
               descriptionClassName="md:h-10 h-14 whitespace-pre-wrap"
               description={
                 <>
-                  Menu sezonowe lub specjalna oferta lunchowa? Dzięki naszej
-                  aplikacji zwiększysz liczbę rezerwacji i gości
-                  w restauracji.
+                  {intl.formatMessage({ id: 'howItWorks.RestaurantHotel.desc' })}
                 </>
               }
             />
           ),
           ["1"]: (
             <Claim
-              title="Zamów taxi"
+              title=  {intl.formatMessage({ id: 'howItWorks.OrderTaxi.title' })}
               titleClassName="text-[40px]"
               descriptionClassName="md:h-10 h-14"
-              description="Goście hotelowi z łatwością zamówią taksówkę bezpośrednio z PODa bez konieczności angażowania obsługi."
+              description= {intl.formatMessage({ id: 'howItWorks.OrderTaxi.desc' })}
             />
           ),
           ["2"]: (
             <Claim
-              title="Oferty specjalne"
+              title={intl.formatMessage({ id: 'howItWorks.SpecialOffer.title' })}
               titleClassName="text-[40px]"
-              description="Promuj oferty specjalne z wyprzedzeniem i zwiększ szanse na bezpośrednie rezerwacje oraz powrót gości."
+              description={intl.formatMessage({ id: 'howItWorks.SpecialOffer.desc' })}
               descriptionClassName="md:h-10 h-14"
             />
           ),
           ["3"]: (
             <Claim
-              title="Wydarzenia hotelowe"
+              title={intl.formatMessage({ id: 'howItWorks.Events.title' })}
               titleClassName="text-[40px]"
               descriptionClassName="md:h-10 h-14"
-              description="Organizujesz seanse filmowe, animacje dla dzieci, wspólne kibicowanie? Poinformuj gości o wydarzeniach organizowanych w hotelu i zyskaj dodatkowy przychód."
+              description={intl.formatMessage({ id: 'howItWorks.Events.desc' })}
             />
           ),
           ["4"]: (
             <Claim
-              title="Pozostaw opinię"
+              title={intl.formatMessage({ id: 'howItWorks.Opinion.title' })}
               descriptionClassName="md:h-10 h-14"
               titleClassName="text-[40px]"
-              description="Dzięki opiniom i ich analizie podniesiesz jakość oferowanych usług"
+              description={intl.formatMessage({ id: 'howItWorks.Opinion.desc' })}
             />
           ),
         }[currentStep]
@@ -150,7 +150,7 @@ const HowItWorks = () => {
       <SectionWrapper id="jaktodziala">
         <div className="flex flex-row flex-1 justify-between">
           <div className="flex flex-col gap-[40px] flex-1">
-            <Claim title="Jak to działa?" />
+            <Claim title={ intl.formatMessage({ id: 'howItWorks.title' })} />
             <div className="flex gap-[15px]">
               {[...Array(5)].map((_e, index) => {
                 return (
@@ -226,7 +226,7 @@ const HowItWorks = () => {
                     className="bg-black text-white"
                     size="lg"
                   >
-                    Dalej
+                    {intl.formatMessage({ id: 'btn.next' })}
                   </Button>
                 </div>
               </div>

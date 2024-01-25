@@ -4,17 +4,9 @@ import { Claim, ClaimType } from "../../components";
 import styled from "styled-components";
 import { useDisclosure } from "@nextui-org/react";
 import {HerderWrapper, IcoBlock, InfoIco, InfoIcoText, InfoIcoImage} from "./Header.styled"
+import {useIntl, FormattedMessage} from "gatsby-plugin-intl";
 
-const ClaimProperties: ClaimType = {
-  title: "Inuticyjna aplikacja hotelspot\ncyfrowy concierge dla hoteli",
-  description:
-    "Inuticyjna aplikacja hotelspot cyfrowy concierge dla hoteli,\n umożliwiająca gościom pełen dostęp do różnorodnych usług i informacji, \npoprawiając komfort i wygodę ich pobytu.",
-  hasSeparator: false,
-  buttonSecondaryText: "Dowiedz się więcej",
-  theme: "dark",
-  titleClassName: "whitespace-pre-wrap md:text-justify",
-  descriptionClassName: "max-w-[500px]",
-};
+
 
 const HeaderStyled = styled.div<{
   background: string;
@@ -66,8 +58,17 @@ const HeaderStyled = styled.div<{
 `;
 
 export const Header = () => {
-  const { isOpen, onOpen, onClose } = useDisclosure();
+  const intl = useIntl();
 
+  const ClaimProperties: ClaimType = {
+    title: intl.formatMessage({ id: 'hero.title' }),
+    description: intl.formatMessage({ id: 'hero.desc' }),
+    hasSeparator: false,
+    buttonSecondaryText: intl.formatMessage({ id: 'hero.cta' }),
+    theme: "dark",
+    titleClassName: "whitespace-pre-wrap md:text-justify",
+    descriptionClassName: "max-w-[500px]",
+  };
   return (
     <>
       <HeaderStyled
@@ -84,19 +85,19 @@ export const Header = () => {
           <IcoBlock>
             <InfoIco>
               <InfoIcoImage src={PERCENT}/>
-              <InfoIcoText>Oferty specialne</InfoIcoText>
+              <InfoIcoText>{ intl.formatMessage({ id: 'hero.offers' })}</InfoIcoText>
             </InfoIco>
             <InfoIco>
               <InfoIcoImage src={PIN}/>
-              <InfoIcoText>W pobliżu</InfoIcoText>
+              <InfoIcoText>{ intl.formatMessage({ id: 'hero.pin' })}</InfoIcoText>
             </InfoIco>
             <InfoIco>
               <InfoIcoImage src={INFOICO}/>
-              <InfoIcoText>Informacje Hotelowe</InfoIcoText>
+              <InfoIcoText>{ intl.formatMessage({ id: 'hero.info' })}</InfoIcoText>
             </InfoIco>
             <InfoIco>
               <InfoIcoImage src={TAXIICO}/>
-              <InfoIcoText>Zamów taxówkę</InfoIcoText>
+              <InfoIcoText>{ intl.formatMessage({ id: 'hero.taxi' })}</InfoIcoText>
             </InfoIco>
           </IcoBlock>
         </HerderWrapper>

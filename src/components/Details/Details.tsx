@@ -4,12 +4,14 @@ import { BLOCK16, BLOCK4 } from "../../assets";
 import { Button, useDisclosure } from "@nextui-org/react";
 import { Modals } from "../Modals";
 import CalendlyForm from "../CalendlyForm/CalendlyForm";
+import {useIntl} from "gatsby-plugin-intl";
 export const Details = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
 
   const handleOpen = () => {
     onOpen();
   };
+  const intl = useIntl();
   return (
     <>
       <div
@@ -22,13 +24,10 @@ export const Details = () => {
           src={BLOCK16}
         />
         <div className="text-white text-[48px] font-bold text-center leading-none">
-          Porozmawiajmy
-          <br /> o szczegółach
+          {intl.formatMessage({ id: 'cta.title' })}
         </div>
         <p className="text-white  text-[16px] text-center">
-          Uzyskaj odpowiedzi na nurtujące Cię pytania <br />w ramach
-          indywidualnej rozmowy z jednym z naszych ekspertów. <br /> Wspólnie
-          znajdziemy najlepsze rozwiązanie dla Twojego hotelu.
+          {intl.formatMessage({ id: 'cta.desc' })}
         </p>
         <Button
           className="bg-white text-black"
@@ -37,7 +36,7 @@ export const Details = () => {
           size="lg"
           color="success"
         >
-          Umów prezentację
+          {intl.formatMessage({ id: 'cta.btn' })}
         </Button>
       </div>
 

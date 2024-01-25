@@ -3,6 +3,7 @@ import { SectionWrapper } from "../SectionWrapper";
 import { Claim } from "../Claim";
 import { Button, Image } from "@nextui-org/react";
 import { ASSETS1, ASSETS2, ASSETS3, CARD7 } from "../../assets";
+import {useIntl, FormattedMessage} from "gatsby-plugin-intl";
 
 type RowType = {
   title: string;
@@ -13,35 +14,7 @@ type RowType = {
   isDisabled?: boolean
 };
 
-const mocks: RowType[] = [
-  {
-    image: ASSETS2,
-    isDisabled: true,
-    title: "Zarządzanie konferencjami",
-    description:
-        "Aplikacja do zarządzania konferencjami to wszechstronne narzędzie, które umożliwia organizatorom skuteczne planowanie, monitorowanie i koordynację wszelkich aspektów konferencji.",
-  },
-  {
-    image: ASSETS1,
-    title: "Zarządzanie usterkami",
-    isPromoted: false,
-    isDisabled: true,
-    description: (
-      <>
-        Aplikacja do zarządzania usterkami dla hoteli to innowacyjne narzędzie,
-        które umożliwia efektywne monitorowanie <br />i raportowanie wszelkich
-        problemów technicznych czy uszkodzeń w obiekcie hotelowym.
-      </>
-    ),
-  },
-  {
-    image: ASSETS3,
-    title: "Oferta dla hoteli",
-    isDisabled: true,
-    description:
-      "To idealne miejsce, gdzie dostawcy mogą prezentować swoje najnowsze produkty i usługi, a hotele łatwo znajdą innowacyjne rozwiązania dostosowane do swoich potrzeb. Zróżnicowana gama propozycji obejmuje odświeżające nowości w dziedzinie wyposażenia, technologii hotelowej, po luksusowe artykuły dla gości. ",
-  },
-];
+
 
 const Row = ({
   image,
@@ -50,7 +23,7 @@ const Row = ({
   title,
   isLastIndex, isDisabled
 }: RowType) => {
-  console.log(isLastIndex);
+  const intl = useIntl();
   return (
     <div
       className={`${
@@ -84,18 +57,41 @@ const Row = ({
         disabled={ isDisabled }
         className="text-[16px] rounded-full bg-[#545454] text-white"
       >
-        {isDisabled ? 'Dostępne w którce' : 'Więcej'}
+        {isDisabled ? intl.formatMessage({ id: 'btn.soon' })  :  intl.formatMessage({ id: 'btn.more' }) }
       </Button>
     </div>
   );
 };
 
 const Store = () => {
+  const intl = useIntl();
+  const mocks: RowType[] = [
+    {
+      image: ASSETS2,
+      isDisabled: true,
+      title: intl.formatMessage({ id: 'store.conferenceManager.title' }),
+      description:intl.formatMessage({ id: 'store.conferenceManager.desc' }),
+    },
+    {
+      image: ASSETS1,
+      title:intl.formatMessage({ id: 'store.FaultManagement.title' }),
+      isPromoted: false,
+      isDisabled: true,
+      description: intl.formatMessage({ id: 'store.FaultManagement.desc' }),
+    },
+    {
+      image: ASSETS3,
+      title: intl.formatMessage({ id: 'store.offers.title' }),
+      isDisabled: true,
+      description: intl.formatMessage({ id: 'store.offers.desc' }),
+    },
+  ];
   return (
+
     <div>
       <SectionWrapper>
         <div className="flex flex-col gap-[40px] md:gap-[80px] ">
-          <Claim title="Hotelspot Store" />
+          <Claim title={intl.formatMessage({ id: 'store.title' })} />
           <div className="flex flex-col gap-[50px]">
             {mocks.map((props, index, array) => (
               <Row {...props} isLastIndex={false} />

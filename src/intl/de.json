@@ -1,17 +1,3 @@
 {
-  "title": "Gatsby Deutsch",
-  "description": "Starten Sie Ihr nächstes großartiges Gatsby-Projekt mit diesem Standardstarter-intl. Dieser minimalistische Starter wird mit den wichtigsten Gatsby-Konfigurationsdateien geliefert, die Sie möglicherweise benötigen.",
-  "author": "@wiziple",
-  "hello": "Hallo Leute",
-  "welcome": "Willkommen auf Ihrer neuen Gatsby-Website.",
-  "title_page2": "Seite zwei",
-  "hello_page2": "Hallo von der zweiten Seite",
-  "go_page2": "Gehe zu Seite 2",
-  "build": "Jetzt bauen Sie etwas Großartiges.",
-  "welcome_page2": "Willkommen auf Seite 2",
-  "go_back": "Zurück zur Startseite",
-  "notfound": {
-    "header": "NICHT GEFUNDEN",
-    "description": "Sie haben gerade eine Route getroffen, die nicht existiert... die Traurigkeit."
-  }
+  "menuproject": "Gatsby de"
 }

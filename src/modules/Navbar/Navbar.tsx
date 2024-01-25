@@ -28,29 +28,23 @@ import {
 } from "@nextui-org/react";
 import { useIntl } from "gatsby-plugin-intl";
 
-import { LOGO, LOGO_WHITE } from "../../assets";
+import { LOGO_WHITE } from "../../assets";
 import { Spin as Hamburger } from "hamburger-react";
-import { Modals } from "../../components/Modals";
 
-import CalendlyForm from "../../components/CalendlyForm/CalendlyForm";
-export const navbarItems = [
-  { text: "Produkt", href: "#product" },
-  { text: "Funkcje", href: "#funkcje" },
-  { text: "Jak to działa", href: "#jaktodziala" },
-  { text: "Kontakt", href: "#footer" },
-];
 
 export const Navbar = () => {
   const intl = useIntl();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [scrollDirection, setScrollDirection] = useState<"down" | "up">("up");
   const [scrollPosition, setScrollPosition] = useState<boolean>(false);
-  const { isOpen, onOpen, onClose } = useDisclosure();
 
-  const handleOpen = () => {
-    onOpen();
-  };
 
+  const navbarItems = [
+    { text: intl.formatMessage({ id: 'menu.product' }), href: '#product' },
+    { text: intl.formatMessage({ id: 'menu.function' }), href: '#functions' },
+    { text: intl.formatMessage({ id: 'menu.howItWorks' }), href: '#howItWorks' },
+    { text: intl.formatMessage({ id: 'menu.contact' }), href: '#footer' },
+  ];
   useEffect(() => {
     let lastScrollY = window.pageYOffset;
 
@@ -108,15 +102,15 @@ export const Navbar = () => {
           <div className="flex flex-1 gap-2 justify-end">
 
             <Button
-                href="#cp-widget"
-                onClick={() => { window.location.href = "#cp-widget" }}
+              href="#cp-widget"
+              onClick={() => { window.location.href = "#cp-widget" }}
               style={{ fontSize: 15, height: 40 }}
               size="lg"
               variant="bordered"
               radius="full"
               className="text-white relative overflow-visible rounded-full  after:content-[''] after:absolute after:rounded-full after:inset-0   after:z-[-1] after:transition after:!duration-500 hover:after:scale-150 hover:after:opacity-0 "
             >
-              Umów bezpłatne spotkanie
+              {intl.formatMessage({ id: 'menu.cta' })}
 
             </Button>
 
@@ -174,9 +168,6 @@ export const Navbar = () => {
         </NavbarMenu>
       </NavbarWrapper>
 
-      <Modals isOpen={isOpen} onClose={onClose} size={"xl"}>
-        <CalendlyForm />
-      </Modals>
     </>
   );
 };

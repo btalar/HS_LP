@@ -1,17 +1,167 @@
 {
-  "title": "Gatsby English",
-  "description": "Kick off your next, great Gatsby project with this default-starter-intl. This barebones starter ships with the main Gatsby configuration files you might need.",
-  "author": "@wiziple",
-  "hello": "Hi people",
-  "welcome": "Welcome to your new Gatsby site.",
-  "title_page2": "Page two",
-  "hello_page2": "Hi from the second page",
-  "go_page2": "Go to page 2",
-  "build": "Now go build something great.",
-  "welcome_page2": "Welcome to page 2",
-  "go_back": "Go back to the homepage",
-  "notfound": {
-    "header": "NOT FOUND",
-    "description": "You just hit a route that doesn't exist... the sadness."
+  "menu": {
+    "product": "Product",
+    "function": "Functions",
+    "howItWorks": "How it works",
+    "contact": "Contact",
+    "cta": "Schedule a free meeting"
+  },
+  "hero": {
+    "title": "Intuitive hotelspot digital concierge app for hotels",
+    "desc": "Intuitive hotelspot digital concierge app for hotels which allows guests full access to various services and informations, enhancing their comfort and convenience during their stay.",
+    "cta": "Find out more",
+    "offers": "Special offers",
+    "pin": "Nearby",
+    "info": "Hotel informations",
+    "taxi": "Order a taxi"
+  },
+  "product": {
+    "title": "Exceptional and unique design",
+    "desc": "Digital concierge is an app with 24/7 access to information, presentation of all hotel amenities, and promotion of special offers using digital technology",
+    "selectWariant": "Choose an option:"
+  },
+  "benefits": {
+    "title": "Benefits",
+    "IncreasedRevenue":{
+      "title": "Increased revenue",
+      "desc": "By promoting and reccomending of all hotel services, as well as local attractions, you will significantly increase the hotel's revenue."
+    },
+    "ImprovingGuest":{
+      "title": "Improved guest service",
+      "desc": "Digital POD will provice fast and effective information for guests 24/7, elimination the need to wait at the reception. Effectively enhance guest satisfaction."
+    },
+    "TaskAutomation":{
+      "title": "Automation of routine tasks",
+      "desc": "The digital concierge automates many routine tasks, allowing employees to focus on more complex tasks."
+    },
+    "SaveTime":{
+      "title": "Time savings",
+      "desc": "Guests will quickly get answers to their questions without the need to wait in queues."
+    },
+    "Personalizing":{
+      "title": "Personalization of Guest Experiences",
+      "desc": "Thanks to data analysis and artificial intelligence, the digital concierge will provide personalized recommendations, advice, and information."
+    },
+    "CostReduction":{
+      "title": "Cost Reduction",
+      "desc": "Clearly reduced operational costs through, for example, a reduction in the printing of informational advertising materials, optimizing the number of receptionists, and many others."
+    }
+  },
+  "function": {
+    "title": "Features",
+    "LocalAttractions": {
+      "title": "Local Attractions",
+      "desc": "Share recommendations of local attractions: museums, interesting places, events, restaurants."
+    },
+    "VoiceAssistant": {
+      "title": "Voice Assistant",
+      "desc": "Respond in your guests native language thanks to the build-in automatic tranlation tool."
+    },
+    "MobileApp": {
+      "title": "Mobile App",
+      "desc": "Elevate your offering to a higher level. Inform and sell your services directly through the mobile app."
+    }
+  },
+  "howItWorks": {
+    "title": "Jak to działa?",
+    "LocalAttractions": {
+      "title": "Local Attractions",
+      "desc": "Share recommendations of local attractions: museums, interesting places, events, restaurants."
+    },
+    "VoiceAssistant": {
+      "title": "Voice Assistant",
+      "desc": "Respond in your guests native language thanks to the build-in automatic tranlation tool"
+    },
+    "MobileApp": {
+      "title": "Mobile App",
+      "desc": "Elevate your offering to a higher level. Inform and sell your services directly through the mobile app."
+    }
+  },
+  "howItWorks": {
+    "title" : "How it works?",
+    "RestaurantHotel" : {
+      "title": "Hotel Restaurant",
+      "desc": "Seasonal menu or special lunch offer? With our app, you will increase the number of reservations and restaurant guests."
+    },
+    "OrderTaxi" : {
+      "title": "Order a Taxi",
+      "desc": "Hotel guests will easily order a taxi directly from the POD without the need for stall assistance."
+    },
+    "SpecialOffer" : {
+      "title": "Special Offers",
+      "desc": "Promote special offers in advance and increase the chances of direct bookings and guest returns."
+    },
+    "Events" : {
+      "title": "Hotel events",
+      "desc": "Do you organize movie screenings, children animations, group cheering event? Inform guests about the events organized at the hotel and gain additional revenue."
+    },
+    "Opinion" : {
+      "title": "Leave your review",
+      "desc": "Thanks to reviews and their analysis, you will enhance the quality of the services offered."
+    }
+  },
+  "cta": {
+    "title" : "Let's talk about the details",
+    "desc" : "Get answers to your burning questions in an individual conversation with one of our experts. Together, we will find the best solution for your hotel.",
+    "btn" : "Schedule a presentation"
+  },
+  "variants": {
+    "title" : "Options",
+    "pod" : {
+      "label": "STATIONARY POD",
+      "title": "Voice Assistant",
+      "desc": "Thanks to advanced speech recognition and instatn access to information, the voice assistant will provide answers in any language instantly!"
+    },
+    "mobileApp" : {
+      "label": "MOBILE APP",
+      "title": "Chat Bot",
+      "desc": "Discover a new dimension of communication with guests, enhancing the quality of their experiences through the latest artificial intelligence-based solutions."
+    }
+  },
+  "mobileApp": {
+    "title" : "MOBILE APP",
+    "desc" : "The service is also available as an application for all guests, regardless of whether they are using a smarpthone, tablet or computer."
+  },
+  "store": {
+    "title" : "Hotelspot Store",
+    "conferenceManager" : {
+      "title": "Conference Management",
+      "desc": "The conference management app is a versatile tool that enables organizers to effectively plan, monitor, and coordinate all aspects of the conference."
+    },
+    "FaultManagement" : {
+      "title": "Defect Management",
+      "desc": "The defect management app for hotels is an innovative tool that enables efficient monitoring and reporting of any technical issues or damages in the hotel property."
+    },
+    "offers" : {
+      "title": "Offer for Hotels",
+      "desc": "It is the perfect spot where suppliers can showcase their latest products and services, and hotels can easily find innovative solutions tailored to their needs. The diverse range of offerings includes refreshing innovations in equipment, hotel technology, and even luxury guests amenities."
+    }
+  },
+  "contact": {
+    "title" : "Comming soon",
+    "desc" : {
+      "line1": "Contact us directly by phone.",
+      "line2": "We are available to answer your questions and provide necessary assistance."
+    }
+  },
+  "policy": {
+    "text" : "By sending, I confirm that I have read the privacy policy and consent to the processing of my personal data."
+  },
+  "btn": {
+    "next" : "Next",
+    "soon" : "Comming soon",
+    "send" :  "Send",
+    "addOption" : "Add a review",
+    "checkMenu" : "Check the Menu",
+    "orderTaxi" : "Order a Taxi",
+    "checkOffer" :    "Check Offers",
+    "checkEvents" :   "Check Events"
+  },
+  "input": {
+    "name" : "First Name",
+    "surname" :   "Last Name",
+    "email" : "E-mail",
+    "phone" : "Phone Number",
+    "message" :   "Message"
   }
 }

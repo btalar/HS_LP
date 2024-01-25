@@ -14,12 +14,14 @@ import { Button } from "@nextui-org/react";
 import { SectionWrapper } from "../SectionWrapper";
 import { Claim } from "../Claim";
 import { Icon } from "../Functional/Functional";
+import {useIntl} from "gatsby-plugin-intl";
 export const Variant = () => {
+  const intl = useIntl();
   return (
     <SectionWrapper id="warianty" className="">
       <div className="flex flex-col gap-[30px] md:gap-[80px]">
         <div>
-          <Claim title="Warianty" />
+          <Claim title={intl.formatMessage({ id: 'variants.title' })} />
         </div>
         <div className="flex md:flex-row flex-col gap-[50px] md:h-[700px] h-[1200px]">
           <div
@@ -31,13 +33,12 @@ export const Variant = () => {
           >
             <Icon src={SVG4} />
             <div className="bg-black text-white py-1 text-[12px] px-4 rounded-[25px]">
-              STACJONARNY POD
+
+              {intl.formatMessage({ id: 'variants.pod.label' })}
             </div>
-            <h3 className="text-black text-[30px]">Asystent głosowy</h3>
+            <h3 className="text-black text-[30px]"> {intl.formatMessage({ id: 'variants.pod.title' })}</h3>
             <p className="text-black text-[16px] md:text-justify min-h-[80px]">
-              Za sprawą zaawansowanego rozpoznawania mowy i natychmiastowego
-              dostępu do informacji, asystent głosowy błyskawicznie udzieli
-              odpowiedzi w dowolnym języku!
+              {intl.formatMessage({ id: 'variants.pod.desc' })}
             </p>
           </div>
           <div
@@ -49,13 +50,11 @@ export const Variant = () => {
           >
             <Icon src={SVG5} />
             <div className="bg-black text-white py-1 text-[12px] px-4 rounded-[25px] font-normal uppercase">
-              Aplikacja mobilna
+              {intl.formatMessage({ id: 'variants.mobileApp.label' })}
             </div>
-            <h3 className="text-black text-[30px]">Chat Bot</h3>
+            <h3 className="text-black text-[30px]">  {intl.formatMessage({ id: 'variants.mobileApp.title' })}</h3>
             <p className="text-black text-[16px] md:text-justify min-h-[80px]">
-              Odkryj nowy wymiar komunikacji z Gośćmi podnosząc jakość ich
-              doświadczeń dzięki najnowszym rozwiązaniom opartym na sztucznej
-              inteligencji.
+              {intl.formatMessage({ id: 'variants.mobileApp.desc' })}
             </p>
           </div>
         </div>

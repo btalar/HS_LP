@@ -1,17 +1,173 @@
 {
-  "title": "Gatsby Polski",
-  "description": "Rozpocznij swój następny, wspaniały projekt Gatsby przy użyciu tego domyślnego startera-intl. Ten starter zawiera podstawowe pliki konfiguracyjne Gatsby, które mogą ci się przydać.",
-  "author": "@wiziple",
-  "hello": "Cześć ludzie",
-  "welcome": "Witaj na swojej nowej stronie Gatsby.",
-  "title_page2": "Strona druga",
-  "hello_page2": "Cześć z drugiej strony",
-  "go_page2": "Idź do strony 2",
-  "build": "Teraz zbuduj coś wielkiego.",
-  "welcome_page2": "Witaj na stronie 2",
-  "go_back": "Wróć do strony głównej",
-  "notfound": {
-    "header": "NIE ZNALEZIONO",
-    "description": "Właśnie trafiłeś na trasę, której nie ma... smutek."
+  "menu": {
+    "product": "Produkt",
+    "function": "Funkcje",
+    "howItWorks": "Jak to działa",
+    "contact": "Kontakt",
+    "cta": "Umów bezpłatne spotkanie"
+  },
+  "hero": {
+    "title": "Inuticyjna aplikacja hotelspot cyfrowy concierge dla hoteli",
+    "desc": "Inuticyjna aplikacja hotelspot cyfrowy concierge dla hoteli, umożliwiająca gościom pełen dostęp do różnorodnych usług i informacji, poprawiając komfort i wygodę ich pobytu.",
+    "cta": "Dowiedz się więcej",
+    "offers": "Oferty specjalne",
+    "pin": "W pobliżu",
+    "info": "Informacje Hotelowe",
+    "taxi": "Zamów taxówkę"
+  },
+  "product": {
+    "title": "Wyjątkowy niepowtarzalny design",
+    "desc": "Cyfrowy concierge to aplikacja z dostępem do informacji 24/7, prezentacji wszystkich udogodnień hotelowych oraz promocji ofert specjalnych za pomocą technologii cyfrowej",
+    "selectWariant": "Wybierz wariant:"
+  },
+  "benefits": {
+    "title": "Korzyści",
+    "IncreasedRevenue":{
+      "title": "Zwiększone przychody",
+      "desc": "Dzięki promocji i rekomendacji wszystkich hotelowych usług, a także lokalnych atrakcji, widocznie zwiększysz przychody hotelu."
+    },
+    "ImprovingGuest":{
+      "title": "Usprawnienie obsługi gościa",
+      "desc": "Digital POD dostarczy szybką i skuteczną informację dla gości 24/7 eliminując potrzebę czekania przy recepcji. Efektywnie zwiększaj zadowolenie gości."
+    },
+    "TaskAutomation":{
+      "title": "Automation of routine tasks",
+      "desc": "The digital concierge automates many routine tasks, allowing employees to focus on more complex tasks."
+    },
+    "SaveTime":{
+      "title": "Oszczędność czasu",
+      "desc": "Goście szybko uzyskają odpowiedzi na pytania bez konieczności oczekiwania w kolejkach."
+    },
+    "Personalizing":{
+      "title": "Personalizacja doświadczeń gości",
+      "desc": "Dzięki analizie danych i sztucznej inteligencji, cyfrowy concierge dostarczy spersonalizowane rekomendacje, porady i informacje."
+    },
+    "CostReduction":{
+      "title": "Redukcja kosztów",
+      "desc": "Widocznie obniżone koszty operacyjne poprzez np. redukcję wydruku materiałów reklamowych informacyjnych, optymalizację liczby recepcjonistów i wiele innych."
+    }
+  },
+  "function": {
+    "title": "Funkcje",
+    "LocalAttractions": {
+      "title": "Lokalne Atrakcje",
+      "desc": "Podziel się rekomendacjami lokalnych atrakcji: muzea, ciekawe miejsca, wydarzenia, restauracje."
+    },
+    "VoiceAssistant": {
+      "title": "Asystent głosowy",
+      "desc": "Odpowiadaj w ojczystym języku swoich gości dzięki wbudowanemu narzędziu do automatycznego tłumaczenia"
+    },
+    "MobileApp": {
+      "title": "Aplikacja mobilna",
+      "desc": "Przenieś swoją ofertę na wyższy poziom. Informuj i sprzedawaj swoje usługi bezpośrednio w aplikacji mobilnej."
+    }
+  },
+  "howItWorks": {
+    "title": "Jak to działa?",
+    "LocalAttractions": {
+      "title": "Local Attractions",
+      "desc": "Share recommendations of local attractions: museums, interesting places, events, restaurants."
+    },
+    "VoiceAssistant": {
+      "title": "Voice Assistant",
+      "desc": "Respond in your guests native language thanks to the build-in automatic tranlation tool"
+    },
+    "MobileApp": {
+      "title": "Mobile App",
+      "desc": "Elevate your offering to a higher level. Inform and sell your services directly through the mobile app."
+    }
+  },
+
+  "howItWorks": {
+    "title" : "Jak to działa?",
+    "RestaurantHotel" : {
+      "title": "Restauracja hotelowa",
+      "desc": "Menu sezonowe lub specjalna oferta lunchowa? Dzięki naszej aplikacji zwiększysz liczbę rezerwacji i gości w restauracji."
+    },
+    "OrderTaxi" : {
+      "title": "Zamów Taxi",
+      "desc": "Goście hotelowi z łatwością zamówią taksówkę bezpośrednio z PODa bez konieczności angażowania obsługi."
+    },
+    "SpecialOffer" : {
+      "title": "Oferty specjalne",
+      "desc": "Promuj oferty specjalne z wyprzedzeniem i zwiększ szanse na bezpośrednie rezerwacje oraz powrót gośc"
+    },
+    "Events" : {
+      "title": "Wydarzenia hotelowe",
+      "desc": "Organizujesz seanse filmowe, animacje dla dzieci, wspólne kibicowanie? Poinformuj gości o wydarzeniach organizowanych w hotelu i zyskaj dodatkowy przychód."
+    },
+    "Opinion" : {
+      "title": "Pozostaw opinię",
+      "desc": "Dzięki opiniom i ich analizie podniesiesz jakość oferowanych usług"
+    }
+  },
+
+  "cta": {
+    "title" : "Porozmawiajmy o szczegółach",
+    "desc" : "Uzyskaj odpowiedzi na nurtujące Cię pytania w ramach indywidualnej rozmowy z jednym z naszych ekspertów. Wspólnie znajdziemy najlepsze rozwiązanie dla Twojego hotelu.",
+    "btn" : "Umów prezentację"
+  },
+
+  "variants": {
+    "title" : "Warianty",
+    "pod" : {
+      "label": "STACJONARNY POD",
+      "title": "Asystent głosowy",
+      "desc": "Za sprawą zaawansowanego rozpoznawania mowy i natychmiastowego dostępu do informacji, asystent głosowy błyskawicznie udzieli odpowiedzi w dowolnym języku!"
+    },
+    "mobileApp" : {
+      "label": "APLIKACJA MOBILNA",
+      "title": "Chat Bot",
+      "desc": "Odkryj nowy wymiar komunikacji z Gośćmi podnosząc jakość ich doświadczeń dzięki najnowszym rozwiązaniom opartym na sztucznej inteligencji."
+    }
+  },
+
+  "mobileApp": {
+    "title" : "Aplikacja mobilna",
+    "desc" : "Usługa dostępna także jako aplikacja dostępna dla wszystkich gości, niezależnie od tego, czy korzystają ze smartfona, tabletu, czy komputera."
+  },
+  "store": {
+    "title" : "Hotelspot Store",
+    "conferenceManager" : {
+      "title": "Zarządzanie konferencjami",
+      "desc": "Aplikacja do zarządzania konferencjami to wszechstronne narzędzie, które umożliwia organizatorom skuteczne planowanie, monitorowanie i koordynację wszelkich aspektów konferencji."
+    },
+    "FaultManagement" : {
+      "title": "Zarządzanie usterkami",
+      "desc": "Aplikacja do zarządzania usterkami dla hoteli to innowacyjne narzędzie, które umożliwia efektywne monitorowanie i raportowanie wszelkich problemów technicznych czy uszkodzeń w obiekcie hotelowym."
+    },
+    "offers" : {
+      "title": "Oferta dla hoteli",
+      "desc": "To idealne miejsce, gdzie dostawcy mogą prezentować swoje najnowsze produkty i usługi, a hotele łatwo znajdą innowacyjne rozwiązania dostosowane do swoich potrzeb. Zróżnicowana gama propozycji obejmuje odświeżające nowości w dziedzinie wyposażenia, technologii hotelowej, po luksusowe artykuły dla gości."
+    }
+  },
+  "contact": {
+    "title" : "Kontakt",
+    "desc" : {
+      "line1": "Skontaktuj się bezpośrednio poprzez telefon.",
+      "line2": "Jesteśmy dostępni, aby odpowiedzieć na Twoje pytania i udzielić niezbędnej pomocy."
+    }
+  },
+
+  "policy": {
+    "text" : "Wysyłając potwierdzam iż, zapoznałem się z polityką prywatności i wyrażam zgodę na przetwarzanie moich danych osobowych."
+  },
+
+  "btn": {
+    "next" : "Dalej",
+    "soon" : "Dostępne w krótce",
+    "send" :	"Wyślij",
+    "addOption" :	"Dodaj, opinię",
+    "checkMenu" :	"Sprawdź, menu",
+    "orderTaxi" :	"Zamów, Taxi",
+    "checkOffer" :	"Sprawdź, oferty",
+    "checkEvents" :	"Sprawdź, wydarzenia"
+  },
+  "input": {
+    "name" : "Imię",
+    "surname" :	"Nazwisko",
+    "email" :	"E-mail",
+    "phone" :	"Numer telefonu",
+    "message" :	"Wiadomość"
   }
 }

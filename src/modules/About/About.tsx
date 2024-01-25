@@ -24,17 +24,19 @@ import {
 } from "./About.styled";
 import { Claim, SectionWrapper } from "../../components";
 import { ChooseVariant } from "../../components/ChooseVariant";
+import {useIntl} from "gatsby-plugin-intl";
 
 export const About = () => {
   const [variant, setVariant] = useState<"black" | "white">("black");
+  const intl = useIntl();
 
   return (
     <SectionWrapper id="product">
       <SectionAbout>
         <ColLeft>
           <Claim
-            title="Wyjątkowy niepowtarzalny design"
-            description="Cyfrowy concierge to aplikacja z dostępem do informacji 24/7, prezentacji wszystkich udogodnień hotelowych oraz promocji ofert specjalnych za pomocą technologii cyfrowej"
+            title={intl.formatMessage({ id: 'product.title' })}
+            description={intl.formatMessage({ id: 'product.desc' })}
           />
           <VariantSwitcher>
             <ChooseVariant variant={variant} setVariant={setVariant} />

@@ -3,8 +3,10 @@ import { Image } from "@nextui-org/react";
 import { APP_STORE, BLOCK7, GOOGLE_PLAY } from "../../assets";
 import { SectionWrapper } from "../SectionWrapper";
 import { Claim } from "../Claim";
+import {useIntl} from "gatsby-plugin-intl";
 
 export const MobileApp = () => {
+    const intl = useIntl();
   return (
     <SectionWrapper id="aplikacja">
       <div className="flex lg:flex-row flex-col gap-4">
@@ -13,11 +15,11 @@ export const MobileApp = () => {
             titleClassName="  leading-none"
             title={
               <>
-                Aplikacja mobilna
+                  {intl.formatMessage({ id: 'mobileApp.title'})}
               </>
             }
             descriptionClassName="max-w-[300px] text-justify"
-            description="Usługa dostępna także jako aplikacja dostępna dla wszystkich gości, niezależnie od tego, czy korzystają ze smartfona, tabletu, czy komputera."
+            description={intl.formatMessage({ id: 'mobileApp.desc'})}
           />
           <div className="hidden lg:flex gap-[10px]">
             <Image className="border" src={APP_STORE} />

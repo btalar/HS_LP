@@ -2,47 +2,10 @@ import React from "react";
 import { Claim, SectionWrapper } from "../../components";
 import { Image } from "@nextui-org/react";
 import { AD1, AD2, AD3, AD4, AD5, AD6 } from "../../assets";
+import {useIntl} from "gatsby-plugin-intl";
 
 export type ListType = { title: string; description: string; src: any };
 
-const list: ListType[] = [
-  {
-    src: AD1,
-    title: "Zwiększone przychody",
-    description:
-      "Dzięki promocji i rekomendacji wszystkich hotelowych usług, a także lokalnych atrakcji, widocznie zwiększysz przychody hotelu.",
-  },
-  {
-    src: AD2,
-    title: "Usprawnienie obsługi gościa",
-    description:
-      "Digital POD dostarczy szybką i skuteczną informację \ndla gości 24/7 eliminując potrzebę czekania przy recepcji. Efektywnie zwiększaj zadowolenie gości.\n",
-  },
-  {
-    src: AD3,
-    title: "Automatyzacja zadań rutynowych",
-    description:
-      "Cyfrowy concierge automatyzuje wiele rutynowych zadań\nco pozwala pracownikom skupić się na bardziej skomplikowanych czynnościach.\n",
-  },
-  {
-    src: AD4,
-    title: "Oszczędność czasu",
-    description:
-      "Goście szybko uzyskają odpowiedzi na pytania bez konieczności oczekiwania w kolejkach. \n",
-  },
-  {
-    src: AD5,
-    title: "Personalizacja doświadczeń gości",
-    description:
-      "Dzięki analizie danych i sztucznej inteligencji, cyfrowy concierge dostarczy spersonalizowane rekomendacje, porady i informacje.\n",
-  },
-  {
-    src: AD6,
-    title: "Redukcja kosztów",
-    description:
-      "Widocznie obniżone koszty operacyjne poprzez np. redukcję wydruku materiałów reklamowych informacyjnych, optymalizację liczby recepcjonistów i wiele innych.\n",
-  },
-];
 
 const Item = ({ title, description, src }: ListType) => {
   return (
@@ -55,13 +18,46 @@ const Item = ({ title, description, src }: ListType) => {
 };
 
 export const Advantage = () => {
+  const intl = useIntl();
+  const list: ListType[] = [
+    {
+      src: AD1,
+      title: intl.formatMessage({ id: 'benefits.IncreasedRevenue.title' }),
+      description: intl.formatMessage({ id: 'benefits.IncreasedRevenue.desc' }),
+    },
+    {
+      src: AD2,
+      title:  intl.formatMessage({ id: 'benefits.ImprovingGuest.title' }),
+      description: intl.formatMessage({ id: 'benefits.ImprovingGuest.desc' }),
+    },
+    {
+      src: AD3,
+      title:  intl.formatMessage({ id: 'benefits.TaskAutomation.title' }),
+      description: intl.formatMessage({ id: 'benefits.TaskAutomation.desc' }),
+    },
+    {
+      src: AD4,
+      title:  intl.formatMessage({ id: 'benefits.SaveTime.title' }),
+      description: intl.formatMessage({ id: 'benefits.SaveTime.desc' }),
+    },
+    {
+      src: AD5,
+      title:  intl.formatMessage({ id: 'benefits.Personalizing.title' }),
+      description: intl.formatMessage({ id: 'benefits.Personalizing.desc' }),
+    },
+    {
+      src: AD6,
+      title:  intl.formatMessage({ id: 'benefits.CostReduction.title' }),
+      description: intl.formatMessage({ id: 'benefits.CostReduction.desc' }),
+    },
+  ];
   return (
     <SectionWrapper
       id="korzysci"
       className="py-0 my-0 px-10 gap-[100px] flex flex-col"
     >
       <div className="flex flex-row justify-center">
-        <Claim title="Korzyści" />
+        <Claim title={intl.formatMessage({ id: 'benefits.title' })} />
       </div>
       <div className="flex flex-row flex-wrap justify-center md:justify-between gap-10">
         {list.map((props) => (

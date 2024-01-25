@@ -24,7 +24,7 @@ export const Logo = styled(NavbarBrand)`
 `;
 
 export const PopoverWrapper= styled.span`
- display: none; 
+ display: flex; 
 `;
 
 export const Item = styled.p`

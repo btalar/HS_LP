@@ -3,9 +3,9 @@ import { ContactForm as StyledContactForm } from "../../modules/Footer/Footer.st
 import React, { useState } from "react";
 import { SubmitHandler, useForm } from "react-hook-form";
 import { toast } from "react-toastify";
-import emailjs from "@emailjs/browser";
 import { RotatingLines } from "react-loader-spinner";
 import { actionSendEmail } from "../../actions";
+import {useIntl} from "gatsby-plugin-intl";
 type Inputs = {
   firstName: string;
   lastName: string;
@@ -22,7 +22,6 @@ export const ContactForm = () => {
   const {
     register,
     handleSubmit,
-    watch,
     formState: { errors },
   } = useForm<Inputs>();
   const onSubmit: SubmitHandler<Inputs> = async (data) => {
@@ -46,7 +45,7 @@ export const ContactForm = () => {
       setFormState("error");
     }
   };
-
+  const intl = useIntl();
   return (
     <StyledContactForm onSubmit={handleSubmit(onSubmit)}>
       <div className="flex flex-col gap-[30px]">
@@ -58,7 +57,7 @@ export const ContactForm = () => {
             }}
             variant="bordered"
             labelPlacement="inside"
-            label="Imię"
+            label={intl.formatMessage({ id: 'input.name' })}
             radius="full"
           />
           <Input
@@ -68,7 +67,7 @@ export const ContactForm = () => {
             }}
             variant="bordered"
             labelPlacement="inside"
-            label="Nazwisko"
+            label={intl.formatMessage({ id: 'input.surname' })}
             radius="full"
           />
         </div>
@@ -81,7 +80,7 @@ export const ContactForm = () => {
             variant="bordered"
             type="email"
             labelPlacement="inside"
-            label="E-mail"
+            label={intl.formatMessage({ id: 'input.email' })}
             radius="full"
           />
           <Input
@@ -91,7 +90,7 @@ export const ContactForm = () => {
             {...register("phoneNumber")}
             variant="bordered"
             labelPlacement="inside"
-            label="Numer telefonu"
+            label={intl.formatMessage({ id: 'input.phone' })}
             radius="full"
           />
         </div>
@@ -104,7 +103,7 @@ export const ContactForm = () => {
             className="textarea"
             variant="bordered"
             labelPlacement="inside"
-            label="Wiadomość"
+            label={intl.formatMessage({ id: 'input.message' })}
             radius="full"
           />
         </div>
@@ -120,7 +119,7 @@ export const ContactForm = () => {
           >
             {
               {
-                ready: <>Wyślij</>,
+                ready: <> {intl.formatMessage({ id: 'btn.send' })}</>,
                 loading: (
                   <RotatingLines
                     visible={true}
@@ -132,22 +131,13 @@ export const ContactForm = () => {
                     ariaLabel="rotating-lines-loading"
                   />
                 ),
-                success: <>Wysłano</>,
-                error: <>Wyślij Ponownie</>,
+                success: <>{intl.formatMessage({ id: 'btn.send' })}</>,
+                error: <>:( Please again</>,
               }[formState]
             }
           </Button>
           <p>
-            Wysyłając potwierdzam iż, zapoznałem się z{" "}
-            <a
-              className="underline font-bold"
-              target="_blank"
-              href="/polityka_prywatnosci.pdf"
-            >
-              {" "}
-              polityką prywatności{" "}
-            </a>{" "}
-            i wyrażam zgodę na przetwarzanie moich danych osobowych.
+            {intl.formatMessage({ id: 'policy.text' })}
           </p>
         </div>
       </div>

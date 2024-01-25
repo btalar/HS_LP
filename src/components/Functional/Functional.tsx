@@ -18,6 +18,7 @@ import {
   SVG9,
 } from "../../assets";
 import { Image } from "@nextui-org/react";
+import {useIntl} from "gatsby-plugin-intl";
 
 export const Icon = ({ src }: { src: any }) => {
   return (
@@ -32,9 +33,10 @@ export const Icon = ({ src }: { src: any }) => {
 };
 
 export const Functional = () => {
+  const intl = useIntl();
   return (
     <SectionWrapper id="funkcje" className="flex gap-[40px] flex-col">
-      <Claim title="Funkcje" />
+      <Claim title={intl.formatMessage({ id: 'function.title' })} />
       <div className="flex gap-[20px] md:gap-[50px] md:flex-row flex-col md:h-[700px]">
         <div
           className="flex-1 bg-center relative p-[30px] md:p-[50px] flex flex-col justify-end gap-[10px] bg-cover rounded-[25px]"
@@ -42,11 +44,10 @@ export const Functional = () => {
         >
           <Icon src={SVG8} />
           <h3 className="text-white text-[30px] mt-[100px] md:mt-0 mt-[100px] md:mt-0">
-            Asystent głosowy
+            {intl.formatMessage({ id: 'function.VoiceAssistant.title' })}
           </h3>
           <p className="text-white text-[16px] md:text-justify">
-            Odpowiadaj w ojczystym języku swoich gości <br />
-            dzięki wbudowanemu narzędziu do automatycznego tłumaczenia
+            {intl.formatMessage({ id: 'function.VoiceAssistant.desc' })}
           </p>
         </div>
         <div className="flex-1 flex flex-col gap-[20px] md:gap-[50px] relative">
@@ -58,11 +59,10 @@ export const Functional = () => {
           >
             <Icon src={SVG9} />
             <h3 className="text-white text-[30px] mt-[100px] md:mt-0">
-              Lokalne Atrakcje
+              {intl.formatMessage({ id: 'function.LocalAttractions.title' })}
             </h3>
             <p className="text-white text-[16px]">
-              Podziel się rekomendacjami lokalnych atrakcji:
-              <br /> muzea, ciekawe miejsca, wydarzenia, restauracje.
+              {intl.formatMessage({ id: 'function.LocalAttractions.desc' })}
             </p>
           </div>
           <div
@@ -74,11 +74,10 @@ export const Functional = () => {
             <img className="absolute -right-[20%] top-[10%]" src={BLOCK15} />
             <Icon src={SVG10} />
             <h3 className="text-white text-[30px] mt-[100px] md:mt-0">
-              Aplikacja mobilna
+              {intl.formatMessage({ id: 'function.MobileApp.title' })}
             </h3>
             <p className="text-white text-[16px]">
-              Przenieś swoją ofertę na wyższy poziom. <br /> Informuj i
-              sprzedawaj swoje usługi bezpośrednio w aplikacji mobilnej.
+              {intl.formatMessage({ id: 'function.MobileApp.desc' })}
             </p>
           </div>
         </div>

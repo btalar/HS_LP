@@ -2,15 +2,17 @@ import React, { Dispatch, SetStateAction, useState } from "react";
 import black from "./../../assets/variants/black.png";
 import white from "./../../assets/variants/white.png";
 import { Image } from "@nextui-org/react";
+import {useIntl} from "gatsby-plugin-intl";
 
 type ChooseVariantType = {
   setVariant: Dispatch<SetStateAction<"black" | "white">>;
   variant: "black" | "white";
 };
 export const ChooseVariant = ({ setVariant, variant }: ChooseVariantType) => {
-  return (
+    const intl = useIntl();
+    return (
     <div className="flex flex-col gap-3">
-      <div className="text-[20px] font-semibold">Wybierz wariant:</div>
+      <div className="text-[20px] font-semibold">{intl.formatMessage({ id: 'product.selectWariant' })}</div>
       <div className="flex flex-row gap-4">
 
         <button

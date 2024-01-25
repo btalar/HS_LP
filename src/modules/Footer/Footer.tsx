@@ -8,7 +8,7 @@ import { useIntl } from "gatsby-plugin-intl";
 import { useForm } from "react-hook-form";
 import { Newsletter } from "../../components/Newsletter";
 import { ContactForm } from "../../components/Contact";
-import { navbarItems } from "../Navbar";
+
 
 type Inputs = {
   example: string;
@@ -19,11 +19,16 @@ export const Footer = () => {
   const intl = useIntl();
 
   const {
-    register,
-    handleSubmit,
-    watch,
+
     formState: { errors },
   } = useForm<Inputs>();
+
+  const navbarItems = [
+    { text: intl.formatMessage({ id: 'menu.product' }), href: '#product' },
+    { text: intl.formatMessage({ id: 'menu.function' }), href: '#functions' },
+    { text: intl.formatMessage({ id: 'menu.howItWorks' }), href: '#howItWorks' },
+    { text: intl.formatMessage({ id: 'menu.contact' }), href: '#footer' },
+  ];
 
   return (
     <SectionWrapper id="footer" noMarginVertical isFluid className="py-8">
@@ -34,12 +39,11 @@ export const Footer = () => {
         <div>
           <Claim
             titleClassName="text-[40px] md:text-[60px]"
-            title="Skontaktuj się"
+            title={intl.formatMessage({ id: 'contact.title' })}
           />
           <div className="my-[20px] md:my-[40px]">
-            Skontaktuj się bezpośrednio poprzez telefon. <br /> Jesteśmy
-            dostępni, aby odpowiedzieć na Twoje pytania i udzielić niezbędnej
-            pomocy.
+            {intl.formatMessage({ id: 'contact.desc.line1' })}<br />
+            {intl.formatMessage({ id: 'contact.desc.line2' })}
           </div>
           <h2 className="text-[32px] font-[600] mt-[25px]">+48 794 099 609</h2>
           <h2 className="my-[25px] text-[32px] font-[600] mt-[12px]">

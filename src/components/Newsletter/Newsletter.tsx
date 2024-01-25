@@ -9,6 +9,7 @@ import { AxiosError } from "axios";
 import { actionAddSubscriber } from "../../actions";
 import { Checkbox } from "@nextui-org/react";
 import {PrivacyText} from "./Newsletter.styled";
+import {useIntl} from "gatsby-plugin-intl";
 
 type Inputs = {
   email: string;
@@ -48,14 +49,14 @@ export const Newsletter = () => {
       setFormState("error");
     }
   };
-
+  const intl = useIntl();
   return (
     <form
       onSubmit={handleSubmit(onSubmit)}
       className="flex flex-1 flex-col gap-[40px] md:gap-[80px]"
     >
       <Claim
-        title="Dołącz do newslettera"
+        title="Newsletter"
         titleClassName="text-center md:text-left text-[32px]"
       />
       <div className="flex flex-col gap-[40px]">
@@ -69,7 +70,7 @@ export const Newsletter = () => {
               {...register("email")}
               radius="full"
               size="sm"
-              label="Email"
+              label={intl.formatMessage({ id: 'input.email' })}
               variant="bordered"
             />
           </div>
@@ -85,7 +86,7 @@ export const Newsletter = () => {
           >
             {
               {
-                ready: <>Wyślij</>,
+                ready: <>{intl.formatMessage({ id: 'btn.send' })}</>,
                 loading: (
                   <RotatingLines
                     visible={true}
@@ -110,7 +111,7 @@ export const Newsletter = () => {
             console.log(field);
             return (
               <Checkbox value={field.value} onChange={field.onChange}>
-                <PrivacyText>Wysyłając potwierdzam iż, zapoznałem się z polityką prywatności i wyrażam zgodę na przetwarzanie moich danych osobowych.</PrivacyText>
+                <PrivacyText>{intl.formatMessage({ id: 'policy.text' })}</PrivacyText>
               </Checkbox>
             );
           }}
