@@ -23,8 +23,6 @@ import {
   Popover,
   PopoverTrigger,
   PopoverContent,
-
-  useDisclosure,
 } from "@nextui-org/react";
 import { useIntl } from "gatsby-plugin-intl";
 
@@ -41,9 +39,9 @@ export const Navbar = () => {
 
   const navbarItems = [
     { text: intl.formatMessage({ id: 'menu.product' }), href: '#product' },
-    { text: intl.formatMessage({ id: 'menu.function' }), href: '#functions' },
-    { text: intl.formatMessage({ id: 'menu.howItWorks' }), href: '#howItWorks' },
-    { text: intl.formatMessage({ id: 'menu.contact' }), href: '#footer' },
+    { text: intl.formatMessage({ id: 'menu.function' }), href: '#funkcje' },
+    { text: intl.formatMessage({ id: 'menu.howItWorks' }), href: '#jaktodziala' },
+    { text: intl.formatMessage({ id: 'menu.contact' }), href: '#kontakt' },
   ];
   useEffect(() => {
     let lastScrollY = window.pageYOffset;

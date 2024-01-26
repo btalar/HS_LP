@@ -3,7 +3,9 @@ import { Button } from "@nextui-org/react";
 export const Title = styled.h1`
   font-size: 40px;
   color: #192038;
-  font-weight: 600;
+  font-weight: 600; 
+  max-width: 600px;
+  text-align: left!important;
   line-height: 1.4;
   @media (max-width: 768px) {
     font-size: 24px; 

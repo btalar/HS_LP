@@ -161,7 +161,8 @@
     "checkMenu" :	"Sprawdź, menu",
     "orderTaxi" :	"Zamów, Taxi",
     "checkOffer" :	"Sprawdź, oferty",
-    "checkEvents" :	"Sprawdź, wydarzenia"
+    "checkEvents" :	"Sprawdź, wydarzenia",
+    "more": "Pokaż demo"
   },
   "input": {
     "name" : "Imię",

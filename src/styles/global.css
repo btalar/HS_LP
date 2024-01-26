@@ -28,13 +28,12 @@
   color: #908573 !important;
 }
 html {
-  font-family: "Inter", sans-serif;
   font-family: "Lato", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 body{
   text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
 }
 
 #___gatsby .react-multi-carousel-dot button {

@@ -1,9 +1,12 @@
 import React, { ReactNode } from "react";
 import { SectionWrapper } from "../SectionWrapper";
 import { Claim } from "../Claim";
-import { Button, Image } from "@nextui-org/react";
+import {Button, Image, useDisclosure} from "@nextui-org/react";
 import { ASSETS1, ASSETS2, ASSETS3, CARD7 } from "../../assets";
 import {useIntl, FormattedMessage} from "gatsby-plugin-intl";
+import {Modals} from "../Modals";
+
+
 
 type RowType = {
   title: string;
@@ -15,7 +18,6 @@ type RowType = {
 };
 
 
-
 const Row = ({
   image,
   isPromoted,
@@ -24,13 +26,15 @@ const Row = ({
   isLastIndex, isDisabled
 }: RowType) => {
   const intl = useIntl();
+
+  const { isOpen, onOpen, onClose } = useDisclosure();
+  const handleOpen = () => {
+    onOpen();
+  };
+
   return (
     <div
-      className={`${
-        isLastIndex
-          ? "bg-gradient-to-b from-neutral-50 to-transparent opacity-[0.6] "
-          : "bg-[#F5F5F5]"
-      }  p-[35px] rounded-[25px] md:rounded-[25px] flex flex-col gap-[25px] md:gap-[50px]  items-start md:items-center md:flex-row`}
+      className={`${ isDisabled ? 'bg-[#f5f5f5]' : 'bg-[#f5efe8]' }  p-[35px] rounded-[25px] md:rounded-[25px] flex flex-col gap-[25px] md:gap-[50px]  items-start md:items-center md:flex-row`}
     >
       <div
         className="md:hidden h-[200px] w-full bg-cover bg-center rounded-[20px] flex justify-start items-end p-[14px]"
@@ -38,7 +42,7 @@ const Row = ({
       >
         {isPromoted && (
           <div className=" lg:hidden py px-4 bg-[#908573] rounded-[25px] text-white">
-            POPULARNE
+            bestsseler
           </div>
         )}
       </div>
@@ -46,20 +50,30 @@ const Row = ({
       <div className="flex-1 flex flex-col items-start justify-end gap-[15px]">
         {isPromoted && (
           <div className="hidden lg:block py px-4 bg-[#908573] rounded-[25px] text-white text-[14px]">
-            Bestseller
+            Bestseller {isOpen ? 'asd' : 'FALSE'}
           </div>
         )}
-        <div className="text-[40px] font-bold">{title}</div>
-        <div className="text-[16px]">{description}</div>
+        <div className={`text-[40px] font-bold ${isDisabled ? '' : 'text-[##A56B35]'}`}>{title}</div>
+        <div className={`text-[16px] ${isDisabled ? '' : 'text-[#6c6764]'}`}>{description}</div>
       </div>
       <Button
         size="lg"
         disabled={ isDisabled }
-        className="text-[16px] rounded-full bg-[#545454] text-white"
+        className={`text-[16px] rounded-full text-white ${isDisabled ? 'bg-[#545454]' : 'bg-[#445844]'}`}
+        onClick={!isDisabled ? () => handleOpen() : null}
       >
         {isDisabled ? intl.formatMessage({ id: 'btn.soon' })  :  intl.formatMessage({ id: 'btn.more' }) }
       </Button>
+      <Modals isOpen={isOpen} onClose={onClose} size='4xl'>
+        <div className="flex-1 flex flex-col items-center gap-[15px]">
+          <iframe width="800" height="540" src="https://www.youtube.com/embed/7BXrYaEpueE?si=2D6NUXsIam-0z0h2"
+                  title="YouTube video player" frameBorder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  allowFullScreen></iframe>
+        </div>
+      </Modals>
     </div>
+
   );
 };
 
@@ -68,7 +82,8 @@ const Store = () => {
   const mocks: RowType[] = [
     {
       image: ASSETS2,
-      isDisabled: true,
+      isDisabled: false,
+      isPromoted: true,
       title: intl.formatMessage({ id: 'store.conferenceManager.title' }),
       description:intl.formatMessage({ id: 'store.conferenceManager.desc' }),
     },
@@ -86,8 +101,9 @@ const Store = () => {
       description: intl.formatMessage({ id: 'store.offers.desc' }),
     },
   ];
-  return (
 
+
+  return (
     <div>
       <SectionWrapper>
         <div className="flex flex-col gap-[40px] md:gap-[80px] ">

@@ -23,10 +23,10 @@ export const Details = () => {
           className="hidden lg:block absolute left-[10%] bottom-0 h-[50%]"
           src={BLOCK16}
         />
-        <div className="text-white text-[48px] font-bold text-center leading-none">
+        <div className="text-white text-[48px] font-bold text-center leading-none max-w-[500px]">
           {intl.formatMessage({ id: 'cta.title' })}
         </div>
-        <p className="text-white  text-[16px] text-center">
+        <p className="text-white  text-[16px] text-center max-w-[650px]">
           {intl.formatMessage({ id: 'cta.desc' })}
         </p>
         <Button

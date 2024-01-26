@@ -155,7 +155,8 @@
     "checkMenu" : "Check the Menu",
     "orderTaxi" : "Order a Taxi",
     "checkOffer" :    "Check Offers",
-    "checkEvents" :   "Check Events"
+    "checkEvents" :   "Check Events",
+    "more": "Watch demo"
   },
   "input": {
     "name" : "First Name",
