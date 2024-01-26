@@ -13,10 +13,10 @@ const OpinionCard = ({ isActive }: CardType) => {
           }`}
       >
         <div className="flex flex-row items-center justify-start bg-[#F5F5F5] h-[70px] px-[30px] gap-[15px]">
-          <h3>{intl.formatMessage({ id: 'howItWorks.Opinion.title' })}</h3>
+          <h3>{intl.formatMessage({ id: 'howItWorks.Opinion.title' })}s</h3>
         </div>
         <div className="flex flex-1 flex-col gap-[30px] py-[30px] items-center justify-around">
-          <div className="text-white bg-[#C7A581] text-[48px] px-2 rounded-2xl">
+          <div className="text-white bg-[#C7A581] text-[38px] px-2 rounded-2xl">
             4.9
           </div>
           <img className="w-[100px]" src={OPINIONS_ASSETS} />

@@ -50,7 +50,7 @@ const Row = ({
       <div className="flex-1 flex flex-col items-start justify-end gap-[15px]">
         {isPromoted && (
           <div className="hidden lg:block py px-4 bg-[#908573] rounded-[25px] text-white text-[14px]">
-            Bestseller {isOpen ? 'asd' : 'FALSE'}
+            Bestseller
           </div>
         )}
         <div className={`text-[40px] font-bold ${isDisabled ? '' : 'text-[##A56B35]'}`}>{title}</div>
