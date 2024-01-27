@@ -1,3 +1,174 @@
 {
-  "menuproject": "Gatsby de"
+  "menu": {
+    "product": "Produkt",
+    "function": "Funktionen",
+    "howItWorks": "Wie funktioniert das?",
+    "contact": "Kontakt",
+    "cta": "Vereinbaren Sie kostenlos einen Beratungstermin"
+  },
+  "hero": {
+    "title": "Intuitive hotelspot App - digitaler Concierge für Hotels",
+    "desc": "Die intuitive hotelspot App --  ein digitaler Concierge für Hotels, der den Gästen vollen Zugang zu einer Vielzahl von Dienstleistungen und Informationen bietet und so den Komfort und die Bequemlichkeit ihres Aufenthalts verbessert.",
+    "cta": "Mehr Informationen",
+    "offers": "Sonderangebote",
+    "pin": "In Ihrer direkten Umgebung",
+    "info": "Hotel Informationen",
+    "taxi": "Bestellen Sie ein Taxi"
+  },
+  "product": {
+    "title": "Außergewöhnlich einzigartiges Design",
+    "desc": "Der digitale Concierge ist eine App, die rund um die Uhr Zugang zu Informationen bietet, alle Annehmlichkeiten des Hotels vorstellt und Sonderangebote über digitale Technologie bewirbt.",
+    "selectWariant": "Wählen Sie eine Variante:"
+  },
+  "benefits": {
+    "title": "Vorteile",
+    "IncreasedRevenue": {
+      "title": "Höhere Einnahmen",
+      "desc": "Indem Sie alle Dienstleistungen des Hotels sowie die lokalen Attraktionen bewerben und empfehlen, werden Sie die Einnahmen des Hotels deutlich steigern."
+    },
+    "ImprovingGuest": {
+      "title": "Verbesserung des Besuchererlebnisses",
+      "desc": "Mit dem digitalen POD erhalten die Gäste rund um die Uhr schnelle und effektive Informationen und müssen nicht mehr an der Rezeption warten. Verbessern Sie effektiv die Zufriedenheit Ihrer Gäste."
+    },
+    "TaskAutomation": {
+      "title": "Automation of routine tasks",
+      "desc": "The digital concierge automates many routine tasks, allowing employees to focus on more complex tasks."
+    },
+    "SaveTime": {
+      "title": "Zeitersparnis",
+      "desc": "Hotelgäste erhalten schnell Antworten auf ihre Fragen, ohne in Warteschlangen warten zu müssen."
+    },
+    "Personalizing": {
+      "title": "Personalisierung des Erlebnisses für Hotelgäste.",
+      "desc": "Durch Datenanalyse und künstliche Intelligenz wird der digitale Concierge personalisierte Empfehlungen, Ratschläge und Informationen liefern."
+    },
+    "CostReduction": {
+      "title": "Kostenreduzierung",
+      "desc": "Sichtbare Senkung der Betriebskosten, z.B. durch die Reduzierung des Drucks von Informations- und Werbematerial, die Optimierung der Anzahl der Empfangsmitarbeiter und vieles mehr."
+    }
+  },
+  "function": {
+    "title": "Funktionen",
+    "LocalAttractions": {
+      "title": "Lokale Attraktionen",
+      "desc": "Sehenswürdigkeiten, Veranstaltungen, Restaurants."
+    },
+    "VoiceAssistant": {
+      "title": "Sprachassistent",
+      "desc": "Beantworten Sie die Fragen Ihrer Gäste in deren Muttersprache mit dem integrierten automatischen ‹bersetzungstool"
+    },
+    "MobileApp": {
+      "title": "Mobile Applikation",
+      "desc": "Bringen Sie Ihr Angebot auf die nächste Stufe. Informieren und verkaufen Sie Ihre Dienste direkt über die mobile App."
+    }
+  },
+  "howItWorks": {
+    "title": "Wie funktioniert das?",
+    "LocalAttractions": {
+      "title": "Local Attractions",
+      "desc": "Share recommendations of local attractions: museums, interesting places, events, restaurants."
+    },
+    "VoiceAssistant": {
+      "title": "Voice Assistant",
+      "desc": "Respond in your guests native language thanks to the build-in automatic tranlation tool"
+    },
+    "MobileApp": {
+      "title": "Mobile App",
+      "desc": "Elevate your offering to a higher level. Inform and sell your services directly through the mobile app."
+    }
+  },
+
+  "howItWorks": {
+    "title": "Wie funktioniert das?",
+    "RestaurantHotel": {
+      "title": "Hotel Restaurant",
+      "desc": "Ein saisonales Menü oder ein spezielles Mittagsangebot? Steigern Sie die Anzahl der Buchungen und Gäste in Ihrem Restaurant mit unserer App."
+    },
+    "OrderTaxi": {
+      "title": "Bestellen Sie ein Taxi",
+      "desc": "Hotelgäste können ganz einfach direkt vom POD aus ein Taxi bestellen, ohne das Hotelpersonal einzuschalten."
+    },
+    "SpecialOffer": {
+      "title": "Sonderangebote",
+      "desc": "Bewerben Sie Sonderangebote im Voraus und erhöhen Sie die Chancen auf Direktbuchungen und wiederkehrende Gäste"
+    },
+    "Events": {
+      "title": "Hotel-Events",
+      "desc": "Organisieren Sie Filmvorführungen, Kinderanimationen, gemeinsame Anfeuerungen? Informieren Sie Ihre Gäste über die Veranstaltungen Ihres Hotels und erzielen Sie zusätzliche Einnahmen."
+    },
+    "Opinion": {
+      "title": "Kommentar hinterlassen",
+      "desc": "Durch Feedback und Analysen verbessern Sie die Qualität der von Ihnen angebotenen Dienstleistungen"
+    }
+  },
+
+  "cta": {
+    "title": "Lassen Sie uns über die Details sprechen",
+    "desc": "Erhalten Sie Antworten auf Ihre Fragen in einem persönlichen Gespräch mit einem unserer Experten. Gemeinsam werden wir die beste Lösung für Ihr Hotel finden.",
+    "btn": "Planen Sie eine Präsentation"
+  },
+
+  "variants": {
+    "title": "Varianten",
+    "pod": {
+      "label": "stationärer POD",
+      "title": "Sprachassistent",
+      "desc": "Mit fortschrittlicher Spracherkennung und sofortigem Zugriff auf Informationen gibt Ihnen der Sprachassistent im Handumdrehen Antworten in jeder Sprache!"
+    },
+    "mobileApp": {
+      "label": "MOBILE APPLIKATION",
+      "title": "Chat Bot",
+      "desc": "Entdecken Sie eine neue Dimension der Kommunikation mit Ihren Besuchern, indem Sie die Qualität ihrer Erfahrungen mit den neuesten, auf künstlicher Intelligenz basierenden Lösungen verbessern."
+    }
+  },
+
+  "mobileApp": {
+    "title": "MOBILE APPLIKATION",
+    "desc": "Der Service ist auch als App verfügbar, auf die alle Gäste zugreifen können, egal ob sie ein Smartphone, ein Tablet oder einen Computer benutzen."
+  },
+  "store": {
+    "title": "Hotelspot Store",
+    "conferenceManager": {
+      "title": "Konferenz-Management",
+      "desc": "Die Konferenzmanagement-App ist ein umfassendes Tool, mit dem Organisatoren alle Aspekte einer Konferenz effektiv planen, überwachen und koordinieren können."
+    },
+    "FaultManagement": {
+      "title": "Zarządzanie usterkami",
+      "desc": "Die Störungsmanagement-Applikation für Hotels ist ein innovatives Tool, das die effektive ‹berwachung und Meldung von technischen Problemen oder Defekten in einer Hotelimmobilie ermöglicht."
+    },
+    "offers": {
+      "title": "Störungsmanagement",
+      "desc": "Die Störungsmanagement-Applikation für Hotels ist ein innovatives Tool, das die effektive ‹berwachung und Meldung von technischen Problemen oder Defekten in einer Hotelimmobilie ermöglicht."
+    }
+  },
+  "contact": {
+    "title": "Kontaktieren Sie uns",
+    "desc": {
+      "line1": "Kontaktieren Sie uns direkt per Telefon.",
+      "line2": "Wir stehen Ihnen zur Verfügung, um Ihre Fragen zu beantworten und Ihnen die notwendige Unterstützung zu geben."
+    }
+  },
+
+  "policy": {
+    "text": "Mit dem Absenden dieses Formulars bestätige ich, dass ich die Datenschutzbestimmungen gelesen habe und mit der Verarbeitung meiner persönlichen Daten einverstanden bin."
+  },
+
+  "btn": {
+    "next": "Mehr Informationen",
+    "soon": "Bald verfügbar",
+    "send": "Absenden",
+    "addOption": "Kommentar hinzufügen",
+    "checkMenu": "Sehen Sie sich das Menü an",
+    "orderTaxi": "Ein Taxi bestellen",
+    "checkOffer": "Sehen Sie sich die Angebote an",
+    "checkEvents": "Veranstaltungen ansehen",
+    "more": "Demo anzeigen"
+  },
+  "input": {
+    "name": "Name",
+    "surname": "Vorname",
+    "email": "E-mail",
+    "phone": "Telefonnummmer",
+    "message": "Nachricht"
+  }
 }

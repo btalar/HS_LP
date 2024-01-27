@@ -121,6 +121,8 @@ export const Navbar = () => {
                         {
                           pl: <PL title="Polska" />,
                           en: <GB title="Englisch" />,
+                          fr: <FR title="French" />,
+                          de: <DE title="German" />,
                         }[intl.locale]
                       }
                       <PL title="Polska" />
@@ -141,6 +143,18 @@ export const Navbar = () => {
                         <GB title="English" />
                       </LangFlag>
                       <LangName>English</LangName>
+                    </FlagListItem>
+                    <FlagListItem onClick={() => (window.location = `/fr`)}>
+                      <LangFlag>
+                        <FR title="French" />
+                      </LangFlag>
+                      <LangName>French</LangName>
+                    </FlagListItem>
+                    <FlagListItem onClick={() => (window.location = `/de`)}>
+                      <LangFlag>
+                        <DE title="German" />
+                      </LangFlag>
+                      <LangName>German</LangName>
                     </FlagListItem>
 
                   </FlagList>

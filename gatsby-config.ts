@@ -24,7 +24,7 @@ const config: GatsbyConfig = {
       resolve: `gatsby-plugin-intl`,
       options: {
         path: `${__dirname}/src/intl`,
-        languages: [`pl`, `en`, `de`],
+        languages: [`pl`, `en`, `de`, `fr`,],
         defaultLanguage: `pl`,
         redirect: false,
       },
