@@ -223,8 +223,12 @@ body {
 }
 
 @media only screen and (max-width: 767px) {
-  #callpage{
-    display: none;
+  #callpage .cp-button-tooltip {
+    display: none!important;
+  }
+
+  #callpage .cp-widget-button {
+    display: none!important
   }
 }
 
