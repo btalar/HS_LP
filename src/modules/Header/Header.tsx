@@ -42,9 +42,10 @@ const HeaderStyled = styled.div<{
     background: linear-gradient(to bottom, transparent, #eae0d6);
     opacity: 0.1;
   }
-  @media (max-width: 996px) {
+  @media (max-width: 768px) {
     background-image: url("${(props) => props.mobileBackground}");
     max-height: 820px;
+    background-size: cover;
     &::before{
       display: none;
     }
@@ -77,7 +78,7 @@ export const Header = () => {
         className="element h-[1080px] bg-cover  justify-center -mt-[124px] rounded-b-[100px] max-w-[1920px] m-auto"
       >
         <HerderWrapper>
-          <div className="flex px-6 gap-8 w-full h-[1080px] flex-col justify-center  m-auto">
+          <div className="flex px-3 gap-4 w-full h-[1080px] flex-col justify-center m-auto">
             <Claim {...ClaimProperties} buttonSecondaryAction={() =>    {
               window.location.href = "#cp-widget"
             }} />

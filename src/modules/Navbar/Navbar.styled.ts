@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { Navbar as NextNavbar, NavbarBrand} from "@nextui-org/react";
+import {Link} from "@nextui-org/react";
 
 export const NavbarWrapper = styled(NextNavbar)<{ direction: "down" | "up" , isDark}>`
   backdrop-filter: none !important; 
@@ -27,10 +28,19 @@ export const PopoverWrapper= styled.span`
  display: flex; 
 `;
 
-export const Item = styled.p`
-  font-size: 0.9rem;
+
+export const MobileLink = styled(Link)`
+  font-size: 18px;
   font-weight: 500;
-  margin: 0 8px;
+  margin: 10px 8px; 
+  text-align: center;
+  
+`;
+
+export const Item = styled.p`
+  font-size: 18px;
+  font-weight: 500;
+  margin: 40px 8px;
   color: white;
 `;
 

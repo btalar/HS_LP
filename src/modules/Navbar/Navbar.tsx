@@ -9,6 +9,7 @@ import {
   FlagList,
   FlagListItem,
   PopoverWrapper, Logo, CurrentLangName,
+  MobileLink,
 } from "./Navbar.styled";
 import { PL, GB, DE, FR } from "country-flag-icons/react/1x1";
 import {
@@ -22,12 +23,12 @@ import {
   NavbarMenuItem,
   Popover,
   PopoverTrigger,
-  PopoverContent,
+  PopoverContent, Divider,
 } from "@nextui-org/react";
 import { useIntl } from "gatsby-plugin-intl";
 
 import { LOGO_WHITE } from "../../assets";
-import { Spin as Hamburger } from "hamburger-react";
+import { Menu} from "react-feather";
 
 
 export const Navbar = () => {
@@ -84,7 +85,7 @@ export const Navbar = () => {
           <img src={LOGO_WHITE} />
         </Logo>
         <NavbarMenuToggle
-          icon={(isOpen) => <Hamburger toggled={isOpen} size={18} />}
+            icon={ <Menu size={'xl'}/> }
           className="lg:hidden text-white mr-[15px] "
         />
         <NavbarContent className="lg:flex hidden gap-4 justify-between flex-1">
@@ -163,20 +164,68 @@ export const Navbar = () => {
             </PopoverWrapper>
           </div>
         </NavbarContent>
-        <NavbarMenu className="pt-5">
+        <NavbarMenu className=" bg-gradient-to-t from-white via-white to-transparent h-screen flex items-center justify-center">
+
+            <Popover showArrow={false} placement="bottom" backdrop="opaque">
+              <PopoverTrigger>
+                <LangTriggerWrapper>
+                  <LangFlag>
+                    {
+                      {
+                        pl: <PL title="Polska" />,
+                        en: <GB title="Englisch" />,
+                        fr: <FR title="French" />,
+                        de: <DE title="German" />,
+                      }[intl.locale]
+                    }
+                    <PL title="Polska" />
+                  </LangFlag>
+                </LangTriggerWrapper>
+              </PopoverTrigger>
+              <PopoverContent className="w-[140px]  bg-white ">
+                <FlagList>
+                  <FlagListItem onClick={() => (window.location = `/pl`)}>
+                    <LangFlag>
+                      <PL title="Polski" />
+                    </LangFlag>
+                    <LangName>Polski</LangName>
+                  </FlagListItem>
+                  <FlagListItem onClick={() => (window.location = `/en`)}>
+                    <LangFlag>
+                      <GB title="English" />
+                    </LangFlag>
+                    <LangName>English</LangName>
+                  </FlagListItem>
+                  <FlagListItem onClick={() => (window.location = `/fr`)}>
+                    <LangFlag>
+                      <FR title="French" />
+                    </LangFlag>
+                    <LangName>French</LangName>
+                  </FlagListItem>
+                  <FlagListItem onClick={() => (window.location = `/de`)}>
+                    <LangFlag>
+                      <DE title="German" />
+                    </LangFlag>
+                    <LangName>German</LangName>
+                  </FlagListItem>
+
+                </FlagList>
+              </PopoverContent>
+            </Popover>
+          <Divider/>
           {navbarItems.map(({ text, href }, index) => (
             <NavbarMenuItem key={`${text}-${index}`}>
-              <Link
+              <MobileLink
                 onPress={() => setIsMenuOpen(false)}
                 className="w-full"
                 href={`#${href}`}
-                size="lg"
                 color="foreground"
               >
                 {text}
-              </Link>
+              </MobileLink>
             </NavbarMenuItem>
           ))}
+          <Divider/>
         </NavbarMenu>
       </NavbarWrapper>
 

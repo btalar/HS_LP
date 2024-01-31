@@ -157,11 +157,11 @@
     "next" : "Dalej",
     "soon" : "Dostępne w krótce",
     "send" :	"Wyślij",
-    "addOption" :	"Dodaj, opinię",
-    "checkMenu" :	"Sprawdź, menu",
-    "orderTaxi" :	"Zamów, Taxi",
-    "checkOffer" :	"Sprawdź, oferty",
-    "checkEvents" :	"Sprawdź, wydarzenia",
+    "addOption" :	"Dodaj opinię",
+    "checkMenu" :	"Sprawdź menu",
+    "orderTaxi" :	"Zamów Taxi",
+    "checkOffer" :	"Sprawdź oferty",
+    "checkEvents" :	"Sprawdź wydarzenia",
     "more": "Pokaż demo"
   },
   "input": {
