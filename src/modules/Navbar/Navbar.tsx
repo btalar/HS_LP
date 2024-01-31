@@ -85,7 +85,7 @@ export const Navbar = () => {
           <img src={LOGO_WHITE} />
         </Logo>
         <NavbarMenuToggle
-            icon={ <Menu size={'xl'}/> }
+            icon={ <Menu /> }
           className="lg:hidden text-white mr-[15px] "
         />
         <NavbarContent className="lg:flex hidden gap-4 justify-between flex-1">
